@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{{ site.fontawesome }}">
-    <link rel="stylesheet" href="documentation.css">
+    <link rel="stylesheet" href="{{ site.url }}/documentation.css">
 
     <title>Extensions for Bulma.io</title>
   </head>
@@ -18,10 +18,10 @@
       <div class="columns is-vcentered">
         <div class="column">
           <p class="title">
-            {{ page.title }}
+            Wikiki
           </p>
           <p class="subtitle">
-            {{ page.subtitle }}
+            This page is an access point to my sources
           </p>
         </div>
         <div class="column is-narrow">
@@ -36,10 +36,10 @@
       <nav class="tabs is-boxed">
         <ul>
           <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
-            <a href="{{ site.index }}">Overview</a>
+            <a href="{{ site.index }}/">Overview</a>
           </li>
           <li {% if page.doc-tab == 'bulma-extensions' %}class="is-active"{% endif %}>
-            <a href="{{ site.url }}/bumal-extensions/badge">Bulma Extensions</a>
+            <a href="{{ site.url }}/bulma-extensions/overview">Bulma Extensions</a>
           </li>
         </ul>
       </div>
