@@ -13,25 +13,59 @@
 
   <body>
     <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <h1 class="title has-text-centered">
-                {{ page.title }}
-              </h1>
-              <h2 class="subtitle has-text-centered">
-                {{ page.subtitle }}
-              </h2>
-            </div>
-          </div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            {{ page.title }}
+          </p>
+          <p class="subtitle">
+            {{ page.subtitle }}
+          </p>
+        </div>
+        <div class="column is-narrow">
+          {% include carbon.html %}
         </div>
       </div>
-      <div class="hero-foot">
-        {% include subnav.html %}
-      </div>
-    </section>
+    </div>
+  </div>
 
-    {{ content }}
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
+            <a href="{{ site.documentation }}">Overview</a>
+          </li>
+          <li {% if page.doc-tab == 'modifiers' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/modifiers/syntax">Modifiers</a>
+          </li>
+          <li {% if page.doc-tab == 'columns' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/columns/basics">Columns</a>
+          </li>
+          <li {% if page.doc-tab == 'layout' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/layout/container/">Layout</a>
+          </li>
+          <li {% if page.doc-tab == 'form' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/form/general">Form</a>
+          </li>
+          <li {% if page.doc-tab == 'elements' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/elements/box/">Elements</a>
+          </li>
+          <li {% if page.doc-tab == 'components' %}class="is-active"{% endif %}>
+            {% if site.vernum >= 43 %}
+              <a href="{{ site.url }}/documentation/components/breadcrumb/">Components</a>
+            {% else %}
+              <a href="{{ site.url }}/documentation/components/card/">Components</a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+
+{{ content }}
   </body>
 </html>
