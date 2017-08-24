@@ -2,6 +2,7 @@ fontawesome:   https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-aweso
 
 exclude: [bulma/]
 includes:
+- _includes
 - bulma/docs/_includes
 
 sass:
