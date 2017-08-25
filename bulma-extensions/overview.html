@@ -11,14 +11,32 @@ doc-subtab: overview
   <div class="container">
     <h2 class="subtitle">Set of extensions for <a href="http://bulma.io" target="_blank">Bulma.io</a></h2>
     <p>This section gather all my <a href="http://bulma.io" target="_blank">Bulma.io</a> extensions.</p>
-    
+
+    {% include anchor.html name="Integration" %}
+    <div class="content">
+      <p>This is an example with the Switch extension.</p>
+      <ul>
+        <li>Clone the [bulma repo](https://github.com/jgthms/bulma)</li>
+        <li>Under the `sass` folder, create a new folder called <span class="tag">extensions</span></li>
+        <li>In this new folder, create a new file <span class="tag">switch.sass</span></li>
+        <li>Copy the code form the <span class="tag">bulma-switch repo</p>'s [switch.sass](https://github.com/Wikiki/bulma-switch/blob/master/switch.sass) file into your new file</li>
+        <li>In the same folder create a new file <span class="tag">_all.sass</span> (this is not required, but will help when you add more extensions)</li>
+        <li>In this file add this code:
+{% highlight sass %}
+@charset "utf-8"
+@import "switch.sass"
+{% endhighlight %}</li>
+      </ul>
+      <p>At the end of the <span class="tag">bulma.sass</span> file, add this line: <span class="tag">@import "sass/extensions/_all"</span></p>
+
+      <p>Now, you can just build the bulma project with <span class="tag">npm run build</span>, and the output will be available in the <span class="tag">css folder</span>.</p>
+    </div>
+
     {% include anchor.html name="Need an extension ?" %}
     <div class="content">
       <p>You are looking for a particular extension but you did not find it yet ?</p>
       <p>Don't hesitate to send me a request by <a href="https://github.com/Wikiki/wikiki.github.io/issues" target="_blank">opening and issue</a> on my GitHub repository.</p>
     </div>
-    
+
   </div>
 </section>
-
-  
