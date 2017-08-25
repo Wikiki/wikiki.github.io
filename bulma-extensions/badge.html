@@ -3,7 +3,55 @@ title: Badge
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: badge
+variables:
+- name: $badge-shadow
+  value: 0 0 0 .2rem #fff
+- name: $badge-border-radius
+  value: 50%
 ---
+
+{% capture badge_example %}
+<button class="button badge" data-badge="8">Button</button>
+{% endcapture %}
+
+{% capture badge_colors_example %}
+<div class="block">
+  <span class="badge" data-badge="">
+    Notifications
+  </span>
+  <span class="badge is-badge-success" data-badge="">
+    Notifications
+  </span>
+  <span class="badge is-badge-warning" data-badge="">
+    Notifications
+  </span>
+  <span class="badge is-badge-danger" data-badge="">
+    Notifications
+  </span>
+</div>
+
+<div class="block">
+  <span class="badge" data-badge="8">
+    Notifications
+  </span>
+  <span class="badge is-badge-success" data-badge="88">
+    Notifications
+  </span>
+  <span class="badge is-badge-danger" data-badge="888">
+    Notifications
+  </span>
+</div>
+
+<div class="block">
+  <button class="button badge" data-badge="">Button</button>
+  <button class="button badge" data-badge="8">Button</button>
+</div>
+
+<div class="block">
+  <button class="button is-primary badge" data-badge="">Button</button>
+  <button class="button is-info badge" data-badge="8">Button</button>
+</div>
+{% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
 
@@ -20,5 +68,26 @@ doc-subtab: badge
     %}
 
     <hr>
+
+    <div class="columns">
+      <div class="column">
+        {{badge_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{badge_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors" %}
+    <div class="columns">
+      <div class="column">
+        {{badge_colors_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{badge_colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
