@@ -157,6 +157,33 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture switch_colors_disabled_example %}
+<div class="field">
+  <input id="switchColorDefault" type="checkbox" name="switchColorDefault" class="switch" checked="checked" disabled>
+  <label for="switchColorDefault">Switch default</label>
+</div>
+
+<div class="field">
+  <input id="switchColorSuccess" type="checkbox" name="switchColorSuccess" class="switch is-success" checked="checked" disabled>
+  <label for="switchColorSuccess">Switch success</label>
+</div>
+
+<div class="field">
+  <input id="switchColorWarning" type="checkbox" name="switchColorWarning" class="switch is-warning" checked="checked" disabled>
+  <label for="switchColorWarning">Switch warning</label>
+</div>
+
+<div class="field">
+  <input id="switchColorDanger" type="checkbox" name="switchColorDanger" class="switch is-danger" checked="checked" disabled>
+  <label for="switchColorDanger">Switch danger</label>
+</div>
+
+<div class="field">
+  <input id="switchColorInfo" type="checkbox" name="switchColorInfo" class="switch is-info" checked="checked" disabled>
+  <label for="switchColorInfo">Switch info</label>
+</div>
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -237,6 +264,17 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{switch_rounded_outlined_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    <div class="columns">
+      <div class="column">
+        {{switch_colors_disabled_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{switch_colors_disabled_example}}{% endhighlight %}
       </div>
     </div>
 
