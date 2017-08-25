@@ -27,8 +27,7 @@ doc-subtab: pageloader
 
     <div class="columns">
       <div class="column">
-        <button id="showPageloader" class="button is-primary">Show Page-loader</button>
-        <p>Please refresh the page after page-loader displayed to get back to the documentation.</p>
+        <button id="showPageloader" class="button is-primary">Show Page-loader (3 sec only)</button>
       </div>
       <div class="column">
         {% highlight html %}{{pageloader_example}}{% endhighlight %}
@@ -43,8 +42,6 @@ doc-subtab: pageloader
 var $button = Array.prototype.slice.call(document.querySelectorAll('#showPageloader'), 0);
 var $pageloader = Array.prototype.slice.call(document.querySelectorAll('.pageloader'), 0);
 
-console.log( $pageloader );
-
 // Check if there are any nav burgers
   if ($button.length > 0 && $pageloader.length > 0) {
 
@@ -52,6 +49,11 @@ console.log( $pageloader );
     $button.forEach(function ($el) {
       $el.addEventListener('click', () => {
         $pageloader[0].classList.toggle('is-active');
+        var pageloaderTimeout = setTimeout( function() {
+          $pageloader[0].classList.toggle('is-active');
+          clearTimeout( pageloaderTimeout );
+        }, 3000 );
+
       } );
     });
   }
