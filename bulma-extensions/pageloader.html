@@ -5,6 +5,10 @@ doc-tab: bulma-extensions
 doc-subtab: pageloader
 ---
 
+{% capture pageloader_example %}
+<div class="pageloader"></div>
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -20,5 +24,35 @@ doc-subtab: pageloader
     %}
 
     <hr>
+
+    <div class="columns">
+      <div class="column">
+        <button id="showPageloader" class="button is-primary">Show Page-loader</button>
+        <p>Please refresh the page after page-loader displayed to get back to the documentation.</p>
+      </div>
+      <div class="column">
+        {% highlight html %}{{pageloader_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="pageloader"></div>
   </div>
 </section>
+
+<script>
+var $button = Array.prototype.slice.call(document.querySelectorAll('#showPageloader'), 0);
+var $pageloader = Array.prototype.slice.call(document.querySelectorAll('.pageloader'), 0);
+
+console.log( $pageloader );
+
+// Check if there are any nav burgers
+  if ($button.length > 0 && $pageloader.length > 0) {
+
+    // Add a click event on each of them
+    $button.forEach(function ($el) {
+      $el.addEventListener('click', () => {
+        $pageloader[0].classList.toggle('is-active');
+      } );
+    });
+  }
+</script>
