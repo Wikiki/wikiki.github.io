@@ -5,6 +5,29 @@ doc-tab: bulma-extensions
 doc-subtab: tooltip
 ---
 
+{% capture tooltip_example %}
+<div class="column">
+  <button class="button is-primary tooltip" data-tooltip="Tooltip Text">Tooltip</button>
+</div>
+{% endcapture %}
+
+{% capture tooltip_positions_example %}
+<div class="columns text-center">
+  <div class="column">
+    <button class="button is-primary tooltip" data-tooltip="Tooltip Text">top tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary tooltip is-tooltip-right" data-tooltip="Tooltip Text">right tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary tooltip is-tooltip-bottom" data-tooltip="Tooltip Text">bottom tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary tooltip is-tooltip-left" data-tooltip="Tooltip Text">left tooltip</button>
+  </div>
+</div>
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -15,9 +38,30 @@ doc-subtab: tooltip
     </h2>
     {%
       include meta.html
-      variables=true
     %}
 
     <hr>
+
+    <div class="columns">
+      <div class="column">
+        {{tooltip_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{tooltip_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">Positions</h3>
+    <h4 class="subtitle">You can use <span class="tag">.is-tooltip-top</span> <span class="tag">.is-tooltip-right</span> <span class="tag">.is-tooltip-bottom</span> <span class="tag">.is-tooltip-left</span> modifiers to change the tooltip position</h4>
+    <div class="columns">
+      <div class="column">
+        {{tooltip_positions_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{tooltip_positions_example}}{% endhighlight %}
+      </div>
+    </div>
   </div>
 </section>
