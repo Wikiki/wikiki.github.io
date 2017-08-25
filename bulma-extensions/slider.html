@@ -3,7 +3,62 @@ title: Slider
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: slider
+variables:
+- name: $slider-radius
+  value: $radius
+- name: $slider-track-background
+  value: $grey-light
+- name: $slider-thumb-background
+  value: $primary
+- name: $slider-track-radius
+  value: $radius
+- name: $slider-thumb-radius
+  value: $radius
 ---
+
+{% capture slider_example %}
+<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+{% endcapture %}
+
+{% capture slider_disabled_example %}
+<input class="slider is-fullwidth" min="0" max="100" value="50" type="range" disabled="disabled">
+{% endcapture %}
+
+{% capture slider_colors_example %}
+<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-success" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-warning" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-danger" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-info" min="0" max="100" value="50" type="range">
+{% endcapture %}
+
+{% capture slider_sizes_example %}
+<input class="slider is-fullwidth is-small" min="0" max="100" value="50" type="range" disabled="disabled">
+
+<input class="slider is-fullwidth is-small" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-medium" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-large" min="0" max="100" value="50" type="range">
+{% endcapture %}
+
+{% capture slider_circle_example %}
+<input class="slider is-fullwidth is-small is-circle" min="0" max="100" value="50" type="range" disabled="disabled">
+
+<input class="slider is-fullwidth is-small is-circle" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-success is-circle" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-medium is-warning is-circle" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-large is-danger is-circle" min="0" max="100" value="50" type="range">
+{% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
 
@@ -21,5 +76,63 @@ doc-subtab: slider
     %}
 
     <hr>
+
+    <div class="columns">
+      <div class="column">
+        {{slider_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors" %}
+    <div class="columns">
+      <div class="column">
+        {{slider_colors_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Sizes" %}
+
+    <div class="columns">
+      <div class="column">
+        {{slider_sizes_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Circle</h4>
+    <div class="columns">
+      <div class="column">
+        {{slider_circle_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_circle_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    <div class="columns">
+      <div class="column">
+        {{slider_disabled_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_disabled_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
