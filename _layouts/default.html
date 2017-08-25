@@ -13,40 +13,48 @@
 
   <body>
     <section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-vcentered">
-        <div class="column">
-          <p class="title">
-            Wikiki
-          </p>
-          <p class="subtitle">
-            This page is an access point to my sources
-          </p>
-        </div>
-        <div class="column is-narrow">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <p class="title">
+                Wikiki
+              </p>
+              <p class="subtitle">
+                This page is an access point to my sources
+              </p>
+            </div>
+            <div class="column is-narrow">
 
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="hero-foot">
-    <div class="container">
-      <nav class="tabs is-boxed">
-        <ul>
-          <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
-            <a href="{{ site.index }}/">Overview</a>
-          </li>
-          <li {% if page.doc-tab == 'bulma-extensions' %}class="is-active"{% endif %}>
-            <a href="{{ site.url }}/bulma-extensions/overview">Bulma Extensions</a>
-          </li>
-        </ul>
+      <div class="hero-foot">
+        <div class="container">
+          <nav class="tabs is-boxed">
+            <ul>
+              <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
+                <a href="{{ site.index }}/">Overview</a>
+              </li>
+              <li {% if page.doc-tab == 'bulma-extensions' %}class="is-active"{% endif %}>
+                <a href="{{ site.url }}/bulma-extensions/overview">Bulma Extensions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    {{ content }}
+    
+    <section class="section">
+      <div class="container">
+        <p class="has-text-centered has-text-grey-light">
+          This page is <strong class="has-text-grey">open source</strong>.
+        </p>
       </div>
-    </div>
-  </nav>
-</section>
-
-{{ content }}
+    </section>
   </body>
 </html>
