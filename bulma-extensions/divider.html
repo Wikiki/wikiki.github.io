@@ -3,7 +3,26 @@ title: Divider
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: divider
+variables:
+- name: $divider-background-color
+  value: $grey-lighter
+- name: $divider-font-size
+  value: $size-7
+- name: $divider-color
+  value: $grey-light
 ---
+
+{% capture divider_example %}
+<div class="is-divider" data-content="OR"></div>
+{% endcapture %}
+
+{% capture divider_vertical_example %}
+<div class="columns">
+  <div class="column"></div>
+  <div class="is-divider-vertical" data-content="OR"></div>
+  <div class="column"></div>
+</div>
+{% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
 
@@ -19,5 +38,31 @@ doc-subtab: divider
     %}
 
     <hr>
+
+    <p>You can easily display a message on the divider by adding <span class="tag">data-content</span> attribute to the divider.</p>
+    <br />
+    <div class="columns">
+      <div class="column">
+        {{divider_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{divider_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Vertical</h4>
+    <div class="columns">
+      <div class="column" style="min-height: 90px">
+        {{divider_vertical_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{divider_vertical_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
