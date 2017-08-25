@@ -3,7 +3,107 @@ title: Checkradio
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: checkradio
+variables:
+- name: $checkbox-radius
+  value: $radius
+- name: $checkbox-border
+  value: .1rem solid $grey-light
 ---
+
+{% capture checkradio_example %}
+<div class="field">
+  <input class="is-checkbox" id="exampleCheckbox" type="checkbox" name="exampleCheckbox" checked="checked">
+  <label for="exampleCheckbox">Check me</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_disabled_example %}
+<div class="field">
+  <input class="is-checkbox" id="exampleCheckboxDisabled" type="checkbox" name="exampleCheckboxDisabled" checked="checked" disabled>
+  <label for="exampleCheckboxDisabled">Checkbox - disabled</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_colors_example %}
+<div class="field">
+  <input class="is-checkbox" id="exampleCheckboxDefault" type="checkbox" name="exampleCheckboxDefault" checked="checked">
+  <label for="exampleCheckboxDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-success" id="exampleCheckboxSuccess" type="checkbox" name="exampleCheckboxSuccess" checked="checked">
+  <label for="exampleCheckboxSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-warning" id="exampleCheckboxWarning" type="checkbox" name="exampleCheckboxWarning" checked="checked">
+  <label for="exampleCheckboxWarning">Checkbox - large - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked="checked">
+  <label for="exampleCheckboxDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-info" id="exampleCheckboxInfo" type="checkbox" name="exampleCheckboxInfo" checked="checked">
+  <label for="exampleCheckboxInfo">Checkbox - info</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_sizes_example %}
+<div class="field">
+  <input class="is-checkbox is-small" id="exampleCheckboxSmall" type="checkbox" name="exampleCheckboxSmall" checked="checked">
+  <label for="exampleCheckboxSmall">Checkbox - small</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox" id="exampleCheckboxNormal" type="checkbox" name="exampleCheckboxNormal" checked="checked">
+  <label for="exampleCheckboxNormal">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium" checked="checked">
+  <label for="exampleCheckboxMedium">Checkbox - medium</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-large" id="exampleCheckboxLarge" type="checkbox" name="exampleCheckboxLarge" checked="checked">
+  <label for="exampleCheckboxLarge">Checkbox - large</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_colors_circle_example %}
+<div class="field">
+  <input class="is-checkbox is-circle" id="exampleCheckboxDefaultDisabledCircle" type="checkbox" name="exampleCheckboxDefaultDisabledCircle" checked="checked" disabled="disabled">
+  <label for="exampleCheckboxDefaultDisabledCircle">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-circle" id="exampleCheckboxDefaultCircle" type="checkbox" name="exampleCheckboxDefaultCircle" checked="checked">
+  <label for="exampleCheckboxDefaultCircle">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-success is-circle" id="exampleCheckboxSuccessCircle" type="checkbox" name="exampleCheckboxSuccessCircle" checked="checked">
+  <label for="exampleCheckboxSuccessCircle">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-warning is-circle" id="exampleCheckboxWarningCircle" type="checkbox" name="exampleCheckboxWarningCircle" checked="checked">
+  <label for="exampleCheckboxWarningCircle">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-danger is-circle" id="exampleCheckboxDangerCircle" type="checkbox" name="exampleCheckboxDangerCircle" checked="checked">
+  <label for="exampleCheckboxDangerCircle">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-info is-circle" id="exampleCheckboxInfoCircle" type="checkbox" name="exampleCheckboxInfoCircle" checked="checked">
+  <label for="exampleCheckboxInfoCircle">Checkbox - info</label>
+</div>
+{% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
 
@@ -21,5 +121,64 @@ doc-subtab: checkradio
     %}
 
     <hr>
+
+    <div class="columns">
+      <div class="column">
+        {{checkradio_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_example}}{% endhighlight %}
+      </div>
+    </div>
+    <div class="notification is-danger has-text-centered">
+      <p>Please note that due to <strong>CSS limitation</strong> the structure of the checkbox is different of the one provided by Bulma core.<br /><i>(Input is not wrapped by the label)</i></p>
+    </div>
+
+    {% include anchor.html name="Colors" %}
+    <div class="columns">
+      <div class="column">
+        {{checkradio_colors_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Sizes" %}
+
+    <div class="columns">
+      <div class="column">
+        {{checkradio_sizes_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Circle</h4>
+    <div class="columns">
+      <div class="column">
+        {{checkradio_colors_circle_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_colors_circle_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    <div class="columns">
+      <div class="column">
+        {{checkradio_disabled_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_disabled_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
