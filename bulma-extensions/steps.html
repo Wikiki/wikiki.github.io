@@ -3,7 +3,196 @@ title: Steps
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: steps
+variables:
+- name: $steps-maker-default-color
+  value: $grey-light
+- name: $steps-marker-default-border
+  value: .2em solid #fff
+- name: $steps-default-color
+  value: $grey-lighter
+- name: $steps-completed-color
+  value: $primary
+- name: $steps-active-color
+  value: $primary
+- name: $steps-divider-height
+  value: .2em
 ---
+
+{% capture steps_example %}
+<ul class="steps">
+  <li class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-content">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step, which means you start here.</p>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+    <div class="step-content">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. Once you complete the first step, you will end up here.</p>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+    <div class="step-content">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. This is halfway between the start and the end.</p>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker"></div>
+    <div class="step-content">
+      <p class="step-title">Step 4</p>
+      <p>And finally the last step. You have successfully completed all 5 steps.</p>
+    </div>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture steps_sizes_example %}
+<ul class="steps is-small">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker"></div>
+  </li>
+</ul>
+
+<ul class="steps">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker"></div>
+  </li>
+</ul>
+
+<ul class="steps is-medium">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker"></div>
+  </li>
+</ul>
+
+<ul class="steps is-large">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker"></div>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture steps_colors_example %}
+<ul class="steps">
+  <li class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-content is-primary is-completed">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step, which means you start here.</p>
+    </div>
+  </li>
+  <li class="step-item is-info is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-star"></i>
+      </span>
+    </div>
+    <div class="step-content">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. Once you complete the first step, you will end up here.</p>
+    </div>
+  </li>
+  <li class="step-item is-warning is-completed">
+    <div class="step-marker">3</div>
+    <div class="step-content">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. This is halfway between the start and the end.</p>
+    </div>
+  </li>
+  <li class="step-item is-danger is-active">
+    <div class="step-marker"></div>
+    <div class="step-content">
+      <p class="step-title">Step 4</p>
+      <p>And finally the last step. You have successfully completed all 5 steps.</p>
+    </div>
+  </li>
+</ul>
+{% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
 
@@ -21,5 +210,30 @@ doc-subtab: steps
     %}
 
     <hr>
+
+    <div class="bd-example">
+      {{steps_example}}
+    </div>
+    {% highlight html %}{{steps_example}}{% endhighlight %}
+
+    {% include anchor.html name="Colors" %}
+
+    <div class="bd-example">
+      {{steps_colors_example}}
+    </div>
+    {% highlight html %}{{steps_colors_example}}{% endhighlight %}
+
+    {% include anchor.html name="Sizes" %}
+
+    <div class="columns">
+      <div class="column">
+        {{steps_sizes_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{steps_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
