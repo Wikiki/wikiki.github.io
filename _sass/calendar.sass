@@ -2,6 +2,9 @@ $calendar-border: .1rem solid $grey-lighter !default
 $calendar-border-radius: $radius-small !default
 $calendar-header-color: $primary !default
 $calendar-date-hover: $white-ter !default
+$calendar-today-background: transparent !default
+$calendar-today-border-color: $primary !default
+$calendar-today-color: $primary !default
 
 .calendar
   border: $calendar-border
@@ -72,8 +75,9 @@ $calendar-date-hover: $white-ter !default
       white-space: nowrap
       width: 2.8rem
       &.is-today
-        border-color: $primary
-        color: $primary
+        background: $calendar-today-background
+        border-color: $calendar-today-border-color
+        color: $calendar-today-color
       &:focus
         background: $calendar-date-hover
         border-color: $calendar-date-hover

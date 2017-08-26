@@ -3,6 +3,21 @@ title: Calendar
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: calendar
+variables:
+- name: $calendar-border
+  value: .1rem solid $grey-lighter
+- name: $calendar-border-radius
+  value: $radius
+- name: $calendar-header-color
+  value: $primary
+- name: $calendar-date-hover
+  value: $white-ter
+- name: $calendar-today-background
+  value: transparent
+- name: $calendar-today-border-color
+  value: $primary
+- name: $calendar-today-color
+  value: $primary
 ---
 
 {% capture calendar_example %}
@@ -208,5 +223,6 @@ doc-subtab: calendar
     </div>
     {% highlight html %}{{calendar_sizes_example}}{% endhighlight %}
 
+    {% include variables.html %}
   </div>
 </section>
