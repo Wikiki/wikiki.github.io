@@ -19,37 +19,50 @@ variables:
 {% capture pricingtable_example %}
 <div class="pricing-table is-hoverable">
   <ul class="pricing-plan">
-    <li class="plan-header">Basic</li>
-    <li class="plan-price">$ 20/month</li>
+    <li class="plan-header">Starter</li>
+    <li class="plan-price">$ <span class="plan-price-amount">20</span>/month</li>
     <li class="plan-item">20GB Storage</li>
     <li class="plan-item">100 Domains</li>
     <li class="plan-item">1TB Bandwidth</li>
+    <li class="plan-item">-</li>
     <li class="plan-action">
-      <button class="button is-primary is-medium">Choose</button>
+      <button class="button is-fullwidth" disabled="disabled">Current plan</button>
+    </li>
+  </ul>
+
+  <ul class="pricing-plan is-warning">
+    <li class="plan-header">Startups</li>
+    <li class="plan-price">$ <span class="plan-price-amount">20</span>/month</li>
+    <li class="plan-item">20GB Storage</li>
+    <li class="plan-item">100 Domains</li>
+    <li class="plan-item">1TB Bandwidth</li>
+    <li class="plan-item">-</li>
+    <li class="plan-action">
+      <button class="button is-fullwidth">Choose</button>
     </li>
   </ul>
 
   <ul class="pricing-plan is-active">
-    <li class="plan-header">Basic</li>
-    <li class="plan-price">$ 20/month</li>
+    <li class="plan-header">Growing Team</li>
+    <li class="plan-price">$ <span class="plan-price-amount">20</span>/month</li>
     <li class="plan-item">20GB Storage</li>
     <li class="plan-item">100 Domains</li>
     <li class="plan-item">1TB Bandwidth</li>
     <li class="plan-item">1000 Email Boxes</li>
     <li class="plan-action">
-      <button class="button is-primary is-medium">Choose</button>
+      <button class="button is-fullwidth">Choose</button>
     </li>
   </ul>
 
-  <ul class="pricing-plan">
-    <li class="plan-header">Basic</li>
-    <li class="plan-price">$ 20/month</li>
+  <ul class="pricing-plan is-danger">
+    <li class="plan-header">Enterprise</li>
+    <li class="plan-price">$ <span class="plan-price-amount">20</span>/month</li>
     <li class="plan-item">20GB Storage</li>
     <li class="plan-item">100 Domains</li>
     <li class="plan-item">1TB Bandwidth</li>
     <li class="plan-item">1000 Email Boxes</li>
     <li class="plan-action">
-      <button class="button is-primary is-medium">Choose</button>
+      <button class="button is-fullwidth">Choose</button>
     </li>
   </ul>
 </div>
@@ -82,7 +95,6 @@ variables:
 
     <hr>
 
-    <p>Just add <span class="tag">is-hoverable</span> class to the pricing table container to add an hover effect on each plan.</p>
     <div class="bd-example">
       {{pricingtable_example}}
     </div>
