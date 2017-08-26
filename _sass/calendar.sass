@@ -1,5 +1,7 @@
 $calendar-border: .1rem solid $grey-lighter !default
 $calendar-border-radius: $radius-small !default
+$calendar-header-color: $primary !default
+$calendar-date-hover: $white-ter !default
 
 .calendar
   border: $calendar-border
@@ -9,7 +11,7 @@ $calendar-border-radius: $radius-small !default
   text-align: center
   .calendar-nav
     align-items: center
-    background: $primary
+    background: $calendar-header-color
     color: $white
     border-top-left-radius: $radius-small
     border-top-right-radius: $radius-small
@@ -27,7 +29,7 @@ $calendar-border-radius: $radius-small !default
         color: $white
         &:hover
           background: transparent
-          color: $grey-lighter
+          color: $white-ter
     .calendar-nav-left
       align-items: center
       justify-content: flex-start
@@ -36,8 +38,6 @@ $calendar-border-radius: $radius-small !default
       justify-content: flex-end
   .calendar-header, .calendar-body
     display: flex
-    display: -ms-flexbox
-    display: -webkit-flex
     flex-wrap: wrap
     justify-content: center
     padding: .2rem 0
@@ -45,8 +45,8 @@ $calendar-border-radius: $radius-small !default
     flex: 0 0 14.28%
     max-width: 14.28%
   .calendar-header
-    background: darken($primary, 5%)
-    color: $white
+    background: darken($calendar-header-color, 5%)
+    color: findColorInvert( $calendar-header-color )
     font-size: $size-6
   .calendar-body
     color: $grey
@@ -75,19 +75,19 @@ $calendar-border-radius: $radius-small !default
         border-color: $primary
         color: $primary
       &:focus
-        background: $white-ter
-        border-color: $white-ter
-        color: $white
+        background: $calendar-date-hover
+        border-color: $calendar-date-hover
+        color: findColorInvert( $calendar-date-hover )
         text-decoration: none
       &:hover
-        background: $white-ter
-        border-color: $white-ter
-        color: $grey
+        background: $calendar-date-hover
+        border-color: $calendar-date-hover
+        color: findColorInvert( $calendar-date-hover )
         text-decoration: none
       &.is-active
         background: $primary
         border-color: $primary
-        color: #fff
+        color: findColorInvert( $primary )
     &.is-disabled
       .date-item, .calendar-event
         cursor: default
@@ -144,7 +144,7 @@ $calendar-border-radius: $radius-small !default
       overflow-y: auto
       padding: .5rem
     .calendar-event
-      background-color: $info
+      background-color: $grey
       border-radius: $radius-small
       color: $white
       display: block
