@@ -25,7 +25,7 @@ $slider-thumb-radius: $radius !default
   &::-moz-range-track
     height: $size / 2.5
   &::-ms-track
-    height: $size / 2.5
+    height: $size * 2
 
 .slider
   -webkit-appearance: none
@@ -115,9 +115,11 @@ $slider-thumb-radius: $radius !default
     width: 100%
 
   &::-ms-track
-    background: $slider-track-background
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent
     border-radius: $slider-track-radius
-    border: 0px
     width: 100%
   &::-ms-fill-lower
     background: $primary
