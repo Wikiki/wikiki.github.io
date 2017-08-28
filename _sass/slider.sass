@@ -5,7 +5,9 @@ $slider-track-radius: $radius !default
 $slider-thumb-radius: $radius !default
 
 =slider-size($size)
-  margin: $size * 2
+  margin-top: $size
+  margin-bottom: $size
+  height: $size * 2
   &::-webkit-slider-thumb
     height: $size * 1.2
     width: $size * 1.2
@@ -23,7 +25,7 @@ $slider-thumb-radius: $radius !default
   &::-moz-range-track
     height: $size / 2.5
   &::-ms-track
-    height: $size
+    height: $size / 2.5
 
 .slider
   -webkit-appearance: none
