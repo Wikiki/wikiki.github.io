@@ -9,16 +9,28 @@ doc-subtab: overview
 
 <section class="section">
   <div class="container">
-    <h2 class="subtitle">This section gather all my <a href="http://bulma.io" target="_blank">Bulma.io</a> extensions.</h2>
+    <div class="columns">
+      <div class="column">
+        <h2 class="subtitle">This section gather all my <a href="http://bulma.io" target="_blank">Bulma.io</a> extensions.</h2>
+      </div>
+      <div class="column is-narrow">
+        <a class="button is-small is-outlined" href="https://github.com/Wikiki/bulma-extensions" target="_blank">
+          <span class="icon">
+              <i class="fa fa-github"></i>
+          </span>
+          <span>View on Github</span>
+        </a>
+      </div>
+    </div>
 
     {% include anchor.html name="Integration" %}
     <div class="content">
       <p>This is an example with the Switch extension.</p>
       <ul>
-        <li>Clone the [bulma repo](https://github.com/jgthms/bulma)</li>
+        <li>Clone the <a href="https://github.com/jgthms/bulma" target="_blank">bulma repo</a></li>
         <li>Under the <span class="tag">sass</span> folder, create a new folder called <span class="tag">extensions</span></li>
         <li>In this new folder, create a new file <span class="tag">switch.sass</span></li>
-        <li>Copy the code form the <span class="tag">bulma-switch repo</p>'s [switch.sass](https://github.com/Wikiki/bulma-switch/blob/master/switch.sass) file into your new file</li>
+        <li>Copy the code form the <span class="tag">bulma-switch repo</span>'s <a href="https://github.com/Wikiki/bulma-switch/blob/master/switch.sass" target="_blank">switch.sass</a> file into your new file</li>
         <li>In the same folder create a new file <span class="tag">_all.sass</span> (this is not required, but will help when you add more extensions)</li>
         <li>In this file add this code:
 {% highlight sass %}
@@ -34,7 +46,7 @@ doc-subtab: overview
     {% include anchor.html name="Need an extension ?" %}
     <div class="content">
       <p>You are looking for a specific extension but you did not find it yet ?</p>
-      <p>Don't hesitate to send me a request by <a href="https://github.com/Wikiki/wikiki.github.io/issues" target="_blank">opening and issue</a> on my GitHub repository.</p>
+      <p>Don't hesitate to send me a request by <a href="https://github.com/Wikiki/bulma-extensions/issues" target="_blank">opening and issue</a> on my GitHub repository.</p>
     </div>
 
   </div>
