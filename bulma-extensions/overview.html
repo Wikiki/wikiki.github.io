@@ -14,12 +14,24 @@ doc-subtab: overview
         <h2 class="subtitle">This section gather all my <a href="http://bulma.io" target="_blank">Bulma.io</a> extensions.</h2>
       </div>
       <div class="column is-narrow">
-        <a class="button is-small is-outlined" href="https://github.com/Wikiki/bulma-extensions" target="_blank">
-          <span class="icon">
-              <i class="fa fa-github"></i>
-          </span>
-          <span>View on Github</span>
-        </a>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-extensions" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.0.1</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -28,19 +40,19 @@ doc-subtab: overview
       <p>This is an example with the Switch extension.</p>
       <ul>
         <li>Clone the <a href="https://github.com/jgthms/bulma" target="_blank">bulma repo</a></li>
-        <li>Under the <span class="tag">sass</span> folder, create a new folder called <span class="tag">extensions</span></li>
-        <li>In this new folder, create a new file <span class="tag">switch.sass</span></li>
-        <li>Copy the code form the <span class="tag">bulma-switch repo</span>'s <a href="https://github.com/Wikiki/bulma-switch/blob/master/switch.sass" target="_blank">switch.sass</a> file into your new file</li>
-        <li>In the same folder create a new file <span class="tag">_all.sass</span> (this is not required, but will help when you add more extensions)</li>
+        <li>Under the <code>sass</code> folder, create a new folder called <code>extensions</code></li>
+        <li>In this new folder, create a new file <code>switch.sass</code></li>
+        <li>Copy the code form the <code>bulma-switch repo</code>'s <a href="https://github.com/Wikiki/bulma-switch/blob/master/switch.sass" target="_blank">switch.sass</a> file into your new file</li>
+        <li>In the same folder create a new file <code>_all.sass</code> (this is not required, but will help when you add more extensions)</li>
         <li>In this file add this code:
 {% highlight sass %}
 @charset "utf-8"
 @import "switch.sass"
 {% endhighlight %}</li>
       </ul>
-      <p>At the end of the <span class="tag">bulma.sass</span> file, add this line: <span class="tag">@import "sass/extensions/_all"</span></p>
+      <p>At the end of the <code>bulma.sass</code> file, add this line: <code>@import "sass/extensions/_all"</code></p>
 
-      <p>Now, you can just build the bulma project with <span class="tag">npm run build</span>, and the output will be available in the <span class="tag">css folder</span>.</p>
+      <p>Now, you can just build the bulma project with <code>npm run build</code>, and the output will be available in the <code>css folder</code>.</p>
     </div>
 
     {% include anchor.html name="Need an extension ?" %}

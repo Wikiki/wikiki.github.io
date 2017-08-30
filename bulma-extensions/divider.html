@@ -36,12 +36,24 @@ variables:
         </h2>
       </div>
       <div class="column is-narrow">
-        <a class="button is-small is-outlined" href="https://github.com/Wikiki/bulma-divider" target="_blank">
-          <span class="icon">
-              <i class="fa fa-github"></i>
-          </span>
-          <span>View on Github</span>
-        </a>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-divider" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-divider" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.0.1</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     {%
@@ -51,7 +63,7 @@ variables:
 
     <hr>
 
-    <p>You can easily display a message on the divider by adding <span class="tag">data-content</span> attribute to the divider.</p>
+    <p>You can easily display a message on the divider by adding <code>data-content</code> attribute to the divider.</p>
     <br />
     <div class="columns">
       <div class="column">

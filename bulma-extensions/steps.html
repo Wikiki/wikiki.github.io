@@ -198,12 +198,24 @@ variables:
         </h2>
       </div>
       <div class="column is-narrow">
-        <a class="button is-small is-outlined" href="https://github.com/Wikiki/bulma-steps" target="_blank">
-          <span class="icon">
-              <i class="fa fa-github"></i>
-          </span>
-          <span>View on Github</span>
-        </a>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-steps" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-steps" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.0.1</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     {%
@@ -240,6 +252,6 @@ variables:
 
     {% include variables.html %}
 
-    <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <span class="tag">marker</span> name idea and for the sizes mixin declaration (which is smart).</p>
+    <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <code>marker</code> name idea and for the sizes mixin declaration (which is smart).</p>
   </div>
 </section>

@@ -152,12 +152,24 @@ variables:
         </h2>
       </div>
       <div class="column is-narrow">
-        <a class="button is-small is-outlined" href="https://github.com/Wikiki/bulma-pricingtable" target="_blank">
-          <span class="icon">
-              <i class="fa fa-github"></i>
-          </span>
-          <span>View on Github</span>
-        </a>
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-pricingtable" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-pricingtable" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.0.1</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     {%
@@ -174,7 +186,7 @@ variables:
     {% highlight html %}{{pricingtable_example}}{% endhighlight %}
 
     <h3 class="title">Orientation</h3>
-    <h4 class="subtitle">You can choose to display the pricing tables horizontally just by adding <span class="tag">is-horizontal</span> modifier to the pricing-table element.</h4>
+    <h4 class="subtitle">You can choose to display the pricing tables horizontally just by adding <code>is-horizontal</code> modifier to the pricing-table element.</h4>
     <div class="bd-example">
       {{pricingtable_horizontal_example}}
     </div>
