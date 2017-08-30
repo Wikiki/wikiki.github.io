@@ -8,56 +8,158 @@ variables:
   value: $radius
 - name: $slider-track-background
   value: $grey-light
-- name: $slider-thumb-background
-  value: $primary
 - name: $slider-track-radius
   value: $radius
+- name: $slider-track-border
+  value: 0px solid $grey
+- name: $slider-track-shadow
+  value: 0px 0px 0px $grey
+- name: $slider-thumb-background
+  value: $primary
 - name: $slider-thumb-radius
+  value: $radius
+- name: $slider-thumb-border
+  value: 1px solid $white-ter
+- name: $slider-thumb-shadow
+  value: none
+- name: $slider-output-width
+  value: 3rem
+- name: $slider-output-background
+  value: $grey-dark
+- name: $slider-output-radius
   value: $radius
 ---
 
 {% capture slider_example %}
-<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
+{% endcapture %}
+
+{% capture slider_vertical_example %}
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range" orient="vertical">
 {% endcapture %}
 
 {% capture slider_disabled_example %}
-<input class="slider is-fullwidth" min="0" max="100" value="50" type="range" disabled="disabled">
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
 {% endcapture %}
 
 {% capture slider_colors_example %}
-<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-success" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-success" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-warning" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-warning" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-danger" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-danger" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-info" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-info" step="1" min="0" max="100" value="50" type="range">
 {% endcapture %}
 
 {% capture slider_sizes_example %}
-<input class="slider is-fullwidth is-small" min="0" max="100" value="50" type="range" disabled="disabled">
+<input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
 
-<input class="slider is-fullwidth is-small" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-medium" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-medium" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-large" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-large" step="1" min="0" max="100" value="50" type="range">
 {% endcapture %}
 
 {% capture slider_circle_example %}
-<input class="slider is-fullwidth is-small is-circle" min="0" max="100" value="50" type="range" disabled="disabled">
+<input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
 
-<input class="slider is-fullwidth is-small is-circle" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-success is-circle" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-success is-circle" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-medium is-warning is-circle" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-medium is-warning is-circle" step="1" min="0" max="100" value="50" type="range">
 
-<input class="slider is-fullwidth is-large is-danger is-circle" min="0" max="100" value="50" type="range">
+<input class="slider is-fullwidth is-large is-danger is-circle" step="1" min="0" max="100" value="50" type="range">
+{% endcapture %}
+
+{% capture slider_js_html %}
+<input id="sliderWithValue" class="slider has-output is-fullwidth" min="0" max="100" value="50" step="1" type="range">
+<output for="sliderWithValue">50</output>
+{% endcapture %}
+
+{% capture slider_js_tooltip_html %}
+<input id="sliderWithValueTooltip" class="slider has-output-tooltip is-fullwidth" min="0" max="100" value="50" step="1" type="range">
+<output for="sliderWithValueTooltip">50</output>
+{% endcapture %}
+
+{% capture slider_js_code %}
+// Find output DOM associated to the DOM element passed as parameter
+function findOutputForSlider( element ) {
+   var idVal = element.id;
+   outputs = document.getElementsByTagName( 'output' );
+   for( var i = 0; i < outputs.length; i++ ) {
+     if ( outputs[ i ].htmlFor == idVal )
+       return outputs[ i ];
+   }
+}
+
+function getSliderOutputPosition( slider ) {
+  // Update output position
+  var newPlace,
+      minValue;
+
+  var style = window.getComputedStyle( slider, null );
+  // Measure width of range input
+  sliderWidth = parseInt( style.getPropertyValue( 'width' ), 10 );
+
+  // Figure out placement percentage between left and right of input
+  if ( !slider.getAttribute( 'min' ) ) {
+    minValue = 0;
+  } else {
+    minValue = slider.getAttribute( 'min' );
+  }
+  var newPoint = ( slider.value - minValue ) / ( slider.getAttribute( 'max' ) - minValue );
+
+  // Prevent bubble from going beyond left or right (unsupported browsers)
+  if ( newPoint < 0 ) {
+    newPlace = 0;
+  } else if ( newPoint > 1 ) {
+    newPlace = sliderWidth;
+  } else {
+    newPlace = sliderWidth * newPoint;
+  }
+
+  return {
+    'position': newPlace + 'px'
+  }
+}
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  // Get all document sliders
+  var sliders = document.querySelectorAll( 'input[type="range"].slider' );
+  [].forEach.call( sliders, function ( slider ) {
+    var output = findOutputForSlider( slider );
+    if ( output ) {
+      if ( event.target.classList.contains( 'has-output-tooltip' ) ) {
+        // Get new output position
+        var newPosition = getSliderOutputPosition( slider );
+
+        // Set output position
+        output.style[ 'left' ] = newPosition.position;
+      }
+
+      // Add event listener to update output when slider value change
+      slider.addEventListener( 'input', function( event ) {
+        if ( event.target.classList.contains( 'has-output-tooltip' ) ) {
+          // Get new output position
+          var newPosition = getSliderOutputPosition( event.target );
+
+          // Set output position
+          output.style[ 'left' ] = newPosition.position;
+        }
+
+        // Update output with slider value
+        output.value = event.target.value;
+      } );
+    }
+  } );
+} );
 {% endcapture %}
 
 {% include_relative subnav-bulma-extensions.html %}
@@ -134,6 +236,18 @@ variables:
 
     <hr>
 
+    <h3 class="title">Positions</h3>
+    <h4 class="subtitle">vertical</h4>
+    <p>You can display vertical slider by adding <code>orient="vertical"</code> attribute to the range input.</p>
+    <div class="columns">
+      <div class="column">
+        {{slider_vertical_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{slider_vertical_example}}{% endhighlight %}
+      </div>
+    </div>
+
     <h3 class="title">States</h3>
     <h4 class="subtitle">Disabled</h4>
     <div class="columns">
@@ -145,6 +259,34 @@ variables:
       </div>
     </div>
 
+    <h3 class="title">Display value</h3>
+    <p>You can display slider value by adding <code>output</code> DOM element after the slider and class <code>has-output</code> to the slider then use the following JavaScript implementation:</p>
+    <div class="bd-example">
+      {{slider_js_html}}
+    </div>
+    <br/>
+    <p>You can display the output as a tooltip by changing the class <code>has-output</code> to <code>has-output-tooltip</code> and use the following JavaScript implementation:</p>
+    <div class="bd-example">
+      {{slider_js_tooltip_html}}
+    </div>
+
+    <div id="sliderJsExample" class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation which update the output value associated to the slider.
+          </p>
+
+          {% highlight html %}{{ slider_js_html }}{% endhighlight %}
+
+          {% highlight javascript %}{{ slider_js_code }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
+
     {% include variables.html %}
+
+    <script type="text/javascript" src="./js/slider.js"></script>
   </div>
 </section>
