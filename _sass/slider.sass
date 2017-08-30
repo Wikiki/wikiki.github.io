@@ -1,5 +1,5 @@
 $slider-radius: $radius !default
-$slider-track-background: $grey-light !default
+$slider-track-background: $grey-lighter !default
 $slider-track-radius: $radius !default
 $slider-track-border: 0px solid $grey !default
 $slider-track-shadow: 0px 0px 0px $grey !default
@@ -83,12 +83,12 @@ input[type=range]
 
       &.has-output
         display: inline-block
-        width: calc(100% - ( #{$slider-output-width + 1.3rem } ))
+        width: calc(100% - ( #{$slider-output-width + 1.2rem } ))
         + output
           display: inline-block
           position: relative
-          margin-left: .85rem
-          top: -.6rem
+          margin-left: .75rem
+          top: -.75rem
 
       &.has-output-tooltip
         display: block
@@ -185,15 +185,18 @@ input[type=range]
 
     &:disabled
       opacity: 0.5
+      cursor: not-allowed
       &::-webkit-slider-thumb
+        cursor: not-allowed
         -webkit-transform: scale(1)
         transform: scale(1)
       &::-moz-range-thumb
+        cursor: not-allowed
         transform: scale(1)
       &::-ms-thumb
+        cursor: not-allowed
         -ms-transform: scale(1)
         transform: scale(1)
-
 
     +slider-size($size-normal)
     &.is-small
