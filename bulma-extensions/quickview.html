@@ -1,0 +1,169 @@
+---
+title: QuickView
+layout: default
+doc-tab: bulma-extensions
+doc-subtab: quickview
+npm-version: 0.0.1
+variables:
+- name: $quickview-shadow
+  value: 5px 0px 13px 3px rgba( 0, 0, 0, 0.1 )
+- name: $quickview-divider
+  value: 1px solid $grey-lighter
+---
+
+{% capture quickview_js_html %}
+<div id="quickviewDefault" class="quickview">
+  <header class="quickview-header">
+    <p class="title">Quickview title</p>
+    <span class="delete" data-dismiss="quickview"></span>
+  </header>
+
+  <div class="quickview-body">
+    <div class="quickview-block">
+      ...
+    </div>
+  </div>
+
+  <footer class="quickview-footer">
+
+  </footer>
+</div>
+
+<button class="button is-primary" data-show="quickview" data-target="quickviewDefault">Show quickview</button>
+{% endcapture %}
+
+{% capture quickview_js_code %}
+function closest(el, selector) {
+  var matchesFn;
+
+  // find vendor prefix
+  [ 'matches', 'webkitMatchesSelector', 'mozMatchesSelector', 'msMatchesSelector', 'oMatchesSelector' ].some( function( fn ) {
+    if ( typeof document.body[ fn ] == 'function' ) {
+      matchesFn = fn;
+      return true;
+    }
+    return false;
+  } );
+
+  var parent;
+
+  // traverse parents
+  while ( el ) {
+      parent = el.parentElement;
+      if ( parent && parent[ matchesFn ]( selector ) ) {
+        return parent;
+      }
+      el = parent;
+  }
+
+  return null;
+}
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  // Get all document sliders
+  var showQuickview = document.querySelectorAll( '[data-show="quickview"]' );
+  [].forEach.call( showQuickview, function ( show ) {
+    var quickview = document.getElementById( show.dataset[ 'target' ] );
+    if ( quickview ) {
+      // Add event listener to update output when slider value change
+      show.addEventListener( 'click', function( event ) {
+        quickview.classList.add( 'is-active' );
+      } );
+    }
+  } );
+
+  // Get all document sliders
+  var dismissQuickView = document.querySelectorAll( '[data-dismiss="quickview"]' );
+  [].forEach.call( dismissQuickView, function ( dismiss ) {
+    var quickview = closest( dismiss, '.quickview' );
+    if ( quickview ) {
+      // Add event listener to update output when slider value change
+      dismiss.addEventListener( 'click', function( event ) {
+        quickview.classList.remove( 'is-active' );
+      } );
+    }
+  } );
+} );
+
+{% endcapture %}
+
+{% include_relative subnav-bulma-extensions.html %}
+
+<div id="quickviewDefault" class="quickview">
+  <header class="quickview-header">
+    <p class="title">Quickview title</p>
+    <span class="delete" data-dismiss="quickview"></span>
+  </header>
+
+  <div class="quickview-body">
+    <div class="quickview-block">
+      ...
+    </div>
+  </div>
+
+  <footer class="quickview-footer">
+
+  </footer>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+          Make classic <strong>checkbox</strong> and <strong>radio</strong> more sexy in different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-quickview" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-quickview" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+      variables=true
+    %}
+
+    <hr>
+
+    <button class="button is-primary" data-show="quickview" data-target="quickviewDefault">Show quickview</button>
+
+    <hr>
+
+    <div id="squickviewsExample" class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation to display / close the quickview.
+          </p>
+
+          {% highlight html %}{{ quickview_js_html }}{% endhighlight %}
+
+          {% highlight javascript %}{{ quickview_js_code }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
+
+    {% include variables.html %}
+  </div>
+</section>
+
+<script type="text/javascript" src="./js/quickview.js"></script>
