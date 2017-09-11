@@ -3,6 +3,9 @@ title: Page loader
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: pageloader
+variables:
+- name: $pageloader-opacity
+  value: 1
 ---
 
 {% capture pageloader_example %}
@@ -57,6 +60,8 @@ doc-subtab: pageloader
         {% highlight html %}{{pageloader_example}}{% endhighlight %}
       </div>
     </div>
+
+    {% include variables.html %}
 
     <div class="pageloader"></div>
   </div>
