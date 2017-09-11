@@ -4,11 +4,20 @@ layout: default
 doc-tab: bulma-extensions
 doc-subtab: tooltip
 npm-version: 0.0.2
+variables:
+- name: $tooltip-background-color
+  value: $grey-dark
 ---
 
 {% capture tooltip_example %}
 <div class="column">
   <button class="button is-primary tooltip" data-tooltip="Tooltip Text">Tooltip</button>
+</div>
+{% endcapture %}
+
+{% capture tooltip_sizes_example %}
+<div class="column">
+  <button class="button is-primary tooltip is-tooltip-multiline" data-tooltip="Tooltip with a long Text. So we use is-tooltip-multiline modifier to force multiline display.">Multiline Tooltip</button>
 </div>
 {% endcapture %}
 
@@ -63,6 +72,8 @@ npm-version: 0.0.2
     </div>
     {%
       include meta.html
+      sizes=true
+      variables=true
     %}
 
     <hr>
@@ -80,7 +91,6 @@ npm-version: 0.0.2
 
     <h3 class="title">Positions</h3>
     <h4 class="subtitle">You can use <code>.is-tooltip-top</code> <code>.is-tooltip-right</code> <code>.is-tooltip-bottom</code> <code>.is-tooltip-left</code> modifiers to change the tooltip position</h4>
-    <h4 class="subtitle">You can force multine display by using <code>.is-tooltip-multiline</code> modifier.</h4>
     <div class="columns">
       <div class="column">
         {{tooltip_positions_example}}
@@ -89,5 +99,18 @@ npm-version: 0.0.2
         {% highlight html %}{{tooltip_positions_example}}{% endhighlight %}
       </div>
     </div>
+
+    {% include anchor.html name="Sizes" %}
+    <h4 class="subtitle">You can force multine display by using <code>.is-tooltip-multiline</code> modifier.</h4>
+    <div class="columns">
+      <div class="column">
+        {{tooltip_sizes_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{tooltip_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include variables.html %}
   </div>
 </section>
