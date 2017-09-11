@@ -3,6 +3,7 @@ title: Switch
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: switch
+npm-version: 0.0.1
 variables:
 - name: $switch-background
   value: $grey-light
@@ -210,7 +211,7 @@ variables:
           <div class="control">
             <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-switch" target="_blank">
               <span class="tag">NPM Package</span>
-              <span class="tag is-success">0.0.1</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
             </a>
           </div>
         </div>
@@ -233,6 +234,12 @@ variables:
         {% highlight html %}{{switch_example}}{% endhighlight %}
       </div>
     </div>
+
+    <div class="has-text-centered has-text-danegr">
+      <p>Don't forget to set <code>id</code> attribute on input and <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
+    </div>
+    <br />
+
     <div class="notification is-warning has-text-centered">
       <p>Please note that due to <strong>CSS limitation</strong> the structure of the checkbox is different of the one provided as exxample in Bulma's documentation.<br /><i>(Input is not wrapped by the label)</i></p>
     </div>

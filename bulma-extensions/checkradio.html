@@ -3,6 +3,7 @@ title: Checkradio
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: checkradio
+npm-version: 0.0.4
 variables:
 - name: $checkbox-radius
   value: $radius
@@ -105,6 +106,80 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture checkradio_noborder_example %}
+<div class="field">
+  <input class="is-checkbox has-no-border" id="exampleCheckboxNoBorderDefault" type="checkbox" name="exampleCheckboxNoBorderDefault" checked="checked">
+  <label for="exampleCheckboxNoBorderDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-no-border is-success" id="exampleCheckboxNoBorderSuccess" type="checkbox" name="exampleCheckboxNoBorderSuccess" checked="checked">
+  <label for="exampleCheckboxNoBorderSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-no-border is-warning" id="exampleCheckboxNoBorderWarning" type="checkbox" name="exampleCheckboxNoBorderWarning" checked="checked">
+  <label for="exampleCheckboxNoBorderWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-no-border is-danger" id="exampleCheckboxNoBorderDanger" type="checkbox" name="exampleCheckboxNoBorderDanger" checked="checked">
+  <label for="exampleCheckboxNoBorderDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-no-border is-info" id="exampleCheckboxNoBorderInfo" type="checkbox" name="exampleCheckboxNoBorderInfo" checked="checked">
+  <label for="exampleCheckboxNoBorderInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkbox has-no-border is-white" id="exampleCheckboxNoBorderWhite" type="checkbox" name="exampleCheckboxNoBorderWhite" checked="checked">
+    <label for="exampleCheckboxNoBorderWhite">Checkbox - white</label>
+
+    <input class="is-checkbox has-no-border is-white" id="exampleCheckboxNoBorderWhite2" type="checkbox" name="exampleCheckboxNoBorderWhite2">
+    <label for="exampleCheckboxNoBorderWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkradio_backgroundColor_example %}
+<div class="field">
+  <input class="is-checkbox has-background-color" id="exampleCheckboxBackgroundColorDefault" type="checkbox" name="exampleCheckboxBackgroundColorDefault" checked="checked">
+  <label for="exampleCheckboxBackgroundColorDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-background-color is-success" id="exampleCheckboxBackgroundColorSuccess" type="checkbox" name="exampleCheckboxBackgroundColorSuccess" checked="checked">
+  <label for="exampleCheckboxBackgroundColorSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-background-color is-warning" id="exampleCheckboxBackgroundColorWarning" type="checkbox" name="exampleCheckboxBackgroundColorWarning" checked="checked">
+  <label for="exampleCheckboxBackgroundColorWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-background-color is-danger" id="exampleCheckboxBackgroundColorDanger" type="checkbox" name="exampleCheckboxBackgroundColorDanger" checked="checked">
+  <label for="exampleCheckboxBackgroundColorDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox has-background-color is-info" id="exampleCheckboxBackgroundColorInfo" type="checkbox" name="exampleCheckboxBackgroundColorInfo" checked="checked">
+  <label for="exampleCheckboxBackgroundColorInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkbox has-background-color is-white" id="exampleCheckboxBackgroundColorWhite" type="checkbox" name="exampleCheckboxBackgroundColorWhite" checked="checked">
+    <label for="exampleCheckboxBackgroundColorWhite">Checkbox - white</label>
+
+    <input class="is-checkbox has-background-color is-white" id="exampleCheckboxBackgroundColorWhite2" type="checkbox" name="exampleCheckboxBackgroundColorWhite2">
+    <label for="exampleCheckboxBackgroundColorWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
 {% capture checkradio_sizes_example %}
 <div class="field">
   <input class="is-checkbox is-small" id="exampleCheckboxSmall" type="checkbox" name="exampleCheckboxSmall" checked="checked">
@@ -185,7 +260,7 @@ variables:
           <div class="control">
             <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-checkradio" target="_blank">
               <span class="tag">NPM Package</span>
-              <span class="tag is-success">0.0.2</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
             </a>
           </div>
         </div>
@@ -208,6 +283,12 @@ variables:
         {% highlight html %}{{checkradio_example}}{% endhighlight %}
       </div>
     </div>
+
+    <div class="has-text-centered has-text-danegr">
+      <p>Don't forget to set <code>id</code> attribute on input and <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
+    </div>
+    <br />
+
     <div class="notification is-warning has-text-centered">
       <p>Please note that due to <strong>CSS limitation</strong> the structure of the checkbox is different of the one provided as exxample in Bulma's documentation.<br /><i>(Input is not wrapped by the label)</i></p>
     </div>
@@ -237,12 +318,38 @@ variables:
 
     <h3 class="title">Styles</h3>
     <h4 class="subtitle">Circle</h4>
+    <p>You can add <code>is-circle</code> modifier to the input to get a rounded checkbox</p>
+    <br />
     <div class="columns">
       <div class="column">
         {{checkradio_colors_circle_example}}
       </div>
       <div class="column">
         {% highlight html %}{{checkradio_colors_circle_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">No border</h4>
+    <p>Adding <code>has-no-border</code> modifier to the input will remove the checkbox border</p>
+    <br />
+    <div class="columns">
+      <div class="column">
+        {{checkradio_noborder_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_noborder_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Background colored</h4>
+    <p>You can add <code>has-background-color</code> modifier to the input to get the checkbox background color impacted</p>
+    <br />
+    <div class="columns">
+      <div class="column">
+        {{checkradio_backgroundColor_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_backgroundColor_example}}{% endhighlight %}
       </div>
     </div>
 
@@ -258,6 +365,8 @@ variables:
         {% highlight html %}{{checkradio_disabled_example}}{% endhighlight %}
       </div>
     </div>
+
+    <hr>
 
     <h3 class="title">Radio</h3>
     <div class="columns">
