@@ -3,7 +3,7 @@ title: Timeline
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: timeline
-npm-version: 0.0.1
+npm-version: 0.0.2
 variables:
 - name: $timeline-marker-background-color
   value: $white
@@ -34,10 +34,8 @@ variables:
     </div>
   </li>
   <li class="timeline-item">
-    <div class="timeline-marker">
-      <figure class="image is-32x32">
-        <img src="http://bulma.io/images/placeholders/32x32.png">
-      </figure>
+    <div class="timeline-marker is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
     </div>
     <div class="timeline-content">
       <p class="heading">February 2016</p>
@@ -67,6 +65,45 @@ variables:
   <li class="timeline-header">
     <span class="tag is-medium is-primary">Start</span>
   </li>
+  <li class="timeline-item">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </li>
+  <li class="timeline-item">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture timeline_colors_line_example %}
+<ul class="timeline">
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </li>
   <li class="timeline-item is-primary">
     <div class="timeline-marker"></div>
     <div class="timeline-content">
@@ -75,10 +112,8 @@ variables:
     </div>
   </li>
   <li class="timeline-item is-warning">
-    <div class="timeline-marker">
-      <figure class="image is-32x32">
-        <img src="http://bulma.io/images/placeholders/32x32.png">
-      </figure>
+    <div class="timeline-marker is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
     </div>
     <div class="timeline-content">
       <p class="heading">February 2016</p>
@@ -90,6 +125,45 @@ variables:
   </li>
   <li class="timeline-item is-danger">
     <div class="timeline-marker is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture timeline_colors_both_example %}
+<ul class="timeline">
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </li>
+  <li class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </li>
+  <li class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
       <i class="fa fa-flag"></i>
     </div>
     <div class="timeline-content">
@@ -153,12 +227,35 @@ variables:
     </div>
 
     {% include anchor.html name="Colors" %}
+    <h4 class="subtitle">You can use color modifiers on timeline-marker to change its color</h4>
     <div class="columns">
       <div class="column">
         {{timeline_colors_example}}
       </div>
       <div class="column">
         {% highlight html %}{{timeline_colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <br />
+    <h4 class="subtitle">You can use color modifiers on timeline-item to change the line color</h4>
+    <div class="columns">
+      <div class="column">
+        {{timeline_colors_line_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{timeline_colors_line_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <br />
+    <h4 class="subtitle">You can even use them both together</h4>
+    <div class="columns">
+      <div class="column">
+        {{timeline_colors_both_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{timeline_colors_both_example}}{% endhighlight %}
       </div>
     </div>
 
