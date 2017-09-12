@@ -3,12 +3,10 @@ title: Badge
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: badge
-npm-version: 0.0.1
+npm-version: 0.0.2
 variables:
-- name: $badge-shadow
-  value: 0 0 0 .1rem $white
-- name: $badge-font-size
-  value: $size-7
+- name: $badge-border-size
+  value: .1rem
 - name: $badge-border-radius
   value: 1rem
 ---
@@ -18,31 +16,45 @@ variables:
 {% endcapture %}
 
 {% capture badge_colors_example %}
-<div class="block">
-  <span class="badge" data-badge="">
-    Notifications
-  </span>
-  <span class="badge is-badge-success" data-badge="">
-    Notifications
-  </span>
-  <span class="badge is-badge-warning" data-badge="">
-    Notifications
-  </span>
-  <span class="badge is-badge-danger" data-badge="">
-    Notifications
-  </span>
+<div class="columns">
+  <div class="column">
+    <span class="badge" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-success" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-warning" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-danger" data-badge="">
+      Notifications
+    </span>
+  </div>
 </div>
 
-<div class="block">
-  <span class="badge" data-badge="8">
-    Notifications
-  </span>
-  <span class="badge is-badge-success" data-badge="88">
-    Notifications
-  </span>
-  <span class="badge is-badge-danger" data-badge="888">
-    Notifications
-  </span>
+<div class="columns">
+  <div class="column">
+    <span class="badge" data-badge="8">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-success" data-badge="88">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-danger" data-badge="888">
+      Notifications
+    </span>
+  </div>
 </div>
 
 <div class="block">
@@ -53,6 +65,84 @@ variables:
 <div class="block">
   <button class="button is-primary badge" data-badge="">Button</button>
   <button class="button is-info badge" data-badge="8">Button</button>
+</div>
+{% endcapture %}
+
+{% capture badge_sizes_example %}
+<div class="columns">
+  <div class="column">
+    <span class="badge is-badge-success is-badge-small" data-badge="10">
+      Small badge
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-success" data-badge="10">
+      Normal badge
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-warning is-badge-medium" data-badge="10">
+      Medium badge
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-danger is-badge-large" data-badge="10">
+      Large badge
+    </span>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture badge_outlined_example %}
+<div class="columns">
+  <div class="column">
+    <span class="badge is-badge-outlined" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-success is-badge-outlined" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-warning is-badge-outlined" data-badge="">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-danger is-badge-outlined" data-badge="">
+      Notifications
+    </span>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <span class="badge is-badge-outlined" data-badge="8">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-success is-badge-outlined" data-badge="88">
+      Notifications
+    </span>
+  </div>
+  <div class="column">
+    <span class="badge is-badge-danger is-badge-outlined" data-badge="888">
+      Notifications
+    </span>
+  </div>
+</div>
+
+<div class="block">
+  <button class="button badge is-badge-outlined" data-badge="">Button</button>
+  <button class="button badge is-badge-outlined" data-badge="8">Button</button>
+</div>
+
+<div class="block">
+  <button class="button is-primary badge is-badge-outlined" data-badge="">Button</button>
+  <button class="button is-info badge is-badge-outlined" data-badge="8">Button</button>
 </div>
 {% endcapture %}
 
@@ -91,6 +181,7 @@ variables:
     {%
       include meta.html
       colors=true
+      sizes=true
       variables=true
     %}
 
@@ -112,6 +203,27 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{badge_colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Sized" %}
+    <div class="columns">
+      <div class="column">
+        {{badge_sizes_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{badge_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Styles" %}
+    <h4 class="subtitle">You can display an outlined badge by using <code>.is-badge-outlined</code> modifier.</h4>
+    <div class="columns">
+      <div class="column">
+        {{badge_outlined_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{badge_outlined_example}}{% endhighlight %}
       </div>
     </div>
 
