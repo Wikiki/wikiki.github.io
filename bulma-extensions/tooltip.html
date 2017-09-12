@@ -40,6 +40,26 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture tooltip_colors_example %}
+<div class="columns text-center">
+  <div class="column">
+    <button class="button is-tooltip-primary tooltip" data-tooltip="Tooltip Text">Primary tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-tooltip-info tooltip" data-tooltip="Tooltip Text">Info tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-tooltip-success tooltip" data-tooltip="Tooltip Text">Success tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-tooltip-warning tooltip" data-tooltip="Tooltip Text">Warning tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-tooltip-danger tooltip" data-tooltip="Tooltip Text">Danger tooltip</button>
+  </div>
+</div>
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -74,6 +94,7 @@ variables:
     </div>
     {%
       include meta.html
+      colors=true
       sizes=true
       variables=true
     %}
@@ -110,6 +131,17 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{tooltip_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors" %}
+    <h4 class="subtitle">You can use color modifiers to change the tooltip background color.</h4>
+    <div class="columns">
+      <div class="column">
+        {{tooltip_colors_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{tooltip_colors_example}}{% endhighlight %}
       </div>
     </div>
 
