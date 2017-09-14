@@ -3,7 +3,7 @@ title: Checkradio
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: checkradio
-npm-version: 0.0.4
+npm-version: 0.0.5
 variables:
 - name: $checkbox-radius
   value: $radius
@@ -21,6 +21,19 @@ variables:
   <label for="exampleRadioInline1">Option 1</label>
   <input class="is-radio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
   <label for="exampleRadioInline2">Option 2</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_rtl_example %}
+<div class="field">
+  <input class="is-checkbox is-rtl" id="exampleRtlCheckbox" type="checkbox" name="exampleRtlCheckbox" checked="checked">
+  <label for="exampleRtlCheckbox">Check me</label>
+</div>
+<div class="field">
+  <input class="is-radio is-rtl" id="exampleRtlRadioInline1" type="radio" name="exampleRtlRadioInline" checked="checked">
+  <label for="exampleRtlRadioInline1">Option 1</label>
+  <input class="is-radio is-rtl" id="exampleRtlRadioInline2" type="radio" name="exampleRtlRadioInline">
+  <label for="exampleRtlRadioInline2">Option 2</label>
 </div>
 {% endcapture %}
 
@@ -281,6 +294,18 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{checkradio_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+    <p>Use <code>is-rtl</code> to display a right-to-left design of ccheckbox or radio (text at left)</p>
+    <br />
+    <div class="columns">
+      <div class="column">
+        {{checkradio_rtl_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_rtl_example}}{% endhighlight %}
       </div>
     </div>
 
