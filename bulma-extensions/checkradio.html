@@ -3,12 +3,14 @@ title: Checkradio
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: checkradio
-npm-version: 0.0.7
+npm-version: 0.0.8
 variables:
 - name: $checkbox-radius
   value: $radius
 - name: $checkbox-border
-  value: .1rem solid $grey-light
+  value: .1rem solid $grey-lighter
+- name: $checkbox-block-background
+  value: $white-ter
 - name: $checkradio-focus
   value: 1px dotted $grey-light
 ---
@@ -117,6 +119,43 @@ variables:
 
     <input class="is-checkbox is-white" id="exampleCheckboxWhite2" type="checkbox" name="exampleCheckboxWhite2">
     <label for="exampleCheckboxWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkradio_block_colors_example %}
+<div class="field">
+  <input class="is-checkbox is-block" id="exampleCheckboxBlockDefault" type="checkbox" name="exampleCheckboxBlockDefault" checked="checked">
+  <label for="exampleCheckboxBlockDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-block is-success" id="exampleCheckboxBlockSuccess" type="checkbox" name="exampleCheckboxBlockSuccess" checked="checked">
+  <label for="exampleCheckboxBlockSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-block is-warning" id="exampleCheckboxBlockWarning" type="checkbox" name="exampleCheckboxBlockWarning" checked="checked">
+  <label for="exampleCheckboxBlockWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-block is-danger" id="exampleCheckboxBlockDanger" type="checkbox" name="exampleCheckboxBlockDanger" checked="checked">
+  <label for="exampleCheckboxBlockDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkbox is-block is-info" id="exampleCheckboxBlockInfo" type="checkbox" name="exampleCheckboxBlockInfo" checked="checked">
+  <label for="exampleCheckboxBlockInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkbox is-block is-white" id="exampleCheckboxBlockWhite" type="checkbox" name="exampleCheckboxBlockWhite" checked="checked">
+    <label for="exampleCheckboxBlockWhite">Checkbox - white</label>
+
+    <input class="is-checkbox is-block is-white" id="exampleCheckboxBlockWhite2" type="checkbox" name="exampleCheckboxBlockWhite2">
+    <label for="exampleCheckboxBlockWhite2">Checkbox - white</label>
   </div>
 </div>
 {% endcapture %}
@@ -353,6 +392,18 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{checkradio_colors_circle_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Block</h4>
+    <p>You can add <code>is-block</code> modifier to the input to get a full colored checkbox</p>
+    <br />
+    <div class="columns">
+      <div class="column">
+        {{checkradio_block_colors_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{checkradio_block_colors_example}}{% endhighlight %}
       </div>
     </div>
 
