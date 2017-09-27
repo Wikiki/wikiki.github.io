@@ -3,7 +3,7 @@ title: Calendar
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: calendar
-npm-version: 0.0.1
+npm-version: 0.0.2
 variables:
 - name: $calendar-border
   value: .1rem solid $grey-lighter
@@ -54,7 +54,7 @@ variables:
       <div class="calendar-date"><button class="date-item">2</button></div>
       <div class="calendar-date"><button class="date-item">3</button></div>
       <div class="calendar-date tooltip" data-tooltip="Today"><button class="date-item is-today">4</button></div>
-      <div class="calendar-date tooltip" data-tooltip="Not available"><button class="date-item" disabled="">5</button></div>
+      <div class="calendar-date tooltip" data-tooltip="Not available" disabled=""><button class="date-item">5</button></div>
       <div class="calendar-date"><button class="date-item">6</button></div>
       <div class="calendar-date"><button class="date-item">7</button></div>
       <div class="calendar-date tooltip" data-tooltip="You have appointments"><button class="date-item">8</button></div>
@@ -125,7 +125,7 @@ variables:
       <div class="calendar-date"><button class="date-item">2</button></div>
       <div class="calendar-date"><button class="date-item">3</button></div>
       <div class="calendar-date tooltip" data-tooltip="Today"><button class="date-item is-today">4</button></div>
-      <div class="calendar-date"><button class="date-item" disabled="">5</button></div>
+      <div class="calendar-date" disabled=""><button class="date-item">5</button></div>
       <div class="calendar-date"><button class="date-item">6</button></div>
       <div class="calendar-date"><button class="date-item">7</button></div>
       <div class="calendar-date tooltip" data-tooltip="You have appointments">
@@ -180,6 +180,10 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture calendar_datepicker_example %}
+<input id="datepickerDemo" class="input" type="text">
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -222,7 +226,7 @@ variables:
 
     <div class="bd-example">
       <div class="columns is-mobile is-centered">
-        <div class="column is-half is-narrow">
+        <div class="column is-4 is-narrow">
           {{calendar_example}}
         </div>
       </div>
@@ -236,6 +240,29 @@ variables:
     </div>
     {% highlight html %}{{calendar_sizes_example}}{% endhighlight %}
 
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation to handle a DatePicker input.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bd-example">
+      {{calendar_datepicker_example}}
+    </div>
+    {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
+
     {% include variables.html %}
+
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript">
+    document.addEventListener( 'DOMContentLoaded', function () {
+      var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
+    } );
+    </script>
   </div>
 </section>
