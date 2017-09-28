@@ -184,6 +184,10 @@ variables:
 <input id="datepickerDemo" class="input" type="text">
 {% endcapture %}
 
+{% capture calendar_datepicker_overlay_example %}
+<input id="datepickerDemo2" class="input" type="text">
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -256,12 +260,20 @@ variables:
     </div>
     {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
 
+    <div class="bd-example">
+      {{calendar_datepicker_overlay_example}}
+    </div>
+    {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
+
     {% include variables.html %}
 
     <script type="text/javascript" src="./js/datepicker.js"></script>
     <script type="text/javascript">
     document.addEventListener( 'DOMContentLoaded', function () {
       var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
+      var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+        overlay: true
+      } );
     } );
     </script>
   </div>
