@@ -72,6 +72,9 @@ class DatePicker {
     if ( this.options.overlay ) {
       var datePickerOverlay = document.createElement( 'div' );
       datePickerOverlay.classList.add( 'is-overlay' );
+      datePickerOverlay.addEventListener( 'click', function( e ) {
+        _this.hide();
+      } );
       this.datePickerContainer.appendChild( datePickerOverlay );
     }
 
@@ -80,6 +83,7 @@ class DatePicker {
 
     this.element.addEventListener( 'click', function( e ) {
       e.preventDefault();
+      e.stopPropagation();
 
       if ( _this.open ) {
         _this.hide();
@@ -88,6 +92,10 @@ class DatePicker {
         _this.show();
         _this.open = true;
       }
+    } );
+    document.addEventListener( 'click', function( e ) {
+
+      _this.hide();
     } );
   }
 
@@ -106,7 +114,6 @@ class DatePicker {
   renderDay( day, month, year, isSelected, isToday, isDisabled, isEmpty, isBetween, isSelectedIn, isSelectedOut ) {
     var _this = this;
     var newDayContainer = document.createElement( 'div' );
-    var newDay = document.createElement( 'div' );
     var newDayButton = document.createElement( 'button' );
 
     newDayButton.classList.add( 'date-item' );
@@ -123,12 +130,10 @@ class DatePicker {
       }
     } );
 
-    newDay.appendChild( newDayButton );
+    // newDay.appendChild( newDayButton );
     newDayContainer.classList.add( 'calendar-date' );
-    newDayContainer.appendChild( newDay );
+    newDayContainer.appendChild( newDayButton );
 
-
-    newDay.classList.add( 'calendar-date' );
     if ( isDisabled ) {
       newDayContainer.setAttribute( 'disabled', 'disabled' );
     }
