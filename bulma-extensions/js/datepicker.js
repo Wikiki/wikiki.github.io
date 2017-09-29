@@ -119,6 +119,7 @@ class DatePicker {
     newDayButton.classList.add( 'date-item' );
     newDayButton.innerHTML = day;
     newDayButton.addEventListener( 'click', function( e ) {
+      e.stopPropagation();
       if ( typeof _this.options.onSelect != 'undefined' &&
           _this.options.onSelect != null &&
           _this.options.onSelect ) {
@@ -172,6 +173,7 @@ class DatePicker {
     this.previousButton.appendChild( previousButtonIcon );
     this.previousButton.addEventListener( 'click', function( e ) {
       e.preventDefault();
+      e.stopPropagation();
 
       _this.prevMonth();
     } );
@@ -191,6 +193,7 @@ class DatePicker {
     this.nextButton.appendChild( nextButtonIcon );
     this.nextButton.addEventListener( 'click', function( e ) {
       e.preventDefault();
+      e.stopPropagation();
 
       _this.nextMonth();
     } );
