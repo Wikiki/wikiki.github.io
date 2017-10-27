@@ -21,6 +21,15 @@ variables:
   value: $primary
 ---
 
+{% capture calendar_js_code %}
+document.addEventListener( 'DOMContentLoaded', function () {
+  var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
+  var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+    overlay: true
+  } );
+} );
+{% endcapture %}
+
 {% capture calendar_example %}
 <div class="calendar">
   <div class="calendar-nav">
@@ -254,6 +263,8 @@ variables:
         </div>
       </div>
     </div>
+
+    {% highlight javascript %}{{calendar_js_code}}{% endhighlight %}
 
     <div class="bd-example">
       {{calendar_datepicker_example}}
