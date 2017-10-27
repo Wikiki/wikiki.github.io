@@ -3,7 +3,7 @@ title: Timeline
 layout: default
 doc-tab: bulma-extensions
 doc-subtab: timeline
-npm-version: 0.0.4
+npm-version: 1.0.0
 variables:
 - name: $timeline-marker-background-color
   value: $white
@@ -177,6 +177,81 @@ variables:
 </ul>
 {% endcapture %}
 
+{% capture timeline_centered_example %}
+<ul class="timeline is-centered">
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </li>
+  <li class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture timeline_rtl_example %}
+<ul class="timeline is-rtl">
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </li>
+  <li class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </li>
+  <li class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </li>
+  <li class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </li>
+</ul>
+{% endcapture %}
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -256,6 +331,28 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{timeline_colors_both_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <br />
+    <h4 class="subtitle">You can use <code>is-centered</code> modifiers on timeline</h4>
+    <div class="columns">
+      <div class="column">
+        {{timeline_centered_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{timeline_centered_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <br />
+    <h4 class="subtitle">You can use <code>is-rtl</code> modifiers on timeline</h4>
+    <div class="columns">
+      <div class="column">
+        {{timeline_rtl_example}}
+      </div>
+      <div class="column">
+        {% highlight html %}{{timeline_rtl_example}}{% endhighlight %}
       </div>
     </div>
 
