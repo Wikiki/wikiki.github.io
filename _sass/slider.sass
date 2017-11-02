@@ -103,8 +103,9 @@ input[type=range]
           top: -.1rem
 
     &[orient="vertical"]
-      -webkit-appearance: slider-vertical
-      writing-mode: bt-lr
+      -webkit-appearance: none
+      transform: rotate(270deg)
+      -moz-transform: rotate(270deg)
       &::-webkit-slider-runnable-track
         height: 100%
       &::-moz-range-track
