@@ -1,0 +1,77 @@
+---
+title: IconPicker
+layout: default
+doc-tab: bulma-extensions
+doc-subtab: iconpicker
+npm-version: 0.1.0
+---
+
+{% capture iconpicker_js_html %}
+<input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+
+<script type="text/javascript" src="./js/iconPicker.js"></script>
+{% endcapture %}
+
+{% include_relative subnav-bulma-extensions.html %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+          Display an input as an Icon Picker to ease the user icon selection.
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-iconpicker" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-iconpicker" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+    %}
+
+    <hr>
+
+    <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+
+    <hr>
+
+    <div id="squickviewsExample" class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation to display / close the IconPicker.
+          </p>
+          <p>
+            You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.
+          </p>
+
+          {% highlight html %}{{ iconpicker_js_html }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
+
+    {% include variables.html %}
+  </div>
+</section>
+
+<script type="text/javascript" src="./js/iconPicker.js"></script>
