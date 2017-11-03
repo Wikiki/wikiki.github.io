@@ -68,7 +68,14 @@ iconPickerOptions = {
 
     <hr>
 
-    <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+    <div class="columns">
+      <div class="column">
+        <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+      </div>
+      <div class="column">
+        <p>You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.</p>
+      </div>
+    </div>
 
     <hr>
 
@@ -78,9 +85,6 @@ iconPickerOptions = {
         <div class="content">
           <p>
             The extension comes with a JavaScript implementation to display / close the IconPicker.
-          </p>
-          <p>
-            You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.
           </p>
 
           {% highlight html %}{{ iconpicker_js_html }}{% endhighlight %}
