@@ -12,6 +12,24 @@ npm-version: 0.1.0
 <script type="text/javascript" src="./js/iconPicker.js"></script>
 {% endcapture %}
 
+{% capture iconpicker_js_customize %}
+iconPickerOptions = {
+  iconSets: [ {
+    name: 'simpleLine', // Name displayed on tab
+    css: 'https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css', // CSS url containing icons rules
+    prefix: 'icon-', // CSS rules prefix to identify icons
+    displayPrefix: ''
+  },
+  {
+    name: 'fontAwesome', // Name displayed on tab
+    css: 'https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css', // CSS url containing icons rules
+    prefix: 'fa-', // CSS rules prefix to identify icons
+    displayPrefix: 'fa fa-icon'
+  } ]
+};
+{% endcapture %}
+
+
 {% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
@@ -66,6 +84,9 @@ npm-version: 0.1.0
           </p>
 
           {% highlight html %}{{ iconpicker_js_html }}{% endhighlight %}
+
+          <p>you can customize icon sets by overwriting <code>iconPickerOptions</code> variable like following:</p>
+          {% highlight html %}{{ iconpicker_js_customize }}{% endhighlight %}
         </div>
       </div>
     </div>
