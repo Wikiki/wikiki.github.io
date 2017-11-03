@@ -6,9 +6,11 @@ doc-subtab: iconpicker
 npm-version: 0.1.0
 ---
 
-{% capture iconpicker_js_html %}
+{% capture iconpicker_html %}
 <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+{% endcapture %}
 
+{% capture iconpicker_js %}
 <script type="text/javascript" src="./js/iconPicker.js"></script>
 {% endcapture %}
 
@@ -73,6 +75,7 @@ iconPickerOptions = {
         <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
       </div>
       <div class="column">
+        {% highlight html %}{{ iconpicker_html }}{% endhighlight %}
         <p>You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.</p>
       </div>
     </div>
@@ -87,10 +90,10 @@ iconPickerOptions = {
             The extension comes with a JavaScript implementation to display / close the IconPicker.
           </p>
 
-          {% highlight html %}{{ iconpicker_js_html }}{% endhighlight %}
+          {% highlight javascript %}{{ iconpicker_js }}{% endhighlight %}
 
           <p>you can customize icon sets by overwriting <code>iconPickerOptions</code> variable like following:</p>
-          {% highlight html %}{{ iconpicker_js_customize }}{% endhighlight %}
+          {% highlight javascript %}{{ iconpicker_js_customize }}{% endhighlight %}
         </div>
       </div>
     </div>
