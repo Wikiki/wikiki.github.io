@@ -1,0 +1,141 @@
+---
+title: Accordion
+layout: default
+doc-tab: bulma-extensions
+doc-subtab: accordion
+npm-version: 0.1.0
+---
+
+{% capture accordion_html %}
+<section class="accordion">
+  <article class="message">
+    <div class="message-header">
+      <p>Hello World</p>
+      <button class="toggle" aria-label="toggle"></button>
+    </div>
+    <div class="message-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>
+  <article class="message">
+    <div class="message-header">
+      <p>Hello World</p>
+      <button class="toggle" aria-label="toggle"></button>
+    </div>
+    <div class="message-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>
+  <article class="message">
+    <div class="message-header">
+      <p>Hello World</p>
+      <button class="toggle" aria-label="toggle"></button>
+    </div>
+    <div class="message-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>
+</section>
+{% endcapture %}
+
+{% capture accordion_js %}
+<script type="text/javascript" src="./js/accordion.js"></script>
+{% endcapture %}
+
+
+{% include_relative subnav-bulma-extensions.html %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+          A simple accordion extension for Bulma
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-accordion" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-accordion" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+    %}
+
+    <hr>
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        <section class="accordion">
+          <article class="message is-active">
+            <div class="message-header">
+              <p>Item 1</p>
+              <button class="toggle" aria-label="toggle"></button>
+            </div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+            </div>
+          </article>
+          <article class="message">
+            <div class="message-header">
+              <p>Item 2</p>
+              <button class="toggle" aria-label="toggle"></button>
+            </div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+            </div>
+          </article>
+          <article class="message">
+            <div class="message-header">
+              <p>Item 3</p>
+              <button class="toggle" aria-label="toggle"></button>
+            </div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="column">
+        {% highlight html %}{{ accordion_html }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="notification is-info">
+      <p>You don't have to write any JavaScript code. Just wrap Bulma article components in a div with <code>accordion</code> class and see the magic happens.</p>
+    </div>
+
+    <hr>
+
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>The extension comes with a JavaScript implementation to expand / collapse accordion items. Don't forget to include it in your project.</p>
+
+          {% highlight javascript %}{{ accordion_js }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script type="text/javascript" src="./js/accordion.js"></script>

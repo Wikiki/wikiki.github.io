@@ -76,9 +76,12 @@ iconPickerOptions = {
       </div>
       <div class="column">
         {% highlight html %}{{ iconpicker_html }}{% endhighlight %}
-        <p>You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.</p>
       </div>
     </div>
+
+    <div class="notification is-info">
+      <p>You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.</p>
+    </DIV>
 
     <hr>
 
@@ -86,9 +89,7 @@ iconPickerOptions = {
       <h4 class="message-header">Javascript</h4>
       <div class="message-body">
         <div class="content">
-          <p>
-            The extension comes with a JavaScript implementation to display / close the IconPicker.
-          </p>
+          <p>The extension comes with a JavaScript implementation to display / close the IconPicker. Don't forget to include it in your project.</p>
 
           {% highlight javascript %}{{ iconpicker_js }}{% endhighlight %}
 
@@ -98,7 +99,6 @@ iconPickerOptions = {
       </div>
     </div>
 
-    {% include variables.html %}
   </div>
 </section>
 
