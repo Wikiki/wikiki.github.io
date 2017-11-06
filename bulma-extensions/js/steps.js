@@ -70,14 +70,26 @@ class StepsWizard {
   updateActions( step ) {
     var stepId = parseInt( step.getAttribute( 'data-step-id' ) );
     if ( stepId == 0 ) {
-      this.previous_btn.setAttribute( 'disabled', 'disabled' );
-      this.next_btn.removeAttribute( 'disabled', 'disabled' );
+      if ( this.previous_btn != null ) {
+        this.previous_btn.setAttribute( 'disabled', 'disabled' );
+      }
+      if ( this.next_btn != null ) {
+        this.next_btn.removeAttribute( 'disabled', 'disabled' );
+      }
     } else if ( stepId == ( this.steps.length - 1 ) ) {
-      this.previous_btn.removeAttribute( 'disabled', 'disabled' );
-      this.next_btn.setAttribute( 'disabled', 'disabled' );
+      if ( this.previous_btn != null ) {
+        this.previous_btn.removeAttribute( 'disabled', 'disabled' );
+      }
+      if ( this.next_btn != null ) {
+        this.next_btn.setAttribute( 'disabled', 'disabled' );
+      }
     } else {
-      this.previous_btn.removeAttribute( 'disabled', 'disabled' );
-      this.next_btn.removeAttribute( 'disabled', 'disabled' );
+      if ( this.previous_btn != null ) {
+        this.previous_btn.removeAttribute( 'disabled', 'disabled' );
+      }
+      if ( this.next_btn != null ) {
+        this.next_btn.removeAttribute( 'disabled', 'disabled' );
+      }
     }
   }
 
