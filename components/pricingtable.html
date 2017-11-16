@@ -1,7 +1,7 @@
 ---
 title: Pricing table
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: components
 doc-subtab: pricingtable
 npm-version: 0.1.0
 variables:
@@ -24,6 +24,8 @@ variables:
 - name: $pricing-price-background
   value: $white
 ---
+
+{% include subnav-components.html %}
 
 {% capture pricingtable_example %}
 <div class="pricing-table">
@@ -217,8 +219,6 @@ variables:
   </div>
 </div>
 {% endcapture %}
-
-{% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
   <div class="container">

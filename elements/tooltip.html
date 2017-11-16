@@ -1,7 +1,7 @@
 ---
 title: Tooltip
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: elements
 doc-subtab: tooltip
 npm-version: 0.0.4
 variables:
@@ -10,6 +10,8 @@ variables:
 - name: $tooltip-max-width
   value: 24rem
 ---
+
+{% include subnav-elements.html %}
 
 {% capture tooltip_example %}
 <div class="column">
@@ -24,7 +26,7 @@ variables:
 {% endcapture %}
 
 {% capture tooltip_positions_example %}
-<div class="columns text-center">
+<div class="columns is-multiline text-center">
   <div class="column">
     <button class="button is-primary tooltip" data-tooltip="Tooltip Text">top tooltip</button>
   </div>
@@ -41,7 +43,7 @@ variables:
 {% endcapture %}
 
 {% capture tooltip_colors_example %}
-<div class="columns text-center">
+<div class="columns is-multiline text-center">
   <div class="column">
     <button class="button is-tooltip-primary tooltip" data-tooltip="Tooltip Text">Primary tooltip</button>
   </div>
@@ -59,8 +61,6 @@ variables:
   </div>
 </div>
 {% endcapture %}
-
-{% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
   <div class="container">
@@ -101,49 +101,21 @@ variables:
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{tooltip_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{tooltip_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=tooltip_example size="one-third" %}
 
     <hr>
 
     <h3 class="title">Positions</h3>
     <h4 class="subtitle">You can use <code>.is-tooltip-top</code> <code>.is-tooltip-right</code> <code>.is-tooltip-bottom</code> <code>.is-tooltip-left</code> modifiers to change the tooltip position</h4>
-    <div class="columns">
-      <div class="column">
-        {{tooltip_positions_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{tooltip_positions_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=tooltip_positions_example size="one-half" %}
 
     {% include anchor.html name="Sizes" %}
     <h4 class="subtitle">You can force multiline display by using <code>.is-tooltip-multiline</code> modifier.</h4>
-    <div class="columns">
-      <div class="column">
-        {{tooltip_sizes_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{tooltip_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=tooltip_sizes_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
     <h4 class="subtitle">You can use color modifiers to change the tooltip background color.</h4>
-    <div class="columns">
-      <div class="column">
-        {{tooltip_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{tooltip_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=tooltip_colors_example size="one-half" %}
 
     {% include variables.html %}
   </div>

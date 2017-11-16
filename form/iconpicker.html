@@ -1,13 +1,16 @@
 ---
 title: IconPicker
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: form
 doc-subtab: iconpicker
 npm-version: 0.1.0
 ---
 
-{% capture iconpicker_html %}
+{% include subnav-form.html %}
+
+{% capture iconpicker_example %}
 <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+<p class="help">Click on icon to open the iconPicker.</p>
 {% endcapture %}
 
 {% capture iconpicker_js %}
@@ -30,9 +33,6 @@ let iconPickerOptions = {
   } ]
 };
 {% endcapture %}
-
-
-{% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
   <div class="container">
@@ -66,18 +66,12 @@ let iconPickerOptions = {
     </div>
     {%
       include meta.html
+      javascript=true
     %}
 
     <hr>
 
-    <div class="columns">
-      <div class="column has-text-centered">
-        <input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
-      </div>
-      <div class="column">
-        {% highlight html %}{{ iconpicker_html }}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=iconpicker_example size="one-third" %}
 
     <div class="notification is-info">
       <p>You don't have to write any JavaScript code. Just add <code>data-action="iconPicker"</code> attribute to the input element and see the magic happens.</p>
@@ -102,4 +96,4 @@ let iconPickerOptions = {
   </div>
 </section>
 
-<script type="text/javascript" src="./js/iconPicker.js"></script>
+<script type="text/javascript" src="{{ site.url}}/assets/js/iconPicker.js"></script>

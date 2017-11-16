@@ -1,7 +1,7 @@
 ---
 title: Slider
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: form
 doc-subtab: slider
 npm-version: 0.0.2
 variables:
@@ -30,6 +30,8 @@ variables:
 - name: $slider-output-radius
   value: $radius
 ---
+
+{% include subnav-form.html %}
 
 {% capture slider_example %}
 <input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
@@ -163,8 +165,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -199,79 +199,38 @@ document.addEventListener( 'DOMContentLoaded', function () {
       include meta.html
       colors=true
       sizes=true
+      javascript=true
       variables=true
     %}
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{slider_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
-    <div class="columns">
-      <div class="column">
-        {{slider_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_colors_example size="one-half" %}
 
     {% include anchor.html name="Sizes" %}
-
-    <div class="columns">
-      <div class="column">
-        {{slider_sizes_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_sizes_example size="one-half" %}
 
     <hr>
 
     <h3 class="title">Styles</h3>
     <h4 class="subtitle">Circle</h4>
-    <div class="columns">
-      <div class="column">
-        {{slider_circle_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_circle_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_circle_example size="one-half" %}
 
     <hr>
 
     <h3 class="title">Positions</h3>
     <h4 class="subtitle">vertical</h4>
     <p>You can display vertical slider by adding <code>orient="vertical"</code> attribute to the range input.</p>
-    <div class="columns">
-      <div class="column">
-        {{slider_vertical_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_vertical_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_vertical_example size="one-half" %}
 
     <h3 class="title">States</h3>
     <h4 class="subtitle">Disabled</h4>
-    <div class="columns">
-      <div class="column">
-        {{slider_disabled_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{slider_disabled_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=slider_disabled_example size="one-half" %}
 
+    {% include anchor.html name="Javascript" %}
     <h3 class="title">Display value</h3>
     <p>You can display slider value by adding <code>output</code> DOM element after the slider and class <code>has-output</code> to the slider then use the following JavaScript implementation:</p>
     <div class="bd-example">
@@ -300,6 +259,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     {% include variables.html %}
 
-    <script type="text/javascript" src="./js/slider.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/slider.js"></script>
   </div>
 </section>

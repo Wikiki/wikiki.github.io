@@ -1,14 +1,16 @@
 ---
-title: Accordion
-layout: default
-doc-tab: bulma-extensions
+title: Timeline
+layout: documentation
+doc-tab: components
 doc-subtab: accordion
 npm-version: 0.1.0
 ---
 
-{% capture accordion_html %}
+{% include subnav-components.html %}
+
+{% capture accordion_example %}
 <section class="accordion">
-  <article class="message">
+  <article class="message is-active">
     <div class="message-header">
       <p>Hello World</p>
       <button class="toggle" aria-label="toggle"></button>
@@ -42,8 +44,6 @@ npm-version: 0.1.0
 <script type="text/javascript" src="./js/accordion.js"></script>
 {% endcapture %}
 
-
-{% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
   <div class="container">
@@ -79,52 +79,20 @@ npm-version: 0.1.0
       include meta.html
       colors=true
       sizes=true
+      javascript=true
     %}
 
     <hr>
 
-    <div class="columns">
-      <div class="column has-text-centered">
-        <section class="accordion">
-          <article class="message is-active">
-            <div class="message-header">
-              <p>Item 1</p>
-              <button class="toggle" aria-label="toggle"></button>
-            </div>
-            <div class="message-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-            </div>
-          </article>
-          <article class="message">
-            <div class="message-header">
-              <p>Item 2</p>
-              <button class="toggle" aria-label="toggle"></button>
-            </div>
-            <div class="message-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-            </div>
-          </article>
-          <article class="message">
-            <div class="message-header">
-              <p>Item 3</p>
-              <button class="toggle" aria-label="toggle"></button>
-            </div>
-            <div class="message-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-            </div>
-          </article>
-        </section>
-      </div>
-      <div class="column">
-        {% highlight html %}{{ accordion_html }}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=accordion_example size="one-half" %}
 
+    {% include anchor.html name="Javascript" %}
     <div class="notification is-info">
       <p>You don't have to write any JavaScript code. Just wrap Bulma article components in a div with <code>accordion</code> class and see the magic happens.</p>
     </div>
 
     <hr>
+
 
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
@@ -140,4 +108,4 @@ npm-version: 0.1.0
   </div>
 </section>
 
-<script type="text/javascript" src="./js/accordion.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/accordion.js"></script>

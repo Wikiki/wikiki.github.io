@@ -1,7 +1,7 @@
 ---
 title: QuickView
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: components
 doc-subtab: quickview
 npm-version: 0.0.1
 variables:
@@ -10,6 +10,8 @@ variables:
 - name: $quickview-divider
   value: 1px solid $grey-lighter
 ---
+
+{% include subnav-components.html %}
 
 {% capture quickview_js_html %}
 <div id="quickviewDefault" class="quickview">
@@ -87,8 +89,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <div id="quickviewDefault" class="quickview">
   <header class="quickview-header">
     <p class="title">Quickview title</p>
@@ -139,14 +139,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
     {%
       include meta.html
       variables=true
+      javascript=true
     %}
 
     <hr>
 
     <button class="button is-primary" data-show="quickview" data-target="quickviewDefault">Show quickview</button>
 
-    <hr>
-
+    {% include anchor.html name="Javascript" %}
     <div id="squickviewsExample" class="message is-info">
       <h4 class="message-header">Javascript</h4>
       <div class="message-body">
@@ -166,4 +166,4 @@ document.addEventListener( 'DOMContentLoaded', function () {
   </div>
 </section>
 
-<script type="text/javascript" src="./js/quickview.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/quickview.js"></script>

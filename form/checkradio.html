@@ -1,7 +1,7 @@
 ---
 title: Checkradio
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: form
 doc-subtab: checkradio
 npm-version: 0.1.0
 variables:
@@ -14,6 +14,8 @@ variables:
 - name: $checkradio-focus
   value: 1px dotted $grey-light
 ---
+
+{% include subnav-form.html %}
 
 {% capture checkradio_example %}
 <div class="field">
@@ -387,8 +389,6 @@ variables:
 </div>
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -428,26 +428,12 @@ variables:
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{checkradio_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkradio_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkradio_example size="one-third" %}
 
     <hr>
     <p>Use <code>is-rtl</code> to display a right-to-left design of checkbox or radio (text at left)</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        {{checkradio_rtl_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkradio_rtl_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkradio_rtl_example size="one-third" %}
 
     <div class="has-text-centered has-text-danegr">
       <p>Don't forget to set <code>id</code> attribute on input and <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
@@ -459,42 +445,12 @@ variables:
     </div>
 
     {% include anchor.html name="Colors" %}
-    <div class="columns">
-      <div class="column">
-        <div class="columns">
-          <div class="column">
-            {{checkbox_colors_example}}
-          </div>
-          <div class="column">
-            {{radio_colors_example}}
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkbox_colors_example}}{% endhighlight %}
-
-        {% highlight html %}{{radio_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkbox_colors_example size="one-third" %}
+    {% include snippet.html content=radio_colors_example size="one-third" %}
 
     {% include anchor.html name="Sizes" %}
-
-    <div class="columns">
-      <div class="column">
-        <div class="columns">
-          <div class="column">
-            {{checkbox_sizes_example}}
-          </div>
-          <div class="column">
-            {{radio_sizes_example}}
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkbox_sizes_example}}{% endhighlight %}
-        {% highlight html %}{{radio_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkbox_sizes_example size="one-third" %}
+    {% include snippet.html content=radio_sizes_example size="one-third" %}
 
     <hr>
 
@@ -502,79 +458,30 @@ variables:
     <h4 class="subtitle">Circle</h4>
     <p>You can add <code>is-circle</code> modifier to the input to get a rounded checkbox</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        {{checkradio_colors_circle_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkradio_colors_circle_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkradio_colors_circle_example size="one-third" %}
 
     <h4 class="subtitle">Block</h4>
     <p>You can add <code>is-block</code> modifier to the input to get a full colored checkbox</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        {{checkradio_block_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkradio_block_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkradio_block_colors_example size="one-third" %}
 
     <h4 class="subtitle">No border</h4>
     <p>Adding <code>has-no-border</code> modifier to the input will remove the checkbox border</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        <div class="columns">
-          <div class="column">
-            {{checkbox_noborder_example}}
-          </div>
-          <div class="column">
-            {{radio_noborder_example}}
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkbox_noborder_example}}{% endhighlight %}
-        {% highlight html %}{{radio_noborder_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkbox_noborder_example size="one-third" %}
+    {% include snippet.html content=radio_noborder_example size="one-third" %}
 
     <h4 class="subtitle">Background colored</h4>
     <p>You can add <code>has-background-color</code> modifier to the input to get the checkbox background color impacted</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        <div class="columns">
-          <div class="column">
-            {{checkbox_backgroundColor_example}}
-          </div>
-          <div class="column">
-            {{radio_backgroundColor_example}}
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkbox_backgroundColor_example}}{% endhighlight %}
-        {% highlight html %}{{radio_backgroundColor_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkbox_backgroundColor_example size="one-third" %}
+    {% include snippet.html content=radio_backgroundColor_example size="one-third" %}
 
     <hr>
 
     <h3 class="title">States</h3>
     <h4 class="subtitle">Disabled</h4>
-    <div class="columns">
-      <div class="column">
-        {{checkradio_disabled_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{checkradio_disabled_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=checkradio_disabled_example size="one-third" %}
 
     {% include variables.html %}
   </div>

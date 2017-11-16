@@ -1,7 +1,7 @@
 ---
 title: Calendar
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: components
 doc-subtab: calendar
 npm-version: 0.1.0
 variables:
@@ -20,6 +20,8 @@ variables:
 - name: $calendar-today-color
   value: $primary
 ---
+
+{% include subnav-components.html %}
 
 {% capture calendar_js_code %}
 document.addEventListener( 'DOMContentLoaded', function () {
@@ -197,8 +199,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 <input id="datepickerDemo2" class="input" type="text">
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -233,18 +233,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
       include meta.html
       sizes=true
       variables=true
+      javascript=true
     %}
 
     <hr>
 
-    <div class="bd-example">
-      <div class="columns is-mobile is-centered">
-        <div class="column is-4 is-narrow">
-          {{calendar_example}}
-        </div>
-      </div>
-    </div>
-    {% highlight html %}{{calendar_example}}{% endhighlight %}
+    {% include snippet.html content=calendar_example size="one-half" %}
 
     {% include anchor.html name="Sizes" %}
     <p>You can use <code>is-large</code> modifier to display a large detailed calendar.</p>
@@ -252,6 +246,19 @@ document.addEventListener( 'DOMContentLoaded', function () {
       {{calendar_sizes_example}}
     </div>
     {% highlight html %}{{calendar_sizes_example}}{% endhighlight %}
+
+    {% include anchor.html name="Javascript" %}
+
+    <div class="bd-example">
+      {{calendar_datepicker_example}}
+    </div>
+    {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
+
+    <div class="bd-example">
+      <h4 class="title is-4">Display calendar as overlay using <code>overlay: true</code> option</h4>
+      {{calendar_datepicker_overlay_example}}
+    </div>
+    {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
 
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
@@ -266,20 +273,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
       </div>
     </div>
 
-    <div class="bd-example">
-      {{calendar_datepicker_example}}
-    </div>
-    {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
-
-    <div class="bd-example">
-      <h4 class="title is-4">Display calendar as overlay using <code>overlay: true</code> option</h4>
-      {{calendar_datepicker_overlay_example}}
-    </div>
-    {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
-
     {% include variables.html %}
 
-    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="{{ site.url}}/assets/js/datepicker.js"></script>
     <script type="text/javascript">
     document.addEventListener( 'DOMContentLoaded', function () {
       var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );

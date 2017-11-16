@@ -1,7 +1,7 @@
 ---
 title: Switch
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: form
 doc-subtab: switch
 npm-version: 0.0.4
 variables:
@@ -20,6 +20,8 @@ variables:
 - name: $switch-paddle-transition
   value: all 0.25s ease-out
 ---
+
+{% include subnav-form.html %}
 
 {% capture switch_example %}
 <div class="field">
@@ -244,8 +246,6 @@ variables:
 </div>
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -285,27 +285,12 @@ variables:
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{switch_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_example size="one-third" %}
 
     <hr>
     <p>Use <code>is-rtl</code> to display a right-to-left design of checkbox (text at left)</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        {{switch_rtl_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_rtl_example}}{% endhighlight %}
-      </div>
-    </div>
-
+    {% include snippet.html content=switch_rtl_example size="one-third" %}
 
     <div class="has-text-centered has-text-danegr">
       <p>Don't forget to set <code>id</code> attribute on input and <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
@@ -317,82 +302,32 @@ variables:
     </div>
 
     {% include anchor.html name="Colors" %}
-    <div class="columns">
-      <div class="column">
-        {{switch_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_colors_example size="one-third" %}
 
     {% include anchor.html name="Sizes" %}
-
-    <div class="columns">
-      <div class="column">
-        {{switch_sizes_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_sizes_example size="one-third" %}
 
     <hr>
 
     <h3 class="title">Styles</h3>
     <h4 class="subtitle">Thin</h4>
-    <div class="columns">
-      <div class="column">
-        {{switch_thin_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_thin_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_thin_colors_example size="one-third" %}
 
     <h4 class="subtitle">Rounded</h4>
-    <div class="columns">
-      <div class="column">
-        {{switch_rounded_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_rounded_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_rounded_example size="one-third" %}
 
     <h4 class="subtitle">Outlined</h4>
-    <div class="columns">
-      <div class="column">
-        {{switch_outlined_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_outlined_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_outlined_example size="one-third" %}
 
     <h4 class="subtitle">Mixed</h4>
-    <div class="columns">
-      <div class="column">
-        {{switch_rounded_outlined_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_rounded_outlined_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_rounded_outlined_example size="one-third" %}
 
     <hr>
 
     <h3 class="title">States</h3>
     <h4 class="subtitle">Disabled</h4>
-    <div class="columns">
-      <div class="column">
-        {{switch_colors_disabled_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{switch_colors_disabled_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=switch_colors_disabled_example size="one-third" %}
 
     {% include variables.html %}
   </div>
-</div>
+</section>

@@ -1,69 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="{{ site.fontawesome }}">
-    <link rel="stylesheet" href="{{ site.url }}/documentation.css">
-
-    <title>Extensions for Bulma.io</title>
-  </head>
-
-  <body>
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <p class="title">
-                Documentation
-              </p>
-              <p class="subtitle">
-                This site gathers documentation of my GitHub projects
-              </p>
-            </div>
-            <div class="column is-narrow">
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-foot">
-        <div class="container">
-          <nav class="tabs is-boxed">
-            <ul>
-              <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
-                <a href="{{ site.index }}/">Overview</a>
-              </li>
-              <li {% if page.doc-tab == 'bulma-extensions' %}class="is-active"{% endif %}>
-                <a href="{{ site.url }}/bulma-extensions/overview">Bulma Extensions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </section>
-
+<html lang="en" class="has-navbar-fixed-top {% if page.route %}route-{{page.route}}{% elsif page.layout %}route-{{page.layout}}{% endif %}">
+  {% include head.html %}
+  <body class="layout-{{ page.layout }}{% if page.doc-tab %} page-{{ page.doc-tab}}{% endif %}">
+    {% include navbar.html %}
+    {% include hero.html %}
     {{ content }}
-
-    <section class="section">
-      <div class="container">
-        {% include anchor.html name="Integration" %}
-        <div class="content">
-          <p>Find all integration details on the <a href="{{ site.url }}/bulma-extensions/overview">overview page</a> of this documentation.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <p class="has-text-centered has-text-grey-light">
-          This page is designed with <a href="http://bulma.io" target="_blank"><strong class="has-text-grey">Bulma CSS framework</strong></a>.
-        </p>
-      </div>
-    </section>
+    {% include footer.html %}
   </body>
 </html>

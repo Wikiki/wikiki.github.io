@@ -1,7 +1,7 @@
 ---
 title: Divider
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: elements
 doc-subtab: divider
 npm-version: 0.0.1
 variables:
@@ -12,6 +12,8 @@ variables:
 - name: $divider-color
   value: $grey-light
 ---
+
+{% include subnav-elements.html %}
 
 {% capture divider_example %}
 <div class="is-divider" data-content="OR"></div>
@@ -24,8 +26,6 @@ variables:
   <div class="column"></div>
 </div>
 {% endcapture %}
-
-{% include_relative subnav-bulma-extensions.html %}
 
 <section class="section">
   <div class="container">
@@ -66,27 +66,13 @@ variables:
 
     <p>You can easily display a message on the divider by adding <code>data-content</code> attribute to the divider.</p>
     <br />
-    <div class="columns">
-      <div class="column">
-        {{divider_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{divider_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=divider_example size="one-half" %}
 
     <hr>
 
     <h3 class="title">Styles</h3>
     <h4 class="subtitle">Vertical</h4>
-    <div class="columns">
-      <div class="column" style="min-height: 90px">
-        {{divider_vertical_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{divider_vertical_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=divider_vertical_example size="one-half" %}
 
     {% include variables.html %}
   </div>

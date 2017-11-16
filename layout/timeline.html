@@ -1,7 +1,7 @@
 ---
 title: Timeline
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: layout
 doc-subtab: timeline
 npm-version: 1.1.0
 variables:
@@ -20,6 +20,8 @@ variables:
 - name: $dimensions
   value: 16 24 32 48 64 96 128
 ---
+
+{% include subnav-layout.html %}
 
 {% capture timeline_example %}
 <div class="timeline">
@@ -255,7 +257,7 @@ variables:
 </div>
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
+
 
 <section class="section">
   <div class="container">
@@ -295,69 +297,31 @@ variables:
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{timeline_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_example}}{% endhighlight %}
-      </div>
-    </div>
+    <h3 class="subtitle">Default layout</h3>
+    {% include snippet.html content=timeline_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
     <h4 class="subtitle">You can use color modifiers on timeline-marker to change its color</h4>
-    <div class="columns">
-      <div class="column">
-        {{timeline_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=timeline_colors_example size="one-half" %}
+
 
     <br />
     <h4 class="subtitle">You can use color modifiers on timeline-item to change the line color</h4>
-    <div class="columns">
-      <div class="column">
-        {{timeline_colors_line_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_colors_line_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=timeline_colors_line_example size="one-half" %}
 
     <br />
     <h4 class="subtitle">You can even use them both together</h4>
-    <div class="columns">
-      <div class="column">
-        {{timeline_colors_both_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_colors_both_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=timeline_colors_both_example size="one-half" %}
 
     <br />
+
+    {% include anchor.html name="Positions" %}
     <h4 class="subtitle">You can use <code>is-centered</code> modifiers on timeline</h4>
-    <div class="columns">
-      <div class="column">
-        {{timeline_centered_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_centered_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=timeline_centered_example size="one-half" %}
 
     <br />
     <h4 class="subtitle">You can use <code>is-rtl</code> modifiers on timeline</h4>
-    <div class="columns">
-      <div class="column">
-        {{timeline_rtl_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{timeline_rtl_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=timeline_rtl_example size="one-half" %}
 
     {% include variables.html %}
   </div>

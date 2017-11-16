@@ -1,7 +1,7 @@
 ---
 title: Badge
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: elements
 doc-subtab: badge
 npm-version: 0.0.3
 variables:
@@ -10,6 +10,8 @@ variables:
 - name: $badge-border-radius
   value: 1rem
 ---
+
+{% include subnav-elements.html %}
 
 {% capture badge_example %}
 <button class="button badge" data-badge="8">Button</button>
@@ -146,8 +148,6 @@ variables:
 </div>
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -187,45 +187,17 @@ variables:
 
     <hr>
 
-    <div class="columns">
-      <div class="column">
-        {{badge_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{badge_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=badge_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
-    <div class="columns">
-      <div class="column">
-        {{badge_colors_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{badge_colors_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=badge_colors_example size="one-half" %}
 
     {% include anchor.html name="Sized" %}
-    <div class="columns">
-      <div class="column">
-        {{badge_sizes_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{badge_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=badge_sizes_example size="one-half" %}
 
     {% include anchor.html name="Styles" %}
     <h4 class="subtitle">You can display an outlined badge by using <code>.is-badge-outlined</code> modifier.</h4>
-    <div class="columns">
-      <div class="column">
-        {{badge_outlined_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{badge_outlined_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=badge_outlined_example size="one-half" %}
 
     {% include variables.html %}
   </div>

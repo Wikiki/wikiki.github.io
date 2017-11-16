@@ -1,7 +1,7 @@
 ---
 title: Steps
-layout: default
-doc-tab: bulma-extensions
+layout: documentation
+doc-tab: components
 doc-subtab: steps
 npm-version: 0.1.0
 variables:
@@ -18,6 +18,8 @@ variables:
 - name: $steps-divider-height
   value: .2em
 ---
+
+{% include subnav-components.html %}
 
 {% capture steps_example %}
 <div class="steps">
@@ -236,8 +238,6 @@ variables:
 </ul>
 {% endcapture %}
 
-{% include_relative subnav-bulma-extensions.html %}
-
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -272,6 +272,7 @@ variables:
       include meta.html
       colors=true
       sizes=true
+      javascript=true
       variables=true
     %}
 
@@ -290,15 +291,7 @@ variables:
     {% highlight html %}{{steps_colors_example}}{% endhighlight %}
 
     {% include anchor.html name="Sizes" %}
-
-    <div class="columns">
-      <div class="column">
-        {{steps_sizes_example}}
-      </div>
-      <div class="column">
-        {% highlight html %}{{steps_sizes_example}}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=steps_sizes_example size="one-half" %}
 
     {% include anchor.html name="Javascript" %}
 
@@ -322,6 +315,6 @@ variables:
 
     <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <code>marker</code> name idea and for the sizes mixin declaration (which is smart).</p>
 
-    <script type="text/javascript" src="./js/steps.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/steps.js"></script>
   </div>
 </section>
