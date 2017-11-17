@@ -1,0 +1,11 @@
+{% for project in page.projects %}
+<article class="message is-info">
+  <div class="message-header">
+    <p>{{ project.name }}</p>
+    <button class="toggle" aria-label="toggle"></button>
+  </div>
+  <div class="message-body">
+    {% include {{project.readme}} %}
+  </div>
+</article>
+{% endfor %}
