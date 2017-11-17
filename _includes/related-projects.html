@@ -1,11 +1,12 @@
 {% for project in page.projects %}
 <article class="message is-info">
   <div class="message-header">
-    <p>{{ project.name }}</p>
+    <p><a href="{{ project.link }}" target="_blank">{{ project.name }}</a></p>
     <button class="toggle" aria-label="toggle"></button>
   </div>
   <div class="message-body">
-    {% include {{project.readme}} %}
+    {% capture my_include %}{% include relatedProjects/{{ project.readme }} %}{% endcapture %}
+    {{ my_include | markdownify }}
   </div>
 </article>
 {% endfor %}
