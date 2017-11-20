@@ -1,5 +1,5 @@
 title:         "Bulma-Extensions"
-description:   "Set of missing Bulma.io functionalities provided as SASS / JaviScript extensions."
+description:   "Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions."
 env:           "production"
 
 # Build
@@ -7,7 +7,11 @@ env:           "production"
 markdown:      kramdown
 permalink:     pretty
 url:           https://wikiki.github.io
+includes:      ['assets/css', 'assets/js', 'bulma/docs/_includes']
 exclude:       ['bulma', icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sass', 'docker-compose.yml', 'package.json', 'yarn.lock']
+sass:
+  sass_dir:    _sass
+  style:       compressed
 
 # Icons
 
@@ -21,14 +25,3 @@ mdi:           https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicon
 download:      https://github.com/wikiki/bulma-extensions/releases/download/0.2.3/bulma-extensions-0.2.3.zip
 github:        https://github.com/wikiki/bulma-extensions
 version:       0.2.3
-
-includes:
-- assets/js
-- bulma/docs/_includes
-
-exclude:
-- bulma
-
-sass:
-  sass_dir: /
-  style: compressed
