@@ -238,14 +238,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     <hr>
 
-    {% include snippet.html content=calendar_example size="one-half" %}
+    {% include snippet.html content=calendar_example size="one-half" more=true %}
 
     {% include anchor.html name="Sizes" %}
     <p>You can use <code>is-large</code> modifier to display a large detailed calendar.</p>
-    <div class="bd-example">
-      {{calendar_sizes_example}}
-    </div>
-    {% highlight html %}{{calendar_sizes_example}}{% endhighlight %}
+    {% include snippet.html content=calendar_sizes_example horizontal=true more=true %}
 
     {% include anchor.html name="Javascript" %}
 

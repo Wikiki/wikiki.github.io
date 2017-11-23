@@ -278,20 +278,14 @@ variables:
 
     <hr>
 
-    <div class="bd-example">
-      {{steps_example}}
-    </div>
-    {% highlight html %}{{steps_example}}{% endhighlight %}
+    {% include snippet.html content=steps_example horizontal=true more=true %}
 
     {% include anchor.html name="Colors" %}
 
-    <div class="bd-example">
-      {{steps_colors_example}}
-    </div>
-    {% highlight html %}{{steps_colors_example}}{% endhighlight %}
+    {% include snippet.html content=steps_colors_example horizontal=true more=true %}
 
     {% include anchor.html name="Sizes" %}
-    {% include snippet.html content=steps_sizes_example size="one-half" %}
+    {% include snippet.html content=steps_sizes_example horizontal=true more=true %}
 
     {% include anchor.html name="Javascript" %}
 
@@ -306,10 +300,7 @@ variables:
       </div>
     </div>
 
-    <div class="bd-example">
-      {{steps_js_example}}
-    </div>
-    {% highlight html %}{{steps_js_example}}{% endhighlight %}
+    {% include snippet.html content=steps_js_example horizontal=true more=true %}
 
     {% include variables.html %}
 
