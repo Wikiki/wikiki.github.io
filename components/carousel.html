@@ -40,6 +40,10 @@ npm-version: 0.1.0
 </div>
 {% endcapture %}
 
+{% capture carousel_js %}
+<script type="text/javascript" src="./carousel.js"></script>
+{% endcapture %}
+
 
 <section class="section">
   <div class="container">
@@ -87,6 +91,25 @@ npm-version: 0.1.0
 
     <hr>
     {% include snippet.html content=carousel_example size="one-half" %}
+
+    {% include anchor.html name="Javascript" %}
+    <div class="notification is-info">
+      <p>You don't have to write any JavaScript code.</p>
+    </div>
+
+    <hr>
+
+
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>The extension comes with a JavaScript implementation to manage carousel items navigation. Don't forget to include it in your project.</p>
+
+          {% highlight javascript %}{{ carousel_js }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
