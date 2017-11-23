@@ -54,6 +54,13 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture checkradio_indeterminate_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckboxIndeterminate" type="checkbox" name="exampleCheckboxIndeterminate">
+  <label for="exampleCheckboxIndeterminate">Checkbox - indeterminate</label>
+</div>
+{% endcapture %}
+
 {% capture checkbox_colors_example %}
 <div class="field">
   <input class="is-checkradio" id="exampleCheckboxDefault" type="checkbox" name="exampleCheckboxDefault" checked="checked">
@@ -482,7 +489,15 @@ variables:
     <h3 class="title">States</h3>
     <h4 class="subtitle">Disabled</h4>
     {% include snippet.html content=checkradio_disabled_example size="one-third" %}
+    {% include snippet.html content=checkradio_indeterminate_example size="one-third" %}
 
     {% include variables.html %}
   </div>
 </section>
+
+<script>
+window.onload = function() {
+  let checkbox = document.getElementById('exampleCheckboxIndeterminate');
+  checkbox.indeterminate = true;
+}
+</script>
