@@ -8,14 +8,21 @@
   display: flex
 
 .hero-carousel
-  .hero-body
-    padding: 0
-    position: relative
-    width: 100%
-    height: auto
-    border: none
-    margin: auto
-    display: flex
+  padding: 0
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  left: 0
+  height: auto
+  border: none
+  margin: auto
+  display: flex
+  z-index: 0
+  + .hero-body,
+  + .hero-head,
+  + .hero-footer
+    z-index: 1
 
 .carousel-navigation
   flex-shrink: 0
