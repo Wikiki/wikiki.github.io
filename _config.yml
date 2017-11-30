@@ -22,6 +22,5 @@ mdi:           https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicon
 
 # Variables
 
-download:      https://github.com/wikiki/bulma-extensions/releases/download/0.3.0/bulma-extensions-0.3.0.zip
 github:        https://github.com/wikiki/bulma-extensions
-version:       0.4.4
+version:       0.5.2
