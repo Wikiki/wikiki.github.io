@@ -97,7 +97,10 @@ doc-subtab: start
         <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">checkradio</strong> extension.</div>
         <p>Open you application's main sass file and add the following line:</p>
         {% highlight bash %}@import 'bulma'
-        @import 'checkradio'{% endhighlight %}
+@import '~bulma-checkradio/checkradio';{% endhighlight %}
+        or
+        {% highlight bash %}@import 'bulma'
+@import '~bulma-checkradio';{% endhighlight %}
         <p>Now, you can just build the bulma project with <code>npm run build</code>, and the output will be available in the <code>css folder</code>.</p>
       </div>
     </article>
@@ -135,7 +138,8 @@ sass bulma-pricingtable.sass
             <li>In this file add this code:
     {% highlight sass %}
     @charset "utf-8"
-    @import "checkradio.sass"
+    @import "{% highlight bash %}@import 'bulma'
+@import '~bulma-checkradio/checkradio.sass'
     {% endhighlight %}</li>
           </ul>
         </div>
