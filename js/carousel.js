@@ -29,7 +29,7 @@ class Carousel {
 
     let nbItems = this.items.length;
     if (nbItems) {
-      this.items.forEach((item, index) => {
+      [].forEach.call(this.items, function(item, index) {
         let newValue;
         if (item.style.order) {
           newValue = (parseInt(item.style.order, 10) + direction) % nbItems;
