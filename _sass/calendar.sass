@@ -10,7 +10,8 @@ $calendar-today-border-color: $primary !default
 $calendar-today-color: $primary !default
 $calendar-range-background-color: lighten($primary, 50%) !default
 $calendar-body-padding: 0 1em 1em 1em !default
-$calendar-header-padding: 1em 1em 0 1em !default
+$calendar-header-days-padding: 1em 1em 0 1em !default
+$calendar-header-padding: 1em .5em !default
 
 =css3-prefix($property, $value)
   -webkit-#{$property}: #{$value}
@@ -41,7 +42,7 @@ $calendar-header-padding: 1em 1em 0 1em !default
       align-items: center
       justify-content: space-between
       font-size: $size-5
-      padding: .5rem
+      padding: $calendar-header-padding
       .calendar-nav-left, .calendar-nav-right
         flex-basis: auto
         flex-grow: 0
