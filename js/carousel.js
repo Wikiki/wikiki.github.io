@@ -80,10 +80,9 @@ class Carousel {
 }
 
 document.addEventListener( 'DOMContentLoaded', function () {
-  let carousels = document.querySelectorAll('.carousel, .hero-carousel');
-  if (carousels) {
-    carousels.forEach(element => {
-      new Carousel(element);
-    })
-  }
+  var carousels = document.querySelectorAll('.carousel, .hero-carousel');
+  [].forEach.call(carousels, function(carousel) {
+      new Carousel(carousel);
+  });
 });
+
