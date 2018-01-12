@@ -79,11 +79,11 @@ class Carousel {
   };
 }
 
-window.onload = function() {
+ready(function() {
   let carousels = document.querySelectorAll('.carousel, .hero-carousel');
   if (carousels) {
     carousels.forEach(element => {
       new Carousel(element);
     })
   }
-};
+});
