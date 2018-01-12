@@ -312,9 +312,11 @@ class Tagify {
   }
 }
 
-let tagInputs = document.querySelectorAll('input[type="tags"]');
-if (tagInputs) {
-  tagInputs.forEach(element => {
-    new Tagify(element);
-  })
-}
+document.addEventListener( 'DOMContentLoaded', function () {
+	let tagInputs = document.querySelectorAll('input[type="tags"]');
+	if (tagInputs) {
+	  tagInputs.forEach(element => {
+	    new Tagify(element);
+	  })
+	}
+});
