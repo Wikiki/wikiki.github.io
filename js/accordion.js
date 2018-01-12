@@ -1,7 +1,7 @@
 document.addEventListener( 'DOMContentLoaded', function () {
   let accordions = document.querySelectorAll('.accordions');
   if (accordions) {
-    accordions.forEach(accordion => {
+    [].forEach.call(accordions, function(accordion) {
       let items = accordion.querySelectorAll('.accordion');
       if (items) {
         items.forEach(item => {
