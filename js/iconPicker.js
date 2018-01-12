@@ -190,9 +190,10 @@ class IconPicker {
         modalSetTabLink.innerHTML = iconSet.name;
         modalSetTabLink.addEventListener('click', e => {
           e.preventDefault();
-
-          this.modalSetTabs.querySelectorAll('.is-active').forEach( el => {
-            el.classList.remove('is-active');
+		
+          var activeModalTabs = this.modalSetTabs.querySelectorAll('.is-active');
+          [].forEach.call(activeModalTabs, function(activeModalTab) {
+            activeModalTab.classList.remove('is-active');
           });
 
           e.target.parentNode.classList.add('is-active');
@@ -240,11 +241,9 @@ class IconPicker {
 ready(() => {
   let iconPickers = document.querySelectorAll('[data-action="iconPicker"]');
   let iconPickerOptions = {};
-  if (iconPickers) {
-    iconPickers.forEach(element => {
-      if (!element.dataset.iconPicker) {
-        element.dataset.iconPicker = new IconPicker(element, iconPickerOptions);
-      }
-    })
-  }
+  [].forEach.call(iconPickers, function(iconPicker) {
+    if (!iconPicker.dataset.iconPicker) {
+      iconPicker.dataset.iconPicker = new IconPicker(iconPicker, iconPickerOptions);
+    }
+  });
 });
