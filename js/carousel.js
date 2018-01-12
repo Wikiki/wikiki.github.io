@@ -79,7 +79,7 @@ class Carousel {
   };
 }
 
-ready(function() {
+document.addEventListener( 'DOMContentLoaded', function () {
   let carousels = document.querySelectorAll('.carousel, .hero-carousel');
   if (carousels) {
     carousels.forEach(element => {
