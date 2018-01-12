@@ -1,4 +1,4 @@
-ready(() => {
+document.addEventListener( 'DOMContentLoaded', function () {
   let accordions = document.querySelectorAll('.accordions');
   if (accordions) {
     accordions.forEach(accordion => {
