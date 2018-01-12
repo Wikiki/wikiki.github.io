@@ -1,11 +1,13 @@
 $calendar-border: none !default
 $calendar-border-radius: $radius-small !default
-$calendar-header-color: $primary !default
+$calendar-header-background-color: transparent !default
 $calendar-date-hover: $white-ter !default
 $calendar-today-background: transparent !default
 $calendar-today-border-color: $primary !default
 $calendar-today-color: $primary !default
 $calendar-range-background-color: lighten($primary, 50%) !default
+$calendar-body-padding: 0 1em 1em 1em !default
+$calendar-header-padding: 1em 1em 0 1em !default
 
 =css3-prefix($property, $value)
   -webkit-#{$property}: #{$value}
@@ -57,16 +59,16 @@ $calendar-range-background-color: lighten($primary, 50%) !default
       display: flex
       flex-wrap: wrap
       justify-content: center
-      padding: .2rem 0
     .calendar-header .calendar-date, .calendar-body .calendar-date
       flex: 0 0 14.28%
       max-width: 14.28%
     .calendar-header
-      background: darken($calendar-header-color, 5%)
-      color: findColorInvert( $calendar-header-color )
+      padding: $calendar-header-padding
+      background: $calendar-header-background-color
+      color: findColorInvert( $calendar-header-background-color )
       font-size: $size-7
     .calendar-body
-      padding: 0
+      padding: $calendar-body-padding
       color: $grey
     .calendar-date
       border: 0
