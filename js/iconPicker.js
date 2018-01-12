@@ -238,7 +238,7 @@ class IconPicker {
   }
 }
 
-ready(() => {
+document.addEventListener( 'DOMContentLoaded', function () {
   let iconPickers = document.querySelectorAll('[data-action="iconPicker"]');
   let iconPickerOptions = {};
   [].forEach.call(iconPickers, function(iconPicker) {
