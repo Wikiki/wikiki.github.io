@@ -12,6 +12,7 @@ $calendar-range-background-color: lighten($primary, 50%) !default
 $calendar-body-padding: 0 1em 1em 1em !default
 $calendar-header-padding: 1em 1em 0 1em !default
 $calendar-header-nav-padding: 1em .5em !default
+$calendar-date-padding: .4rem 0 !default
 
 =css3-prefix($property, $value)
   -webkit-#{$property}: #{$value}
@@ -78,7 +79,7 @@ $calendar-header-nav-padding: 1em .5em !default
       color: $grey
     .calendar-date
       border: 0
-      padding: .4rem
+      padding: $calendar-date-padding
       .date-item
         appearance: none
         background: transparent
