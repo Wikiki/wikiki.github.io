@@ -40,6 +40,7 @@ class Tagify {
       // Create an invisible input element so user will be able to enter value
       this.input = document.createElement('input');
       this.input.setAttribute('type', inputType);
+      this.input.setAttribute('placeholder', 'Add a Tag');
       this.container.appendChild(this.input);
 
       let sib = this.element.nextSibling;
