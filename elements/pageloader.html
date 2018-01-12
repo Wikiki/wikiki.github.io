@@ -77,7 +77,7 @@ var $pageloader = Array.prototype.slice.call(document.querySelectorAll('.pageloa
 
     // Add a click event on each of them
     $button.forEach(function ($el) {
-      $el.addEventListener('click', () => {
+      $el.addEventListener('click', function() {
         $pageloader[0].classList.toggle('is-active');
         var pageloaderTimeout = setTimeout( function() {
           $pageloader[0].classList.toggle('is-active');
