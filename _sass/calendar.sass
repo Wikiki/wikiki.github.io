@@ -2,8 +2,9 @@ $calendar-border: none !default
 $calendar-border-radius: $radius-small !default
 $calendar-header-background-color: $primary !default
 $calendar-days-background-color: transparent !default
-$calendar-days-color: $grey-lighter !default
-$calendar-date-hover: $white-ter !default
+$calendar-header-days-color: $grey-lighter !default
+$calendar-date-color: $text !default
+$calendar-date-hover-color: $white-ter !default
 $calendar-today-background: transparent !default
 $calendar-today-border-color: $primary !default
 $calendar-today-color: $primary !default
@@ -69,6 +70,8 @@ $calendar-header-padding: 1em 1em 0 1em !default
       background: $calendar-days-background-color
       color: findColorInvert( $calendar-days-background-color )
       font-size: $size-7
+      .calendar-date
+        color: $calendar-header-days-color
     .calendar-body
       padding: $calendar-body-padding
       color: $grey
@@ -80,7 +83,7 @@ $calendar-header-padding: 1em 1em 0 1em !default
         background: transparent
         border: .1rem solid transparent
         border-radius: 100%
-        color: $calendar-days-color
+        color: $calendar-date-color
         cursor: pointer
         height: 2.2rem
         line-height: 1.4rem
@@ -98,14 +101,14 @@ $calendar-header-padding: 1em 1em 0 1em !default
           border-color: $calendar-today-border-color
           color: $calendar-today-color
         &:focus
-          background: $calendar-date-hover
-          border-color: $calendar-date-hover
-          color: findColorInvert( $calendar-date-hover )
+          background: $calendar-date-hover-background-color
+          border-color: $calendar-date-hover-background-color
+          color: findColorInvert( $calendar-date-hover-background-color )
           text-decoration: none
         &:hover
-          background: $calendar-date-hover
-          border-color: $calendar-date-hover
-          color: findColorInvert( $calendar-date-hover )
+          background: $calendar-date-hover-background-color
+          border-color: $calendar-date-hover-background-color
+          color: findColorInvert( $calendar-date-hover-background-color )
           text-decoration: none
         &.is-active
           background: $primary
