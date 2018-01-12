@@ -1,0 +1,28 @@
+{
+  "name": "wikiki.github.io",
+  "version": "0.5.4",
+  "description": "Set of extensions for Bulma.io CSS Framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://wikiki@github.com/Wikiki/bulma-extensions.git"
+  },
+  "keywords": [
+    "bulma",
+    "extensions",
+    "bulma.io"
+  ],
+  "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikiki/bulma-extensions/issues"
+  },
+  "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
+  "devDependencies": {
+    "bulma": "^0.6.1",
+    "bulma-extensions": "^0.5.4"
+  }
+}

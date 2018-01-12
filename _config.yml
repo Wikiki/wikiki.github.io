@@ -10,7 +10,9 @@ url:           https://wikiki.github.io
 includes:      ['assets/css', 'assets/js', 'bulma/docs/_includes']
 exclude:       ['bulma', icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sass', 'docker-compose.yml', 'package.json', 'yarn.lock']
 sass:
-  sass_dir:    _sass
+  load_paths:
+      - _sass
+      - node_modules
   style:       compressed
 
 # Icons
@@ -23,4 +25,4 @@ mdi:           https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicon
 # Variables
 
 github:        https://github.com/wikiki/bulma-extensions
-version:       0.5.3
+version:       0.5.4

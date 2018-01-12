@@ -1,0 +1,35 @@
+{
+  "name": "bulma-divider",
+  "version": "0.1.0",
+  "description": "Display a vertical or horizontal divider to segment your design. ",
+  "main": "divider.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikiki/bulma-divider.git"
+  },
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "extensions",
+    "bulam.io"
+  ],
+  "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikiki/bulma-divider/issues"
+  },
+  "homepage": "https://github.com/Wikiki/bulma-divider#readme",
+  "devDependencies": {
+    "bulma": "^0.6.1"
+  },
+  "files": [
+    "divider.sass",
+    "bulma-divider.css",
+    "bulma-divider.min.css",
+    "LICENSE",
+    "README.md"
+  ]
+}
