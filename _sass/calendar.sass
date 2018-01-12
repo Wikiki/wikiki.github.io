@@ -1,6 +1,7 @@
 $calendar-border: none !default
 $calendar-border-radius: $radius-small !default
-$calendar-header-background-color: transparent !default
+$calendar-header-background-color: $primary !default
+$calendar-days-background-color: transparent !default
 $calendar-date-hover: $white-ter !default
 $calendar-today-background: transparent !default
 $calendar-today-border-color: $primary !default
@@ -30,7 +31,7 @@ $calendar-header-padding: 1em 1em 0 1em !default
       display: initial
     .calendar-nav
       align-items: center
-      background: $calendar-header-color
+      background: $calendar-header-background-color
       color: $white
       border-top-left-radius: $radius-small
       border-top-right-radius: $radius-small
@@ -64,8 +65,8 @@ $calendar-header-padding: 1em 1em 0 1em !default
       max-width: 14.28%
     .calendar-header
       padding: $calendar-header-padding
-      background: $calendar-header-background-color
-      color: findColorInvert( $calendar-header-background-color )
+      background: $calendar-days-background-color
+      color: findColorInvert( $calendar-days-background-color )
       font-size: $size-7
     .calendar-body
       padding: $calendar-body-padding
