@@ -3,7 +3,7 @@ title: Steps
 layout: documentation
 doc-tab: components
 doc-subtab: steps
-npm-version: 0.1.4
+npm-version: 0.1.5
 variables:
 - name: $steps-maker-default-color
   value: $grey-light
@@ -65,39 +65,134 @@ variables:
 {% capture steps_js_example %}
 <div class="steps" id="stepsDemo">
   <div class="step-item is-active is-success">
-    <div class="step-marker">
-      <span class="icon">
-        <i class="fa fa-check"></i>
-      </span>
-    </div>
+    <div class="step-marker">1</div>
     <div class="step-details">
-      <p class="step-title">Step 1</p>
-      <p>This is the first step of the process.</p>
+      <p class="step-title">Account</p>
     </div>
   </div>
   <div class="step-item">
-    <div class="step-marker"></div>
+    <div class="step-marker">2</div>
     <div class="step-details">
-      <p class="step-title">Step 2</p>
-      <p>This is the second step. You get here once you have completed the first step.</p>
+      <p class="step-title">Profile</p>
     </div>
   </div>
   <div class="step-item">
     <div class="step-marker">3</div>
     <div class="step-details">
-      <p class="step-title">Step 3</p>
-      <p>This is the third step. One more last before the end.</p>
+      <p class="step-title">Social</p>
     </div>
   </div>
   <div class="step-item">
-    <div class="step-marker">
-      <span class="icon">
-        <i class="fa fa-flag"></i>
-      </span>
-    </div>
+    <div class="step-marker">4</div>
     <div class="step-details">
-      <p class="step-title">Step 4</p>
-      <p>Final step. You have completed all the previous steps and end the process.</p>
+      <p class="step-title">Finish</p>
+    </div>
+  </div>
+  <div class="steps-content">
+    <div class="step-content has-text-centered is-active">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Username</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Confirm password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password_confirm" id="password_confirm" placeholder="Confirm password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Firstname</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="firstname" id="firstname" type="text" placeholder="Firstname" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Last name</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Email</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="email" name="email" id="email" placeholder="Email" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Facebook account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="facebook" id="facebook" type="text" placeholder="Facebook account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Twitter account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="twitter" id="twitter" type="text" placeholder="Twitter account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <h1 class="title is-4">Your account is now created !</h1>
     </div>
   </div>
   <div class="steps-actions">
