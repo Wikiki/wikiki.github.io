@@ -25,8 +25,55 @@ var datepicker_langs = {
     monthsShort: ['Jan', 'Febr', 'März', 'Apr', 'Mai', 'Juni', 'Juli', 'Aug', 'Sept', 'Okt', 'Nov', 'Dez'],
     weekdays: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
     weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+  },
+  tr: {
+    weekStart: 1,
+    previousMonth: 'Önceki Ay',
+    nextMonth: 'Gelecek Ay',
+    months: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
+    monthsShort: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
+    weekdays: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'],
+    weekdaysShort: ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt']
+  },
+  it: {
+    weekStart: 1,
+    previousMonth: 'Mese Precedente',
+    nextMonth: 'Prossimo Mese',
+    months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+    monthsShort: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'],
+    weekdays: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
+    weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
+  },
+  th: {
+    weekStart: 1,
+    previousMonth: 'เดือนก่อนหน้า',
+    nextMonth: 'เดือนถัดไป',
+    months: ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],
+    monthsShort: ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'],
+    weekdays: ['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'],
+    weekdaysShort: ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.']
+  },
+  hr: {
+    weekStart: 2,
+    previousMonth: 'Prošli mjesec',
+    nextMonth: 'Slijedeći mjesec',
+    months: ['siječanj', 'veljača', 'ožujak', 'travanj', 'svibanj', 'lipanj', 'srpanj', 'kolovoz', 'rujan', 'listopad', 'studeni', 'prosinac'],
+    monthsShort: ['sij', 'velj', 'ožu', 'tra', 'svi', 'lip', 'srp', 'kol', 'ruj', 'lis', 'stu', 'pro'],
+    weekdays: ['nedjelja', 'ponedjeljak', 'utorak', 'srijeda', 'četvrtak', 'petak', 'subota'],
+    weekdaysShort: ['ned', 'pon', 'uto', 'sri', 'čet', 'pet', 'sub']
+  },
+  sr: {
+    weekStart: 2,
+    previousMonth: 'Prošli mesec',
+    nextMonth: 'Sledeći mesec',
+    months: ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'],
+    monthsShort: ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'avg', 'sep', 'okt', 'nov', 'dec'],
+    weekdays: ['nedelja', 'ponedeljak', 'utorak', 'sreda', 'četvrtak', 'petak', 'subota'],
+    weekdaysShort: ['ned', 'pon', 'uto', 'sre', 'čet', 'pet', 'sub']
   }
 }
+
+const MOUSE_EVENTS = ['click', 'touchstart'];
 
 class DatePicker {
   constructor(selector, options) {
@@ -89,26 +136,30 @@ class DatePicker {
 
     var modalClose = document.createElement('button');
     modalClose.className = 'modal-close';
-    modalClose.addEventListener('click', function(e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      modalClose.addEventListener(event, function(e) {
+        e.preventDefault();
 
-      _this.datePickerContainer.classList.remove('is-active');
-    })
+        _this.datePickerContainer.classList.remove('is-active');
+      });
+    });
 
     this.datePickerContainer.appendChild(this.calendarContainer);
     this.datePickerContainer.appendChild(modalClose);
     document.body.appendChild(this.datePickerContainer);
 
-    this.element.addEventListener('click', function (e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      this.element.addEventListener(event, function (e) {
+        e.preventDefault();
 
-      if (_this.open) {
-        _this.hide();
-        _this.open = false;
-      } else {
-        _this.show();
-        _this.open = true;
-      }
+        if (_this.open) {
+          _this.hide();
+          _this.open = false;
+        } else {
+          _this.show();
+          _this.open = true;
+        }
+      });
     });
   }
 
@@ -131,16 +182,18 @@ class DatePicker {
 
     newDayButton.classList.add('date-item');
     newDayButton.innerHTML = day;
-    newDayButton.addEventListener('click', function (e) {
-      if (typeof _this.options.onSelect != 'undefined' &&
-        _this.options.onSelect != null &&
-        _this.options.onSelect) {
-        _this.options.onSelect(new Date(year, month, day));
-      }
-      _this.element.value = _this.getFormatedDate(( new Date(year, month, day) ), _this.options.dataFormat);
-      if (_this.options.closeOnSelect) {
-        _this.hide();
-      }
+    MOUSE_EVENTS.forEach((event) => {
+      newDayButton.addEventListener(event, function (e) {
+        if (typeof _this.options.onSelect != 'undefined' &&
+          _this.options.onSelect != null &&
+          _this.options.onSelect) {
+          _this.options.onSelect(new Date(year, month, day));
+        }
+        _this.element.value = _this.getFormatedDate(( new Date(year, month, day) ), _this.options.dataFormat);
+        if (_this.options.closeOnSelect) {
+          _this.hide();
+        }
+      });
     });
 
     newDayContainer.classList.add('calendar-date');
@@ -182,10 +235,12 @@ class DatePicker {
     previousButtonIcon.classList.add('fa');
     previousButtonIcon.classList.add('fa-backward');
     this.previousYearButton.appendChild(previousButtonIcon);
-    this.previousYearButton.addEventListener('click', function (e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      this.previousYearButton.addEventListener(event, function (e) {
+        e.preventDefault();
 
-      _this.prevYear();
+        _this.prevYear();
+      });
     });
     previousButtonContainer.appendChild(this.previousYearButton);
 
@@ -196,10 +251,12 @@ class DatePicker {
     previousMonthButtonIcon.classList.add('fa');
     previousMonthButtonIcon.classList.add('fa-chevron-left');
     this.previousMonthButton.appendChild(previousMonthButtonIcon);
-    this.previousMonthButton.addEventListener('click', function (e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      this.previousMonthButton.addEventListener(event, function (e) {
+        e.preventDefault();
 
-      _this.prevMonth();
+        _this.prevMonth();
+      });
     });
     previousButtonContainer.appendChild(this.previousMonthButton);
 
@@ -216,10 +273,12 @@ class DatePicker {
     nextMonthButtonIcon.classList.add('fa');
     nextMonthButtonIcon.classList.add('fa-chevron-right');
     this.nextMonthButton.appendChild(nextMonthButtonIcon);
-    this.nextMonthButton.addEventListener('click', function (e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      this.nextMonthButton.addEventListener(event, function (e) {
+        e.preventDefault();
 
-      _this.nextMonth();
+        _this.nextMonth();
+      });
     });
     nextButtonContainer.appendChild(this.nextMonthButton);
     this.nextYearButton = document.createElement('div');
@@ -229,10 +288,12 @@ class DatePicker {
     nextYearButtonIcon.classList.add('fa');
     nextYearButtonIcon.classList.add('fa-forward');
     this.nextYearButton.appendChild(nextYearButtonIcon);
-    this.nextYearButton.addEventListener('click', function (e) {
-      e.preventDefault();
+    MOUSE_EVENTS.forEach((event) => {
+      this.nextYearButton.addEventListener('click', function (e) {
+        e.preventDefault();
 
-      _this.nextYear();
+        _this.nextYear();
+      });
     });
     nextButtonContainer.appendChild(this.nextYearButton);
 
