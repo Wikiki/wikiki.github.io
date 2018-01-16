@@ -1,6 +1,6 @@
 {
   "name": "wikiki.github.io",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "Set of extensions for Bulma.io CSS Framework",
   "main": "index.html",
   "scripts": {
@@ -23,6 +23,6 @@
   "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
   "devDependencies": {
     "bulma": "^0.6.2",
-    "bulma-extensions": "^0.6.0"
+    "bulma-extensions": "^0.6.1"
   }
 }
