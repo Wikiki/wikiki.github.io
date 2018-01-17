@@ -3,7 +3,7 @@ title: Calendar
 layout: documentation
 doc-tab: components
 doc-subtab: calendar
-npm-version: 0.1.5
+npm-version: 0.1.7
 variables:
 - name: $calendar-border
   value: .1rem solid $grey-lighter
@@ -199,6 +199,23 @@ document.addEventListener( 'DOMContentLoaded', function () {
 <input id="datepickerDemo2" class="input" type="text">
 {% endcapture %}
 
+{% capture calendar_datepicker_modal_example %}
+<div id="modalWithCalendar" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <div class="field">
+        <label class="label">Select a date</label>
+        <div class="control">
+          <input id="datepickerDemo3" class="input" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+{% endcapture %}
+
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -257,6 +274,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
     </div>
     {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
 
+    <div class="bd-example">
+      <h4 class="title is-4">Use it within modal</h4>
+      <button id="showModal" class="button is-primary">Open modal</button>
+      {{calendar_datepicker_modal_example}}
+    </div>
+    {% highlight html %}{{calendar_datepicker_modal_example}}{% endhighlight %}
+
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
       <div class="message-body">
@@ -275,10 +299,20 @@ document.addEventListener( 'DOMContentLoaded', function () {
     <script type="text/javascript" src="{{ site.url}}/js/datepicker.min.js"></script>
     <script type="text/javascript">
     document.addEventListener( 'DOMContentLoaded', function () {
-      var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
-      var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+      var datePicker1 = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
+      var datePicker2 = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
         overlay: true
       } );
+      var datePicker3 = new DatePicker( document.getElementById( 'datepickerDemo3' ), {
+        overlay: false
+      } );
+
+      var $button = document.querySelector('#showModal');
+      var $modal = document.querySelector('#modalWithCalendar');
+      $button.addEventListener('click', function(e) {
+        e.preventDefault();
+        $modal.classList.add('is-active');
+      });
     } );
     </script>
   </div>
