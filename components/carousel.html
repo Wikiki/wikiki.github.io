@@ -21,19 +21,19 @@ variables:
 {% capture carousel_example %}
 <div class='carousel carousel-animated carousel-animate-slide'>
   <div class='carousel-container'>
-    <div class='carousel-item is-active'>
+    <div class='carousel-item has-background is-active'>
       <img class="is-background" src="{{ site.url }}/images/merry-christmas.jpg" alt="" width="640" height="310" />
       <div class="title">Merry Christmas</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/singer.jpg" alt="" width="640" height="310" />
       <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/sushi.jpg" alt="" width="640" height="310" />
       <div class="title">Sushi time</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/life.jpg" alt="" width="640" height="310" />
       <div class="title">Life</div>
     </div>
@@ -49,22 +49,58 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture carousel_5_example %}
+<div class='carousel is-5 carousel-animated carousel-animate-slide'>
+  <div class='carousel-container'>
+    <div class='carousel-item is-active'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+    <div class='carousel-item'>
+      <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
+    </div>
+  </div>
+  <div class="carousel-navigation is-centered">
+    <div class="carousel-nav-left">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div class="carousel-nav-right">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
 {% capture carousel_navigation_centered_example %}
 <div class='carousel carousel-animated carousel-animate-slide'>
   <div class='carousel-container'>
-    <div class='carousel-item is-active'>
+    <div class='carousel-item has-background is-active'>
       <img class="is-background" src="{{ site.url }}/images/merry-christmas.jpg" alt="" width="640" height="310" />
       <div class="title">Merry Christmas</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/singer.jpg" alt="" width="640" height="310" />
       <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/sushi.jpg" alt="" width="640" height="310" />
       <div class="title">Sushi time</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/life.jpg" alt="" width="640" height="310" />
       <div class="title">Life</div>
     </div>
@@ -83,19 +119,19 @@ variables:
 {% capture carousel_navigation_overlay_example %}
 <div class='carousel carousel-animated carousel-animate-slide'>
   <div class='carousel-container'>
-    <div class='carousel-item is-active'>
+    <div class='carousel-item has-background is-active'>
       <img class="is-background" src="{{ site.url }}/images/merry-christmas.jpg" alt="" width="640" height="310" />
       <div class="title">Merry Christmas</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/singer.jpg" alt="" width="640" height="310" />
       <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/sushi.jpg" alt="" width="640" height="310" />
       <div class="title">Sushi time</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/life.jpg" alt="" width="640" height="310" />
       <div class="title">Life</div>
     </div>
@@ -111,22 +147,23 @@ variables:
 </div>
 {% endcapture %}
 
+
 {% capture carousel_autoplay_example %}
 <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
   <div class='carousel-container'>
-    <div class='carousel-item is-active'>
+    <div class='carousel-item has-background is-active'>
       <img class="is-background" src="{{ site.url }}/images/merry-christmas.jpg" alt="" width="640" height="310" />
       <div class="title">Merry Christmas</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/singer.jpg" alt="" width="640" height="310" />
       <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/sushi.jpg" alt="" width="640" height="310" />
       <div class="title">Sushi time</div>
     </div>
-    <div class='carousel-item'>
+    <div class='carousel-item has-background'>
       <img class="is-background" src="{{ site.url }}/images/life.jpg" alt="" width="640" height="310" />
       <div class="title">Life</div>
     </div>
@@ -292,6 +329,10 @@ variables:
     <hr>
     {% include snippet.html content=carousel_example size="one-half" more=true %}
 
+    <hr>
+    <h4 class="subtitle">You can display up to 5 items (usefull to display list of partners for example)</h4>
+    {% include snippet.html content=carousel_5_example horizontal=true more=true %}
+
     {% include anchor.html name="Navigation" %}
     <h4 class="subtitle">You can modify the way display the navigation conatiner</h4>
     {% include snippet.html content=carousel_example size="one-half" more=true %}
@@ -307,6 +348,13 @@ variables:
 
     {% include anchor.html name="Animation" %}
     <p>You can animate the carousel by using the <code>carousel-animated</code> added to <code>carousel-animate-slide</code> or <code>carousel-animate-fade</code> modifiers directly on carousel element.</p>
+    <div class="message is-warning">
+      <div class="message-body">
+        <div class="content">
+          Fade animation only works with hero-carousel.
+        </div>
+      </div>
+    </div>
 
     {% include anchor.html name="Hero Carousel" %}
     <p>You can even use carousel within <code>hero</code> by using <code>hero-carousel</code> instead of <code>carousel</code> class to the main container</p>
