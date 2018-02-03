@@ -3,7 +3,7 @@ title: Calendar
 layout: documentation
 doc-tab: components
 doc-subtab: calendar
-npm-version: 0.1.8
+npm-version: 0.2.0
 variables:
 - name: $calendar-border
   value: .1rem solid $grey-lighter
@@ -35,13 +35,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
 {% capture calendar_example %}
 <div class="calendar">
   <div class="calendar-nav">
-    <div class="calendar-nav-left">
+    <div class="calendar-nav-previous-month">
       <button class="button is-text">
         <i class="fa fa-chevron-left"></i>
       </button>
     </div>
     <div>March 2017</div>
-    <div class="calendar-nav-right">
+    <div class="calendar-nav-next-month">
       <button class="button is-text">
         <i class="fa fa-chevron-right"></i>
       </button>
@@ -101,13 +101,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
 {% capture calendar_sizes_example %}
 <div class="calendar is-large">
   <div class="calendar-nav">
-    <div class="calendar-nav-left">
+    <div class="calendar-nav-previous-month">
       <button class="button is-text">
         <i class="fa fa-chevron-left"></i>
       </button>
     </div>
     <div>March 2017</div>
-    <div class="calendar-nav-right">
+    <div class="calendar-nav-next-month">
       <button class="button is-text">
         <i class="fa fa-chevron-right"></i>
       </button>
@@ -196,7 +196,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 {% endcapture %}
 
 {% capture calendar_datepicker_overlay_example %}
-<input id="datepickerDemo2" class="input" type="text">
+<input id="datepickerDemo2" class="input" type="text" value="2018/02/05">
 {% endcapture %}
 
 {% capture calendar_datepicker_modal_example %}
