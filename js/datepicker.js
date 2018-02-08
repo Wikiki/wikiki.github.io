@@ -121,6 +121,8 @@ if (typeof Object.assign != 'function') {
   });
 }
 
+Date.prototype.isValid = d => !isNaN(Date.parse(d));
+
 class DatePicker {
   constructor(selector, options = {}) {
     // Determine click event depending on if we are on Touch device or not
@@ -161,7 +163,7 @@ class DatePicker {
     this.lang = typeof datepicker_langs[this.lang] !== 'undefined' ? this.lang : 'en';
     // Set the startDate to the input value
     if (this.element.value) {
-      this.options.startDate = new Date(this.element.value);
+      this.options.startDate = new Date(this._getFormatedDate(new Date(this.element.value), this.options.dateFormat));
     }
     // Transform date format according to dateFormat option
     this.options.startDate = new Date(this._getFormatedDate(this.options.startDate, this.options.dateFormat));
@@ -462,24 +464,28 @@ class DatePicker {
   show() {
     // Set the startDate to the input value
     if (this.element.value) {
-      this.options.startDate = new Date(this.element.value);
+      this.options.startDate = new Date(this._getFormatedDate(new Date(this.element.value), this.options.dateFormat));
     }
-    this.month = this.options.startDate.getMonth();
-    this.year = this.options.startDate.getFullYear();
-    this.day = this.options.startDate.getDate();
-    this._adjustCalendar();
+    if (this.options.startDate.isValid()) {
+      this.month = this.options.startDate.getMonth();
+      this.year = this.options.startDate.getFullYear();
+      this.day = this.options.startDate.getDate();
+      this._adjustCalendar();
 
-    if (typeof this.options.onOpen != 'undefined' &&
-      this.options.onOpen != null &&
-      this.options.onOpen) {
-      this.options.onOpen(this);
-    }
+      if (typeof this.options.onOpen != 'undefined' &&
+        this.options.onOpen != null &&
+        this.options.onOpen) {
+        this.options.onOpen(this);
+      }
 
-    this.datePickerContainer.classList.add('is-active');
-    if (!this.options.overlay) {
-      this._adjustPosition();
+      this.datePickerContainer.classList.add('is-active');
+      if (!this.options.overlay) {
+        this._adjustPosition();
+      }
+      this.open = true;
+    } else {
+      throw new Error('Invalid date entered.');
     }
-    this.open = true;
   }
 
   /**
