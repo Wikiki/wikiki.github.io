@@ -7,7 +7,7 @@ env:           "production"
 markdown:      kramdown
 permalink:     pretty
 url:           https://wikiki.github.io
-includes:      ['assets/css', 'assets/js', 'bulma/docs/_includes']
+includes:      ['assets/css', 'assets/js', 'bulma/docs/_includes', 'node_modules' ]
 exclude:       ['bulma', icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sass', 'docker-compose.yml', 'package.json', 'yarn.lock']
 sass:
   load_paths:
