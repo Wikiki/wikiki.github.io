@@ -25,8 +25,8 @@ variables:
 
 {% capture calendar_js_code %}
 document.addEventListener( 'DOMContentLoaded', function () {
-  var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
-  var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+  var datePicker = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {} );
+  var datePicker = new bulmaCalendar( document.getElementById( 'datepickerDemo2' ), {
     overlay: true
   } );
 } );
@@ -296,14 +296,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     {% include variables.html %}
 
-    <script type="text/javascript" src="{{ site.url}}/js/datepicker.min.js"></script>
+    <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <script type="text/javascript">
     document.addEventListener( 'DOMContentLoaded', function () {
-      var datePicker1 = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
-      var datePicker2 = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+      var datePicker1 = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {} );
+      var datePicker2 = new bulmaCalendar( document.getElementById( 'datepickerDemo2' ), {
         overlay: true
       } );
-      var datePicker3 = new DatePicker( document.getElementById( 'datepickerDemo3' ), {
+      var datePicker3 = new bulmaCalendar( document.getElementById( 'datepickerDemo3' ), {
         dateFormat: 'dd/mm/yyyy',
         overlay: false
       } );

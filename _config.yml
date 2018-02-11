@@ -7,8 +7,7 @@ env:           "production"
 markdown:      kramdown
 permalink:     pretty
 url:           https://wikiki.github.io
-includes:      ['assets/css', 'assets/js', 'bulma/docs/_includes', 'node_modules' ]
-exclude:       ['bulma', icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sass', 'docker-compose.yml', 'package.json', 'yarn.lock']
+exclude:       ['node_modules/bulma/CHANGELOG.md', 'bulma-docs.sass', 'package.json']
 sass:
   load_paths:
       - _sass
@@ -25,4 +24,4 @@ mdi:           https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicon
 # Variables
 
 github:        https://github.com/wikiki/bulma-extensions
-version:       0.7.5
+version:       0.7.6
