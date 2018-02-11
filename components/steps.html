@@ -17,6 +17,37 @@ variables:
   value: $primary
 - name: $steps-divider-height
   value: .2em
+jsOptions:
+- name: selector
+  description: Selector to identify steps
+  value: .step-item
+- name: selector_content
+  description: Selector to identify steps content
+  value: .step-content
+- name: previous_selector
+  description: Selector to identify previous button
+  value: [data-nav="previous"]
+- name: next_selector
+  description: Selector to identify next button
+  value: [data-nav="next"]
+- name: active_class
+  description: Class to apply to the active step
+  value: is-active
+- name: completed_class
+  description: Class to apply to completed step
+  value: is-completed
+- name: beforeNext
+  description: Callback called before displaying next step
+  value: 'null'
+- name: onShow
+  description: Callback called when displaying step
+  value: 'null'
+- name: onFinish
+  description: Callback called when all steps have been completed
+  value: 'null'
+- name: onError
+  description: Callback called on error
+  value: 'null'
 ---
 
 {% include subnav-components.html %}
@@ -382,6 +413,8 @@ variables:
     {% include anchor.html name="Sizes" %}
     {% include snippet.html content=steps_sizes_example horizontal=true more=true %}
 
+    {% include variables.html %}
+
     {% include anchor.html name="Javascript" %}
 
     <div class="message is-info">
@@ -397,7 +430,7 @@ variables:
 
     {% include snippet.html content=steps_js_example horizontal=true more=true %}
 
-    {% include variables.html %}
+    {% include jsOptions.html %}
 
     <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <code>marker</code> name idea and for the sizes mixin declaration (which is smart).</p>
 

@@ -72,7 +72,10 @@ doc-subtab: start
         <p class="title is-5">
           Use <strong>GitHub repository</strong>:
         </p>
-        {% highlight bash %}npm install bulma{% endhighlight %}
+        <div>To integrate <strong class="has-text-info">all extensions</strong> use following command.</div>
+        {% highlight bash %}git clone git://github.com/Wikiki/bulma-extensions.git{% endhighlight %}
+        <div>To integrate the <strong class="has-text-info">checkradio</strong> extension use following command.</div>
+        {% highlight bash %}git clone git://github.com/Wikiki/bulma-checkradio.git{% endhighlight %}
       </div>
     </article>
 
@@ -92,7 +95,7 @@ doc-subtab: start
       </div>
       <div class="media-content">
         <p class="title is-5">
-          NPM:
+          From NPM
         </p>
         <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">checkradio</strong> extension.</div>
         <p>Open you application's main sass file and add the following line:</p>
@@ -108,52 +111,42 @@ doc-subtab: start
       </div>
       <div class="media-content">
         <p class="title is-5">
-          Ruby <em>(assuming you do not have the sass gem and you have ssh configured for GitHub)</em>:
-        </p>
-        {% highlight bash %}gem install sass
-git clone https://github.com/jgthms/bulma.git
-sass bulma-pricingtable.sass
-{% endhighlight %}
-      </div>
-    </article>
-
-    <article class="media is-large">
-      <div class="media-left">
-        <p class="title is-5">2</p>
-      </div>
-      <div class="media-content">
-        <p class="title is-5">
-          GitHub repository:
+          From GitHub repository
         </p>
         <div class="content">
           <ul>
             <li>Clone the <a href="https://github.com/jgthms/bulma" target="_blank">bulma repo</a> following <a href="https://bulma.io/documentation/overview/start/" target="_blank">Bulma's documentation</a></li>
             <li>Under the <code>sass</code> folder, create a new folder called <code>extensions</code></li>
-            <li>In this new folder, create a new file <code>checkradio.sass</code></li>
-            <li>Copy the code from the <code>bulma-checkradio</code>'s repository <a href="https://github.com/Wikiki/bulma-checkradio/blob/master/checkradio.sass" target="_blank">checkradio.sass</a> file into your new file</li>
+            <li>In this new folder, create a new file <code>bulma-checkradio.sass</code></li>
+            <li>Copy the code from the <code>bulma-checkradio</code>'s' repository <a href="https://github.com/Wikiki/bulma-checkradio/blob/master/dist/bulma-checkradio.sass" target="_blank">bulma-checkradio.sass</a> file into your new file</li>
             <li>In the same folder create a new file <code>_all.sass</code> (this is not required, but will help when you add more extensions)</li>
             <li>In this file add this code:
     {% highlight sass %}
 @charset "utf-8"
 @import 'bulma.sass';
-@import 'checkradio.sass'
+@import 'bulma-checkradio.sass'
     {% endhighlight %}</li>
+            <li>
+              <p>Open your main application's sass file and add the following line:</p>
+              {% highlight bash %}@import "sass/extensions/_all"{% endhighlight %}
+            </li>
           </ul>
         </div>
-        <p>Open your main application's sass file and add the following line:</p>
-        {% highlight bash %}@import "sass/extensions/_all"{% endhighlight %}
       </div>
     </article>
 
     {% include anchor.html name="Development" %}
     <div class="content">
-      gulp
-      gulp:build:styles
-      gulp:build:scripts --jsFormat umd --babelTarget "latest 2 versions"
-      gulp build
-      gulp changelog
-      gulp release --type patch|minor|major
-      gulp npm:publish
+      <p>Each extension now integrates <a href="https://gulpjs.com/" target="_blank">Gulp</a> and <a href="https://rollupjs.org" target="_blank">Rollup</a> to automate build tasks and JavaScript code transpilation.</p>
+      <p class="title is-5">Compile SASS to CSS</p>
+      {% highlight bash %}gulp build:styles{% endhighlight %}
+      <p class="title is-5">Compile and Transpile JavaScript</p>
+      <p>You can use option <code>--jsFormat</code> to choose the output format (iife by default), <code>--babelTarger</code> to choose which browser to target (latest 2 versions by default)</p>
+      {% highlight shell %}gulp build:scripts --jsFormat umd --babelTarget "latest 2 versions"{% endhighlight %}
+      <p class="title is-5">Build the whole project</p>
+      {% highlight shell %}gulp build{% endhighlight %}
+      <p>or the following shorcut</p>
+      {% highlight shell %}gulp{% endhighlight %}
     </div>
 
     {% include anchor.html name="Need an extension ?" %}
@@ -161,8 +154,5 @@ sass bulma-pricingtable.sass
       <p>You are looking for a specific extension but you did not find it yet ?</p>
       <p>Don't hesitate to send me a request by <a href="https://github.com/Wikiki/bulma-extensions/issues" target="_blank">opening and issue</a> on my GitHub repository.</p>
     </div>
-
-
-or using npm run build
   </div>
 </section>

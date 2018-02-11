@@ -46,7 +46,7 @@ npm-version: 0.2.1
 {% endcapture %}
 
 {% capture accordion_js %}
-<script type="text/javascript" src="./js/accordion.min.js"></script>
+<script type="text/javascript" src="/node_modules/bulma-extensions/bulma-accordion/dist/bulma-accordion.min.js"></script>
 {% endcapture %}
 
 
@@ -90,6 +90,7 @@ npm-version: 0.2.1
     <hr>
 
     {% include snippet.html content=accordion_example size="one-half" more=true %}
+    <p>Set <code>toggle</code> class on the element you want to handle the expand/collapse action.</p>
 
     {% include anchor.html name="Javascript" %}
     <div class="notification is-info">

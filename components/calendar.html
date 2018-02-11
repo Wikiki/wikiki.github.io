@@ -19,13 +19,53 @@ variables:
   value: $primary
 - name: $calendar-today-color
   value: $primary
+jsOptions:
+- name: startDate
+  description: Date selected by default when Datepicker is displayed
+  value: new Date()
+- name: dateFormat
+  description: Date format to use (to change order or separator). mm/dd/yyyy, dd/mm/yyyy, mm-dd-yyyy, dd-mm-yyyy
+  value: 'yyyy-mm-dd'
+- name: lang
+  description: Lang in which display content (month and day names)
+  value: 'en'
+- name: overlay
+  description: Display the Datepicker in fullscreen using an overlay ?
+  value: false
+- name: closeOnOverlayClick
+  description: Close the Datepicker when clicking on the overlay ?
+  value: true
+- name: closeOnSelect
+  description: Close the Datepicker when selecting a date ?
+  value: true
+- name: onSelect
+  description: Callback to call when selecting a date
+  value: 'null'
+- name: onOpen
+  description: Callback to call when opening the Datepicker
+  value: 'null'
+- name: onClose
+  description: Callback to call when closing the Datepicker
+  value: 'null'
 ---
 
 {% include subnav-components.html %}
 
 {% capture calendar_js_code %}
 document.addEventListener( 'DOMContentLoaded', function () {
-  var datePicker = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {} );
+  var datePicker = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {
+    startDate: new Date(), // Date selected by default
+    dateFormat: 'yyyy-mm-dd', // the date format `field` value
+    lang: 'en', // internationalization
+    overlay: false,
+    closeOnOverlayClick: true,
+    closeOnSelect: true,
+    // callback functions
+    onSelect: null,
+    onOpen: null,
+    onClose: null,
+    onRender: null
+  } );
   var datePicker = new bulmaCalendar( document.getElementById( 'datepickerDemo2' ), {
     overlay: true
   } );
@@ -196,24 +236,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 {% endcapture %}
 
 {% capture calendar_datepicker_overlay_example %}
-<input id="datepickerDemo2" class="input" type="text" value="2018-02-05">
-{% endcapture %}
-
-{% capture calendar_datepicker_modal_example %}
-<div id="modalWithCalendar" class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <div class="box">
-      <div class="field">
-        <label class="label">Select a date</label>
-        <div class="control">
-          <input id="datepickerDemo3" class="input" type="text">
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+<input id="datepickerDemo2" class="input" type="text" value="11-02-2018">
 {% endcapture %}
 
 <section class="section">
@@ -261,25 +284,27 @@ document.addEventListener( 'DOMContentLoaded', function () {
     <p>You can use <code>is-large</code> modifier to display a large detailed calendar.</p>
     {% include snippet.html content=calendar_sizes_example horizontal=true more=true %}
 
+    {% include variables.html %}
+
+
     {% include anchor.html name="Javascript" %}
-
-    <div class="bd-example">
-      {{calendar_datepicker_example}}
+    <div class="columns">
+      <div class="column is-half">
+        <div class="bd-example">
+          <h4 class="title is-4">Default</h4>
+          {{calendar_datepicker_example}}
+        </div>
+        {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
+      </div>
+      <div class="column is-half">
+        <div class="bd-example">
+          <h4 class="title is-4">Overlay</h4>
+          <h5 class="subtitle is-6">set <code>overlay</code> option to <code>true</code></h5>
+          {{calendar_datepicker_overlay_example}}
+        </div>
+        {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
+      </div>
     </div>
-    {% highlight html %}{{calendar_datepicker_example}}{% endhighlight %}
-
-    <div class="bd-example">
-      <h4 class="title is-4">Display calendar as overlay using <code>overlay: true</code> option</h4>
-      {{calendar_datepicker_overlay_example}}
-    </div>
-    {% highlight html %}{{calendar_datepicker_overlay_example}}{% endhighlight %}
-
-    <div class="bd-example">
-      <h4 class="title is-4">Use it within modal</h4>
-      <button id="showModal" class="button is-primary">Open modal</button>
-      {{calendar_datepicker_modal_example}}
-    </div>
-    {% highlight html %}{{calendar_datepicker_modal_example}}{% endhighlight %}
 
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
@@ -294,26 +319,16 @@ document.addEventListener( 'DOMContentLoaded', function () {
       </div>
     </div>
 
-    {% include variables.html %}
+    {% include jsOptions.html %}
 
     <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <script type="text/javascript">
     document.addEventListener( 'DOMContentLoaded', function () {
       var datePicker1 = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {} );
       var datePicker2 = new bulmaCalendar( document.getElementById( 'datepickerDemo2' ), {
-        overlay: true
+        overlay: true,
+        dateFormat: 'dd-mm-yyyy'
       } );
-      var datePicker3 = new bulmaCalendar( document.getElementById( 'datepickerDemo3' ), {
-        dateFormat: 'dd/mm/yyyy',
-        overlay: false
-      } );
-
-      var $button = document.querySelector('#showModal');
-      var $modal = document.querySelector('#modalWithCalendar');
-      $button.addEventListener('click', function(e) {
-        e.preventDefault();
-        $modal.classList.add('is-active');
-      });
     } );
     </script>
   </div>
