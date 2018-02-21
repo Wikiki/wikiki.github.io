@@ -12,11 +12,7 @@ doc-subtab: start
 
 <section class="section">
   <div class="container">
-    <h1 class="title">Bulma-extensions</h1>
-    <h2 class="subtitle">Set of missing <a href="http://bulma.io" target="_blank">Bulma.io</a> functionalities in form of extensions.</h2>
-
     {% include anchor.html name="Getting started" %}
-    <hr>
 
     <div class="content">
       <p>
@@ -24,7 +20,7 @@ doc-subtab: start
       </p>
       <ol>
         <li>
-          use <strong>npm</strong> to install the <u>global Bulma-extensions</u> package (it includes all the extensions)
+          use <strong>npm</strong> to install the <u>global Bulma-extensions</u> package (which includes all the extensions)
         </li>
         <li>
           use <strong>npm</strong> to install <u>Bulma-extension individually</u>
@@ -35,8 +31,29 @@ doc-subtab: start
       </ol>
     </div>
 
+    <div class="content">
+      <p>
+        Each extension contains a <strong>dist</strong> folder which includes all available files for integration into your project (example for Calendar extension):
+      </p>
+      <ul>
+        <li>
+          bulma-calendar.js
+        </li>
+        <li>
+          bulma-calendar.min.js
+        </li>
+        <li>
+          bulma-calendar.sass
+        </li>
+        <li>
+          bulma-calendar.min.css
+        </li>
+      </ul>
+    </div>
+
     <div class="notification is-info">You can find npm package informations related to a specific extension by clicking on the <strong>npm</strong> tag in the top right of each documentation page.</div>
 
+    {% include anchor.html name="Installation" %}
     <article class="media is-large">
       <div class="media-left">
         <p class="title is-5">1</p>
@@ -59,8 +76,8 @@ doc-subtab: start
           Use <strong>NPM</strong> to install extension individually:
         </p>
         <p>Using this method you can install only wanted extensions.</p>
-        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">checkradio</strong> extension.</div>
-        {% highlight bash %}npm install bulma-checkradio{% endhighlight %}
+        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">calendar</strong> extension.</div>
+        {% highlight bash %}npm install bulma-calendar{% endhighlight %}
       </div>
     </article>
 
@@ -74,8 +91,8 @@ doc-subtab: start
         </p>
         <div>To integrate <strong class="has-text-info">all extensions</strong> use following command.</div>
         {% highlight bash %}git clone git://github.com/Wikiki/bulma-extensions.git{% endhighlight %}
-        <div>To integrate the <strong class="has-text-info">checkradio</strong> extension use following command.</div>
-        {% highlight bash %}git clone git://github.com/Wikiki/bulma-checkradio.git{% endhighlight %}
+        <div>To integrate the <strong class="has-text-info">calendar</strong> extension use following command.</div>
+        {% highlight bash %}git clone git://github.com/Wikiki/bulma-calendar.git{% endhighlight %}
       </div>
     </article>
 
@@ -86,7 +103,7 @@ doc-subtab: start
       <p>Once installed the integration process depends on the way you installed the package and your project configuration.<br />
       You will find below some example based on most commons projects configurations</p>
 
-      <div class="notification is-info">Whatever the way you installed the extension you'll have to clone Bulma package in order to be able to use them.</div>
+      <div class="message is-warning"><div class="message-body">Whatever the way you used to install the extension you'll have to include Bulma first in order to be able to use them.</div></div>
     </div>
 
     <article class="media is-large">
@@ -97,10 +114,10 @@ doc-subtab: start
         <p class="title is-5">
           From NPM
         </p>
-        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">checkradio</strong> extension.</div>
+        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">calendar</strong> extension.</div>
         <p>Open you application's main sass file and add the following line:</p>
         {% highlight bash %}@import 'bulma';
-@import '~bulma-checkradio';{% endhighlight %}
+@import '~bulma-calendar';{% endhighlight %}
         <p>Now, you can just build the bulma project with <code>npm run build</code>, and the output will be available in the <code>css folder</code>.</p>
       </div>
     </article>
@@ -117,21 +134,49 @@ doc-subtab: start
           <ul>
             <li>Clone the <a href="https://github.com/jgthms/bulma" target="_blank">bulma repo</a> following <a href="https://bulma.io/documentation/overview/start/" target="_blank">Bulma's documentation</a></li>
             <li>Under the <code>sass</code> folder, create a new folder called <code>extensions</code></li>
-            <li>In this new folder, create a new file <code>bulma-checkradio.sass</code></li>
-            <li>Copy the code from the <code>bulma-checkradio</code>'s' repository <a href="https://github.com/Wikiki/bulma-checkradio/blob/master/dist/bulma-checkradio.sass" target="_blank">bulma-checkradio.sass</a> file into your new file</li>
+            <li>In this new folder, create a new file <code>bulma-calendar.sass</code></li>
+            <li>Copy the code from the <code>bulma-calendar</code>'s' repository <a href="https://github.com/Wikiki/bulma-calendar/blob/master/dist/bulma-calendar.sass" target="_blank">bulma-calendar.sass</a> file into your new file</li>
             <li>In the same folder create a new file <code>_all.sass</code> (this is not required, but will help when you add more extensions)</li>
             <li>In this file add this code:
-    {% highlight sass %}
+{% highlight sass %}
 @charset "utf-8"
-@import 'bulma.sass';
-@import 'bulma-checkradio.sass'
-    {% endhighlight %}</li>
+
+// Import Calendar extension
+@import 'bulma-calendar.sass'
+{% endhighlight %}</li>
             <li>
               <p>Open your main application's sass file and add the following line:</p>
-              {% highlight bash %}@import "sass/extensions/_all"{% endhighlight %}
+{% highlight sass %}
+@charset "utf-8"
+
+// Import Bulma core
+@import 'bulma.sass'
+
+// Import Extensions
+@import "sass/extensions/_all"
+{% endhighlight %}
             </li>
           </ul>
         </div>
+      </div>
+    </article>
+
+    <article class="media is-large">
+      <div class="media-content">
+        <p class="title is-5">
+          JavaScript integration
+        </p>
+        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">calendar</strong> extension from NPM.</div>
+        <p>Open you application's main JavaScript file and add the following line:</p>
+        {% highlight javascript %}
+
+import bulmaCalendar from '/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js';
+{% endhighlight %}
+
+        <p>Or integrate the JavaScript file in your HTML source:</p>
+{% highlight html %}
+<script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
+{% endhighlight %}
       </div>
     </article>
 
@@ -141,7 +186,7 @@ doc-subtab: start
       <p class="title is-5">Compile SASS to CSS</p>
       {% highlight bash %}gulp build:styles{% endhighlight %}
       <p class="title is-5">Compile and Transpile JavaScript</p>
-      <p>You can use option <code>--jsFormat</code> to choose the output format (iife by default), <code>--babelTarger</code> to choose which browser to target (latest 2 versions by default)</p>
+      <p>You can use option <code>--jsFormat</code> to choose the output format (umd by default), <code>--babelTarger</code> to choose which browser to target (latest 2 versions by default)</p>
       {% highlight shell %}gulp build:scripts --jsFormat umd --babelTarget "latest 2 versions"{% endhighlight %}
       <p class="title is-5">Build the whole project</p>
       {% highlight shell %}gulp build{% endhighlight %}
