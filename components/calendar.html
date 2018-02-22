@@ -23,6 +23,12 @@ jsOptions:
 - name: startDate
   description: Date selected by default when Datepicker is displayed
   value: new Date()
+- name: minDate
+  description: Minimum date selectable
+  value: 'null'
+- name: maxDate
+  description: Maximum Date selectable
+  value: 'null'
 - name: dateFormat
   description: Date format to use (to change order or separator). mm/dd/yyyy, dd/mm/yyyy, mm-dd-yyyy, dd-mm-yyyy
   value: 'yyyy-mm-dd'
@@ -327,6 +333,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
       var datePicker1 = new bulmaCalendar( document.getElementById( 'datepickerDemo' ), {} );
       var datePicker2 = new bulmaCalendar( document.getElementById( 'datepickerDemo2' ), {
         overlay: true,
+        minDate: new Date('2018-01-01'),
+        maxDate: new Date('2018-03-31'),
         dateFormat: 'dd-mm-yyyy'
       } );
     } );
