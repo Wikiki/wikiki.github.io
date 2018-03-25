@@ -20,13 +20,13 @@ doc-subtab: start
       </p>
       <ol>
         <li>
-          use <strong>npm</strong> to install the <u>global Bulma-extensions</u> package (which includes all the extensions)
+          Use <strong>npm</strong> to install the <u>global Bulma-extensions</u> package (which includes all the extensions)
         </li>
         <li>
-          use <strong>npm</strong> to install <u>Bulma-extension individually</u>
+          Use <strong>npm</strong> to install <u>Bulma-extension individually</u>
         </li>
         <li>
-          use the <strong>GitHub repository</strong> to get the latest development version
+          Use the <strong>GitHub repository</strong> to get the latest development version
         </li>
       </ol>
     </div>
@@ -51,7 +51,7 @@ doc-subtab: start
       </ul>
     </div>
 
-    <div class="notification is-info">You can find npm package informations related to a specific extension by clicking on the <strong>npm</strong> tag in the top right of each documentation page.</div>
+    <div class="notification is-info">You can find npm package information related to a specific extension by clicking on the <strong>npm</strong> tag in the top right of each documentation page.</div>
 
     {% include anchor.html name="Installation" %}
     <article class="media is-large">
@@ -62,7 +62,7 @@ doc-subtab: start
         <p class="title is-5">
           Use <strong>NPM</strong> to install all extensions:
         </p>
-        <p>This package gather all extensions in one package.</p>
+        <p>This package gathers all extensions in one package.</p>
         {% highlight bash %}npm install bulma-extensions{% endhighlight %}
       </div>
     </article>
@@ -100,10 +100,12 @@ doc-subtab: start
     <hr>
 
     <div class="content">
-      <p>Once installed the integration process depends on the way you installed the package and your project configuration.<br />
-      You will find below some example based on most commons projects configurations</p>
+      <p>Once installed the integration process depends on the way you installed the package and your project configuration.</p>
+      <p>You will find examples below based on most projects' common configurations</p>
 
-      <div class="message is-warning"><div class="message-body">Whatever the way you used to install the extension you'll have to include Bulma first in order to be able to use them.</div></div>
+      <div class="message is-warning">
+        <div class="message-body">Bulma must be included first <strong>before</strong> you include bulma-extensions</div>
+      </div>
     </div>
 
     <article class="media is-large">
@@ -114,11 +116,12 @@ doc-subtab: start
         <p class="title is-5">
           From NPM
         </p>
-        <div class="has-text-info"><strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">calendar</strong> extension.</div>
+        <div class="has-text-info">
+            <strong class="has-text-info">This is an example</strong> to integrate the <strong class="has-text-info">calendar</strong> extension.</div>
         <p>Open you application's main sass file and add the following line:</p>
         {% highlight bash %}@import 'bulma';
 @import '~bulma-calendar';{% endhighlight %}
-        <p>Now, you can just build the bulma project with <code>npm run build</code>, and the output will be available in the <code>css folder</code>.</p>
+        <p>Now you can build the bulma project with <code>npm run build</code> and the output will be available in the <code>css folder</code>.</p>
       </div>
     </article>
 
@@ -134,8 +137,8 @@ doc-subtab: start
           <ul>
             <li>Clone the <a href="https://github.com/jgthms/bulma" target="_blank">bulma repo</a> following <a href="https://bulma.io/documentation/overview/start/" target="_blank">Bulma's documentation</a></li>
             <li>Under the <code>sass</code> folder, create a new folder called <code>extensions</code></li>
-            <li>In this new folder, create a new file <code>bulma-calendar.sass</code></li>
-            <li>Copy the code from the <code>bulma-calendar</code>'s' repository <a href="https://github.com/Wikiki/bulma-calendar/blob/master/dist/bulma-calendar.sass" target="_blank">bulma-calendar.sass</a> file into your new file</li>
+            <li>In this new folder, create a new file named <code>bulma-calendar.sass</code></li>
+            <li>Copy the code from the <code>bulma-calendar</code> repository's <code>sass</code> file (<a href="https://github.com/Wikiki/bulma-calendar/blob/master/dist/bulma-calendar.sass" target="_blank">bulma-calendar.sass</a>) into your new file</li>
             <li>In the same folder create a new file <code>_all.sass</code> (this is not required, but will help when you add more extensions)</li>
             <li>In this file add this code:
 {% highlight sass %}
@@ -186,17 +189,22 @@ import bulmaCalendar from '/node_modules/bulma-extensions/bulma-calendar/dist/bu
       <p class="title is-5">Compile SASS to CSS</p>
       {% highlight bash %}gulp build:styles{% endhighlight %}
       <p class="title is-5">Compile and Transpile JavaScript</p>
-      <p>You can use option <code>--jsFormat</code> to choose the output format (umd by default), <code>--babelTarger</code> to choose which browser to target (latest 2 versions by default)</p>
+      <p>You can use the following options 
+          <ul>
+              <li><code>--jsFormat</code> to choose the output format (umd by default)</li>
+              <li><code>--babelTarget</code> to choose which browser to target (latest 2 versions by default)</li>
+          </ul>
+      </p>
       {% highlight shell %}gulp build:scripts --jsFormat umd --babelTarget "latest 2 versions"{% endhighlight %}
       <p class="title is-5">Build the whole project</p>
       {% highlight shell %}gulp build{% endhighlight %}
-      <p>or the following shorcut</p>
+      <p>or use the following shortcut</p>
       {% highlight shell %}gulp{% endhighlight %}
     </div>
 
-    {% include anchor.html name="Need an extension ?" %}
+    {% include anchor.html name="Need an extension?" %}
     <div class="content">
-      <p>You are looking for a specific extension but you did not find it yet ?</p>
+      <p>Are you looking for a specific extension that you feel is missing but you did not find it?</p>
       <p>Don't hesitate to send me a request by <a href="https://github.com/Wikiki/bulma-extensions/issues" target="_blank">opening and issue</a> on my GitHub repository.</p>
     </div>
   </div>

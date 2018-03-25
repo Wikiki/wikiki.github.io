@@ -68,7 +68,7 @@ variables:
       <div class="column">
         <h1 class="title">Tooltip</h1>
         <h2 class="subtitle">
-          Display a <strong>tooltip</strong> attached to any kind of element, in different position.
+          Display a <strong>tooltip</strong> attached to any kind of element with different positioning.
         </h2>
       </div>
       <div class="column is-narrow">
@@ -106,11 +106,18 @@ variables:
     <hr>
 
     <h3 class="title">Positions</h3>
-    <h4 class="subtitle">You can use <code>.is-tooltip-top</code> <code>.is-tooltip-right</code> <code>.is-tooltip-bottom</code> <code>.is-tooltip-left</code> modifiers to change the tooltip position</h4>
+    <p>You can use one of the following modifiers to change positions of the tooltip: 
+        <ul>
+            <li><code>.is-tooltip-top</code></li>
+            <li><code>.is-tooltip-right</code></li>
+            <li><code>.is-tooltip-bottom</code></li>
+            <li><code>.is-tooltip-left</code></li>
+        </ul>
+    </p>
     {% include snippet.html content=tooltip_positions_example size="one-half" %}
 
     {% include anchor.html name="Sizes" %}
-    <h4 class="subtitle">You can force multiline display by using <code>.is-tooltip-multiline</code> modifier.</h4>
+    <h4 class="subtitle">You can force multiline display by using the <code>.is-tooltip-multiline</code> modifier.</h4>
     {% include snippet.html content=tooltip_sizes_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
