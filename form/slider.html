@@ -171,7 +171,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
       <div class="column">
         <h1 class="title">Slider</h1>
         <h2 class="subtitle">
-          Display classic <strong>slider</strong> more sexy, in different colors, sizes, and states
+          Display a classic <strong>slider</strong> with different colors, sizes, and states
         </h2>
       </div>
       <div class="column is-narrow">
@@ -223,7 +223,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     <h3 class="title">Positions</h3>
     <h4 class="subtitle">vertical</h4>
-    <p>You can display vertical slider by adding <code>orient="vertical"</code> attribute to the range input.</p>
+    <p>Display a vertical slider by adding <code>orient="vertical"</code> to the range input.</p>
     {% include snippet.html content=slider_vertical_example size="one-half" %}
 
     <h3 class="title">States</h3>
@@ -232,13 +232,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     {% include anchor.html name="Javascript" %}
     <h3 class="title">Display value</h3>
-    <p>You can display slider value by adding <code>output</code> DOM element after the slider and class <code>has-output</code> to the slider then use the following JavaScript implementation:</p>
+    <p>Display the slider value by adding an <code>output</code> DOM element after the slider and the class <code>has-output</code> to the slider. Then use the following JavaScript implementation:</p>
     <div class="bd-example">
+      <!--Example missing-->
       {{slider_js_html}}
     </div>
     <br/>
-    <p>You can display the output as a tooltip by changing the class <code>has-output</code> to <code>has-output-tooltip</code> and use the following JavaScript implementation:</p>
+    <p>Display the output as a tooltip by changing the class <code>has-output</code> to <code>has-output-tooltip</code> and use the following JavaScript implementation:</p>
     <div class="bd-example">
+      <!--Example missing-->
       {{slider_js_tooltip_html}}
     </div>
 
@@ -247,7 +249,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
       <div class="message-body">
         <div class="content">
           <p>
-            The extension comes with a JavaScript implementation which update the output value associated to the slider.
+            The extension comes with a JavaScript implementation which updates the output value associated to the slider.
           </p>
 
           {% highlight html %}{{ slider_js_html }}{% endhighlight %}
