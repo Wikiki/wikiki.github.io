@@ -375,7 +375,7 @@ variables:
           {% highlight javascript %}{{ carousel_js }}{% endhighlight %}
 
           <p>Then just add the following code once your DOM's ready:</p>
-          {% highlight javascript %}var carousels = Carousel.attach();{% endhighlight %}
+          {% highlight javascript %}var carousels = bulmaCarousel.attach();{% endhighlight %}
 
           <hr />
           <p>You can react on different events by using {% highlight javascript %}CarouselInstance.on('carousel:ready', function(item) {});{% endhighlight %}</p>
@@ -459,5 +459,6 @@ variables:
 
 <script type="text/javascript" src="{{ site.url }}/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
 <script>
-var carousels = Carousel.attach();
+console.log(bulmaCarousel);
+var carousels = bulmaCarousel.attach();
 </script>

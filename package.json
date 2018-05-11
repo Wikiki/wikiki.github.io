@@ -23,6 +23,6 @@
   "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
   "devDependencies": {
     "bulma": "^0.6.2",
-    "bulma-extensions": "^1.0.13"
+    "bulma-extensions": "latest"
   }
 }
