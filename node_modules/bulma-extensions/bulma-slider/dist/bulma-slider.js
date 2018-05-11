@@ -4,7 +4,7 @@
 // Find output DOM associated to the DOM element passed as parameter
 function findOutputForSlider(element) {
   var idVal = element.id;
-  outputs = document.getElementsByTagName('output');
+  var outputs = document.getElementsByTagName('output');
   for (var i = 0; i < outputs.length; i++) {
     if (outputs[i].htmlFor == idVal)
       return outputs[i];
@@ -13,12 +13,11 @@ function findOutputForSlider(element) {
 
 function getSliderOutputPosition(slider) {
   // Update output position
-  var newPlace,
-    minValue;
+  var newPlace, minValue;
 
   var style = window.getComputedStyle(slider, null);
   // Measure width of range input
-  sliderWidth = parseInt(style.getPropertyValue('width'), 10);
+  var sliderWidth = parseInt(style.getPropertyValue('width'), 10);
 
   // Figure out placement percentage between left and right of input
   if (!slider.getAttribute('min')) {
@@ -66,8 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
           output.style['left'] = newPosition.position;
         }
 
+        // Check for prefix and postfix
+        var prefix = (output.hasAttribute('data-prefix') ? output.getAttribute('data-prefix') : '');
+        var postfix = (output.hasAttribute('data-postfix') ? output.getAttribute('data-postfix') : '');
+        
         // Update output with slider value
-        output.value = event.target.value;
+        output.value = prefix + event.target.value + postfix;
       });
     }
   });
