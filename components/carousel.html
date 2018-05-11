@@ -366,12 +366,6 @@ variables:
 <section class="section">
   <div class="container">
     {% include anchor.html name="Javascript" %}
-    <div class="notification is-info">
-      <p>You don't have to write any JavaScript code.</p>
-    </div>
-
-    <hr>
-
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
       <div class="message-body">
@@ -379,6 +373,81 @@ variables:
           <p>The extension comes with a JavaScript implementation to manage carousel items navigation. Don't forget to include it in your project.</p>
 
           {% highlight javascript %}{{ carousel_js }}{% endhighlight %}
+
+          <p>Then just add the following code once your DOM's ready:</p>
+          {% highlight javascript %}var carousels = Carousel.attach();{% endhighlight %}
+
+          <hr />
+          <p>You can react on different events by using {% highlight javascript %}CarouselInstance.on('carousel:ready', function(item) {});{% endhighlight %}</p>
+          <table class="table is-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Triggered at</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>carousel:ready</code>
+                </td>
+                <td>
+                  once carousel has been iniatited
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>carousel:slide:before</code>
+                </td>
+                <td>
+                  just before sliding
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>carousel:slide:after</code>
+                </td>
+                <td>
+                  just after sliding
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Each event send an object as parameter with following properties: </p>
+          <table class="table is-bordered">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>carousel</code>
+                </td>
+                <td>
+                  The carousel instance that triggered the event.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>node</code>
+                </td>
+                <td>
+                  The Node element related to the current slide item.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>pos</code>
+                </td>
+                <td>
+                  The position (items relative) of the current item.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
