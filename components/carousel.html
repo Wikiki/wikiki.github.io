@@ -50,7 +50,7 @@ variables:
 {% endcapture %}
 
 {% capture carousel_5_example %}
-<div class='carousel is-5 carousel-animated carousel-animate-slide'>
+<div class='carousel carousel-animated carousel-animate-slide' data-size="5">
   <div class='carousel-container'>
     <div class='carousel-item is-active'>
       <figure class="image is-2by1"><img src="https://bulma.io/images/placeholders/640x320.png"></figure>
@@ -348,12 +348,6 @@ variables:
 
     {% include anchor.html name="Animation" %}
     <p>You can animate the carousel by using the <code>carousel-animated</code> along with either the <code>carousel-animate-slide</code> or <code>carousel-animate-fade</code> modifiers directly on the carousel element.</p>
-    <div class="message is-warning">
-      <div class="message-body">
-        <div class="content">
-          The fade animation works only with the hero-carousel.
-        </div>
-      </div>
     </div>
 
     {% include anchor.html name="Hero Carousel" %}
@@ -457,8 +451,9 @@ variables:
   </div>
 </section>
 
-<script type="text/javascript" src="{{ site.url }}/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.js"></script>
 <script>
-console.log(bulmaCarousel);
-var carousels = bulmaCarousel.attach();
+document.addEventListener('DOMContentLoaded', function(){
+  var carousels = bulmaCarousel.attach();
+}, false);
 </script>
