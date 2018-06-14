@@ -32,6 +32,9 @@ jsOptions:
 - name: maxDate
   description: Maximum Date selectable
   value: 'null'
+- name: disabledDates
+  description: Dates to display in calendar
+  value: 'null'
 - name: dateFormat
   description: Date format to use (to change order or separator). mm/dd/yyyy, dd/mm/yyyy, mm-dd-yyyy, dd-mm-yyyy
   value: 'yyyy-mm-dd'
@@ -47,6 +50,21 @@ jsOptions:
 - name: closeOnSelect
   description: Close the Datepicker when selecting a date ?
   value: true
+- name: toggleOnInputClick
+  description: Activate/Deactivate show on input click (if false then call bulmaCalendarInstance.show() to display the datePicker)
+  value: true
+- name: icons.month.previous
+  description: Html content for previous month arrow
+  value: inline svg
+- name: icons.month.next
+  description: Html content for next month arrow
+  value: inline svg
+- name: icons.year.previous
+  description: Html content for previous year arrow
+  value: inline svg
+- name: icons.year.previous
+  description: Html content for previous year arrow
+  value: inline svg
 ---
 
 {% include subnav-components.html %}
@@ -320,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     {% include jsOptions.html %}
 
-    <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.js"></script>
+    <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.js"></script>
     <script type="text/javascript">
     bulmaCalendar.attach('#datepickerDemo');
     bulmaCalendar.attach('#datepickerDemo2', {

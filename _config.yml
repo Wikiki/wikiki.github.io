@@ -12,6 +12,8 @@ sass:
   load_paths:
       - _sass
       - node_modules
+      - node_modules/bulma-extensions
+      - node_modules/bulma-extensions/bulma-tooltip
   style:       compressed
 
 # Icons
