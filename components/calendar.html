@@ -36,7 +36,7 @@ jsOptions:
   description: Dates to display in calendar
   value: 'null'
 - name: dateFormat
-  description: Date format to use (to change order or separator). mm/dd/yyyy, dd/mm/yyyy, mm-dd-yyyy, dd-mm-yyyy
+  description: Date format to use (to change order or separator). See moment.js documentation for supported formats
   value: 'yyyy-mm-dd'
 - name: lang
   description: Lang in which display content (month and day names)
@@ -74,8 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var datePickers = bulmaCalendar.attach('[type="date"]', {
     overlay: true,
     minDate: '2018-01-01',
-    maxDate: '2018-12-31',
-    dateFormat: 'yyyy-mm-dd'
+    maxDate: '2018-12-31'
   });
   // datePickers now contains an Array of all datePicker instances
 });
