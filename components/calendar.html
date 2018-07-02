@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endcapture %}
 
 {% capture calendar_datepicker_overlay_example %}
-<input id="datepickerDemo2" class="input" type="date" value="11-02-2018">
+<input id="datepickerDemo2" class="input" type="date" value="2018-02-11">
 {% endcapture %}
 
 <section class="section">
@@ -338,14 +338,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     {% include jsOptions.html %}
 
-    <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.js"></script>
+    <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
     <script type="text/javascript">
     bulmaCalendar.attach('#datepickerDemo');
     bulmaCalendar.attach('#datepickerDemo2', {
       overlay: true,
       minDate: '2018-01-01',
-      maxDate: '2018-12-31',
-      dateFormat: 'yyyy-mm-dd'
+      maxDate: '2018-12-31'
     });
     </script>
   </div>
