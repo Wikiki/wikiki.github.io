@@ -62,6 +62,14 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture tooltip_active_example %}
+<div class="columns is-multiline text-center">
+  <div class="column">
+    <button class="button is-primary tooltip is-tooltip-active" data-tooltip="Tooltip Text">Always active tooltip</button>
+  </div>
+</div>
+{% endcapture %}
+
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -123,6 +131,10 @@ variables:
     {% include anchor.html name="Colors" %}
     <h4 class="subtitle">You can use color modifiers to change the tooltip background color.</h4>
     {% include snippet.html content=tooltip_colors_example size="one-half" %}
+
+    {% include anchor.html name="AlwaysActive" %}
+    <h4 class="subtitle">By adding the <code>.is-tooltip-actice</code> modifier, you can make a tooltip show always, instead of just when hovering over the element.</h4>
+    {% include snippet.html content=tooltip_active_example size="one-half" %}
 
     {% include variables.html %}
   </div>
