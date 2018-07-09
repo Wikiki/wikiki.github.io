@@ -93,13 +93,6 @@ npm-version: 0.2.1
     <p>Set <code>toggle</code> class on the element you want to handle the expand/collapse action.</p>
 
     {% include anchor.html name="Javascript" %}
-    <div class="notification is-info">
-      <p>You don't have to write any JavaScript code. Just wrap Bulma article components in a div with <code>accordion</code> class and see the magic happens.</p>
-    </div>
-
-    <hr>
-
-
     <div class="message is-info">
       <h4 class="message-header">Javascript</h4>
       <div class="message-body">
@@ -107,6 +100,9 @@ npm-version: 0.2.1
           <p>The extension comes with a JavaScript implementation to expand / collapse accordion items. Don't forget to include it in your project.</p>
 
           {% highlight javascript %}{{ accordion_js }}{% endhighlight %}
+
+          <p>Then just add the following code once your DOM's ready:</p>
+          {% highlight javascript %}var accordions = bulmaAccordion.attach(); // accordions now contains an array of all Accordion instances{% endhighlight %}
         </div>
       </div>
     </div>
