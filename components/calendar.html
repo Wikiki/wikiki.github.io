@@ -340,9 +340,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
     <script type="text/javascript">
     var calendars = bulmaCalendar.attach('#datepickerDemo');
+    console.log(calendars);
     var calendar = calendars[0];
     calendar.on('datepicker:date:selected', function(datePicker) {
-      alert(datePicker.date);
+      alert('Selected date: ' + datePicker.date);
     });
     bulmaCalendar.attach('#datepickerDemo2', {
       overlay: true,
