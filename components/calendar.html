@@ -341,6 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <script type="text/javascript">
     var calendars = bulmaCalendar.attach('#datepickerDemo');
     console.log(calendars);
+    console.log(calendars[0]);
     var calendar = calendars[0];
     calendar.on('datepicker:date:selected', function(datePicker) {
       alert('Selected date: ' + datePicker.date);
