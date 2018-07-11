@@ -341,11 +341,13 @@ document.addEventListener('DOMContentLoaded', function () {
     <script type="text/javascript">
     var calendars = bulmaCalendar.attach('#datepickerDemo');
     console.log(calendars);
-    console.log(calendars[0]);
-    var calendar = calendars[0];
-    calendar.on('datepicker:date:selected', function(datePicker) {
-      alert('Selected date: ' + datePicker.date);
+    [].forEach.call(calendars, function(calendar) {
+      console.log(calendar);
+      calendar.on('datepicker:date:selected', function(datePicker) {
+        alert('Selected date: ' + datePicker.date);
+      });
     });
+    
     bulmaCalendar.attach('#datepickerDemo2', {
       overlay: true,
       minDate: '2018-01-01',
