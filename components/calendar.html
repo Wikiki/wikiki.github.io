@@ -19,6 +19,17 @@ variables:
   value: $primary
 - name: $calendar-today-color
   value: $primary
+jsEvents:
+- name: datepicker:ready
+  description: triggered when DatePicker instance is ready to be used
+- name: datepicker:rendered
+  description: Triggered once per datepicker instanciation
+- name: datepicker:show
+  description: Triggered each time datepicker is showed
+- name: datepicker:hide
+  description: Triggered when datepicker is closed
+- name: datepicker:date:selected
+  description: Triggered when a date is selected
 jsOptions:
 - name: startDate
   description: Date selected by default when Datepicker is displayed
@@ -77,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
     maxDate: '2018-12-31'
   });
   // datePickers now contains an Array of all datePicker instances
+  // To use Events API jus add a listener like below:
+  // datepickerInstance.on(event, function(datepicker) {});
 });
 {% endcapture %}
 
@@ -335,7 +348,11 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     </div>
 
+    {% include jsEvents.html %}
+
     {% include jsOptions.html %}
+
+    events:
 
     <script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
     <script type="text/javascript">
