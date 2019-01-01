@@ -44,6 +44,12 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture tooltip_responsive_positioning_example %}
+<div class="column">
+  <button class="button is-primary tooltip is-tooltip-top is-tooltip-bottom-desktop is-tooltip-active" data-tooltip="Hi! I'm on top and bottom.">Top and Bottom</button>
+</div>
+{% endcapture %}
+
 {% capture tooltip_colors_example %}
 <div class="columns is-multiline text-center">
   <div class="column">
@@ -125,6 +131,23 @@ variables:
         </ul>
     </p>
     {% include snippet.html content=tooltip_positions_example size="one-half" %}
+
+    {% include anchor.html name="Responsive Positioning" %}
+    <h4 class="subtitle">You can position the tooltip at differently depending on the screen size.</h4>
+    {% include snippet.html content=tooltip_responsive_positioning_example size="one-half" %}
+    <p>The format of the responsiveness classes is
+      <code>is-tooltip-<b>**position**</b>-<b>**responsive_helper**</b></code>,
+      such as <code>is-tooltip-bottom-desktop</code> and <code>is-tooltip-left-tablet-only</code>.</p>
+    <p>Beware that you should place the responsiveness classes <i>after</i> the main position class.</p>
+    <br>
+    <div class="message is-primary">
+      <div class="message-header">
+        List of Responsive Helpers
+      </div>
+      <div class="message-body">
+        You may refer to the <a href="https://bulma.io/documentation/modifiers/responsive-helpers/">Documentation of Bulma</a> for all of the available responsive helpers.
+      </div>
+    </div>
 
     {% include anchor.html name="Sizes" %}
     <h4 class="subtitle">You can force multiline display by using the <code>.is-tooltip-multiline</code> modifier.</h4>
