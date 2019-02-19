@@ -3,158 +3,18 @@ title: Badge
 layout: documentation
 doc-tab: elements
 doc-subtab: badge
-npm-version: 0.1.0
-variables:
-- name: $badge-border-size
-  value: .1rem
-- name: $badge-border-radius
-  value: 1rem
+npm-version: 3.0.0
 ---
 
-{% include subnav-elements.html %}
-
-{% capture badge_example %}
-<button class="button badge" data-badge="8">Button</button>
-{% endcapture %}
-
-{% capture badge_colors_example %}
-<div class="columns">
-  <div class="column">
-    <span class="badge" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-success" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-warning" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-danger" data-badge="">
-      Notifications
-    </span>
-  </div>
-</div>
-
-<div class="columns">
-  <div class="column">
-    <span class="badge" data-badge="8">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-success" data-badge="88">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-danger" data-badge="888">
-      Notifications
-    </span>
-  </div>
-</div>
-
-<div class="block">
-  <button class="button badge" data-badge="">Button</button>
-  <button class="button badge" data-badge="8">Button</button>
-</div>
-
-<div class="block">
-  <button class="button is-primary badge" data-badge="">Button</button>
-  <button class="button is-info badge" data-badge="8">Button</button>
-</div>
-{% endcapture %}
-
-{% capture badge_sizes_example %}
-<div class="columns">
-  <div class="column">
-    <span class="badge is-badge-success is-badge-small" data-badge="10">
-      Small badge
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-success" data-badge="10">
-      Normal badge
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-warning is-badge-medium" data-badge="10">
-      Medium badge
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-danger is-badge-large" data-badge="10">
-      Large badge
-    </span>
-  </div>
-</div>
-{% endcapture %}
-
-{% capture badge_outlined_example %}
-<div class="columns">
-  <div class="column">
-    <span class="badge is-badge-outlined" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-success is-badge-outlined" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-warning is-badge-outlined" data-badge="">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-danger is-badge-outlined" data-badge="">
-      Notifications
-    </span>
-  </div>
-</div>
-
-<div class="columns">
-  <div class="column">
-    <span class="badge is-badge-outlined" data-badge="8">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-success is-badge-outlined" data-badge="88">
-      Notifications
-    </span>
-  </div>
-  <div class="column">
-    <span class="badge is-badge-danger is-badge-outlined" data-badge="888">
-      Notifications
-    </span>
-  </div>
-</div>
-
-<div class="block">
-  <button class="button badge is-badge-outlined" data-badge="">Button</button>
-  <button class="button badge is-badge-outlined" data-badge="8">Button</button>
-</div>
-
-<div class="block">
-  <button class="button is-primary badge is-badge-outlined" data-badge="">Button</button>
-  <button class="button is-info badge is-badge-outlined" data-badge="8">Button</button>
-</div>
-{% endcapture %}
+{% include subnav-components.html %}
 
 <section class="section">
   <div class="container">
     <div class="columns">
       <div class="column">
-        <h1 class="title">Badge</h1>
+        <h1 class="title">Calendar</h1>
         <h2 class="subtitle">
-          Display a <strong>badge</strong> element in front of another Bulma element with different colors.<br />
+          Display a badge element in front of Bulma's element in different colors.
         </h2>
       </div>
       <div class="column is-narrow">
@@ -178,28 +38,11 @@ variables:
         </div>
       </div>
     </div>
-    {%
-      include meta.html
-      colors=true
-      sizes=true
-      variables=true
-    %}
-
-    <hr>
-
-    {% include snippet.html content=badge_example size="one-half" %}
-
-    {% include anchor.html name="Colors" %}
-    {% include snippet.html content=badge_colors_example size="one-half" more=true %}
-
-    {% include anchor.html name="Sized" %}
-    {% include snippet.html content=badge_sizes_example size="one-half" more=true %}
-
-    {% include anchor.html name="Styles" %}
-    <h4 class="subtitle">You can display an outlined badge by using the <code>.is-badge-outlined</code> modifier.</h4>
-    {% include snippet.html content=badge_outlined_example size="one-half" more=true %}
-
-    <h4 class="subtitle">You can change the badge position using one of the following modifiers: <code>.is-badge-left</code> <code>.is-badge-bottom</code>  <code>.is-badge-bottom-left</code> .</h4>
-    {% include variables.html %}
+    <article class="message is-warning">
+      <div class="message-body">
+        Full documentation and demos of this component are now available on <a href="https://demo.creativebulma.net/elements/badge"
+          target="_blank">CreativeBulma</a>.
+      </div>
+    </article>
   </div>
 </section>
