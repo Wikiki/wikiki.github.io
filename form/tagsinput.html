@@ -17,6 +17,10 @@ npm-version: 0.2.0
 <script type="text/javascript" src="/node_modules/bulma-extensions/bulma-tagsinput/dist/bulma-tagsinput.min.js"></script>
 {% endcapture %}
 
+{% capture tagsinput_attach %}
+bulmaTagsinput.attach();
+{% endcapture %}
+
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -77,6 +81,10 @@ npm-version: 0.2.0
           <p>The extension comes with a JavaScript implementation to manage input tags type. Don't forget to include it in your project.</p>
 
           {% highlight javascript %}{{ tagsinput_js }}{% endhighlight %}
+          
+          <p>To activate the input elements, run the <code>attach</code>command.</p>
+
+          {% highlight javascript %}{{ tagsinput_attach }}{% endhighlight %}
         </div>
       </div>
     </div>
