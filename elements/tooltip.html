@@ -3,69 +3,83 @@ title: Tooltip
 layout: documentation
 doc-tab: elements
 doc-subtab: tooltip
-npm-version: 0.1.1
+npm-version: 3.0.1
 variables:
+- name: $tooltip-arrow-size
+  value: 6px
 - name: $tooltip-background-color
   value: $grey-dark
 - name: $tooltip-background-opacity
   value: 0.9
+- name: $tooltip-color
+  value: $white
+- name: $tooltip-font-family
+  value: $family-primary
+- name: $tooltip-font-size
+  value: $size-7
 - name: $tooltip-max-width
-  value: 24rem
+  value: 15rem
+- name: $tooltip-padding
+  value: .5rem 1rem
+- name: $tooltip-radius
+  value: $radius-small
+- name: $tooltip-z-index
+  value: 1020
 ---
 
 {% include subnav-elements.html %}
 
 {% capture tooltip_example %}
 <div class="column">
-  <button class="button is-primary tooltip" data-tooltip="Tooltip Text">Tooltip</button>
+  <button class="button is-primary" data-tooltip="Tooltip Text">Tooltip</button>
 </div>
 {% endcapture %}
 
 {% capture tooltip_sizes_example %}
 <div class="column">
-  <button class="button is-primary tooltip is-tooltip-multiline" data-tooltip="Tooltip with a long Text. So we use is-tooltip-multiline modifier to force multiline display.">Multiline Tooltip</button>
+  <button class="button is-primary has-tooltip-multiline" data-tooltip="Tooltip with a long Text. So we use has-tooltip-multiline modifier to force multiline display.">Multiline Tooltip</button>
 </div>
 {% endcapture %}
 
 {% capture tooltip_positions_example %}
 <div class="columns is-multiline text-center">
   <div class="column">
-    <button class="button is-primary tooltip" data-tooltip="Tooltip Text">top tooltip</button>
+    <button class="button is-primary" data-tooltip="Tooltip Text">top tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-primary tooltip is-tooltip-right" data-tooltip="Tooltip Text">right tooltip</button>
+    <button class="button is-primary has-tooltip-right" data-tooltip="Tooltip Text">right tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-primary tooltip is-tooltip-bottom" data-tooltip="Tooltip Text">bottom tooltip</button>
+    <button class="button is-primary has-tooltip-bottom" data-tooltip="Tooltip Text">bottom tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-primary tooltip is-tooltip-left" data-tooltip="Tooltip Text">left tooltip</button>
+    <button class="button is-primary has-tooltip-left" data-tooltip="Tooltip Text">left tooltip</button>
   </div>
 </div>
 {% endcapture %}
 
 {% capture tooltip_responsive_positioning_example %}
 <div class="column">
-  <button class="button is-primary tooltip is-tooltip-top is-tooltip-bottom-desktop is-tooltip-active" data-tooltip="Hi! I'm on top and bottom.">Top and Bottom</button>
+  <button class="button is-primary has-tooltip-top has-tooltip-bottom-desktop has-tooltip-active" data-tooltip="Hi! I'm on top and bottom.">Top and Bottom</button>
 </div>
 {% endcapture %}
 
 {% capture tooltip_colors_example %}
 <div class="columns is-multiline text-center">
   <div class="column">
-    <button class="button is-tooltip-primary tooltip" data-tooltip="Tooltip Text">Primary tooltip</button>
+    <button class="button has-tooltip-primary" data-tooltip="Tooltip Text">Primary tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-tooltip-info tooltip" data-tooltip="Tooltip Text">Info tooltip</button>
+    <button class="button has-tooltip-info" data-tooltip="Tooltip Text">Info tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-tooltip-success tooltip" data-tooltip="Tooltip Text">Success tooltip</button>
+    <button class="button has-tooltip-success" data-tooltip="Tooltip Text">Success tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-tooltip-warning tooltip" data-tooltip="Tooltip Text">Warning tooltip</button>
+    <button class="button has-tooltip-warning" data-tooltip="Tooltip Text">Warning tooltip</button>
   </div>
   <div class="column">
-    <button class="button is-tooltip-danger tooltip" data-tooltip="Tooltip Text">Danger tooltip</button>
+    <button class="button has-tooltip-danger" data-tooltip="Tooltip Text">Danger tooltip</button>
   </div>
 </div>
 {% endcapture %}
@@ -73,7 +87,7 @@ variables:
 {% capture tooltip_active_example %}
 <div class="columns is-multiline text-center">
   <div class="column">
-    <button class="button is-primary tooltip is-tooltip-active" data-tooltip="Tooltip Text">Always active tooltip</button>
+    <button class="button is-primary has-tooltip-active" data-tooltip="Tooltip Text">Always active tooltip</button>
   </div>
 </div>
 {% endcapture %}
@@ -124,10 +138,10 @@ variables:
     <h3 class="title">Positions</h3>
     <p>You can use one of the following modifiers to change positions of the tooltip: 
         <ul>
-            <li><code>.is-tooltip-top</code></li>
-            <li><code>.is-tooltip-right</code></li>
-            <li><code>.is-tooltip-bottom</code></li>
-            <li><code>.is-tooltip-left</code></li>
+            <li><code>.has-tooltip-top</code></li>
+            <li><code>.has-tooltip-right</code></li>
+            <li><code>.has-tooltip-bottom</code></li>
+            <li><code>.has-tooltip-left</code></li>
         </ul>
     </p>
     {% include snippet.html content=tooltip_positions_example size="one-half" %}
@@ -136,8 +150,8 @@ variables:
     <h4 class="subtitle">You can position the tooltip at differently depending on the screen size.</h4>
     {% include snippet.html content=tooltip_responsive_positioning_example size="one-half" %}
     <p>The format of the responsiveness classes is
-      <code>is-tooltip-<b>**position**</b>-<b>**responsive_helper**</b></code>,
-      such as <code>is-tooltip-bottom-desktop</code> and <code>is-tooltip-left-tablet-only</code>.</p>
+      <code>has-tooltip-<b>**position**</b>-<b>**responsive_helper**</b></code>,
+      such as <code>has-tooltip-bottom-desktop</code> and <code>has-tooltip-left-tablet-only</code>.</p>
     <p>Beware that you should place the responsiveness classes <i>after</i> the main position class.</p>
     <br>
     <div class="message is-primary">
@@ -150,7 +164,7 @@ variables:
     </div>
 
     {% include anchor.html name="Sizes" %}
-    <h4 class="subtitle">You can force multiline display by using the <code>.is-tooltip-multiline</code> modifier.</h4>
+    <h4 class="subtitle">You can force multiline display by using the <code>.has-tooltip-multiline</code> modifier.</h4>
     {% include snippet.html content=tooltip_sizes_example size="one-half" %}
 
     {% include anchor.html name="Colors" %}
@@ -158,7 +172,7 @@ variables:
     {% include snippet.html content=tooltip_colors_example size="one-half" %}
 
     {% include anchor.html name="AlwaysActive" %}
-    <h4 class="subtitle">By adding the <code>.is-tooltip-active</code> modifier, you can make a tooltip show always, instead of just when hovering over the element.</h4>
+    <h4 class="subtitle">By adding the <code>.has-tooltip-active</code> modifier, you can make a tooltip show always, instead of just when hovering over the element.</h4>
     {% include snippet.html content=tooltip_active_example size="one-half" %}
 
     {% include variables.html %}
