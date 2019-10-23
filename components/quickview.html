@@ -35,7 +35,7 @@ variables:
 {% endcapture %}
 
 {% capture quickview_js_code %}
-<script type="text/javascript" src="/node_modules/bulma-extensions/bulma-quickview/dist/bulma-quickview.min.js"></script>
+<script type="text/javascript" src="/node_modules/bulma-quickview/dist/bulma-quickview.min.js"></script>
 {% endcapture %}
 
 <div id="quickviewDefault" class="quickview">
@@ -118,7 +118,8 @@ variables:
   </div>
 </section>
 
-<script type="text/javascript" src="{{ site.url }}/node_modules/bulma-extensions/bulma-quickview/dist/js/bulma-quickview.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bulma-quickview@2.0.0/dist/js/bulma-quickview.min.js">
+</script>
 <script>
   bulmaQuickview.attach();
 </script>
