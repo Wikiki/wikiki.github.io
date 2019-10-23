@@ -1,0 +1,19 @@
+<div {% if include.id %}id="{{ include.id }}"{% endif %} class="card {% if include.class %}{{ include.class }}{% endif %}">
+  {% if include.title %}
+  <header class="card-header">
+    <p class="card-header-title">{{ include.title }}</p>
+    {% if include.header-icons %}
+    {% for header-icon in include.header-icons %}
+    <a href="#" class="card-header-icon">
+      <span class="icon">
+        <i class="{{ header-icon.icon }}" aria-hidden="true"></i>
+      </span>
+    </a>
+    {% endfor %}
+    {% endif %}
+  </header>
+  {% endif %}
+  <div class="card-content">
+    {{ include.content }}
+  </div>
+</div>

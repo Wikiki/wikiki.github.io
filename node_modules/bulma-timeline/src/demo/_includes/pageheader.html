@@ -1,0 +1,37 @@
+<!-- Start PageHeader -->
+<nav class="pageheader {% if include.marginless %}is-marginless{% endif %} ">
+  <div class="pageheader-left">
+    <div class="pageheader-item">
+      {% if include.icon %}<i class="icon is-large fa-3x i {{ include.icon }}"></i>{% endif %}
+      <div class="block">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Right side -->
+  <div class="pageheader-right">
+    {% for button in page.pageheader-buttons %}
+    <div class="pageheader-item">
+      <a href="#" class="button {% if button.type %}{{ button.type }}{% endif %}">
+        {% if button.icon %}<span class="icon is-small"><i class="{{ button.icon }}"></i></span>{% endif %}
+        <span> {{ button.name }}</span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if page.tabs %}
+  <div class="pageheader-tabs tabs is-uppercase">
+    <ul>
+    {% for tab in page.tabs %}
+      <li class="{% if forloop.first %}is-active{% endif %}" data-target="{{ tab.target }}"><a href="#{{ tab.target }}">{{ tab.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</nav>
+<!-- End PageHeader -->
