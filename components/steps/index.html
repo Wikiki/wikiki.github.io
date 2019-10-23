@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top route-documentation">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <title>Steps | Bulma-Extensions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/css/documentation.css?v=201910231021">
+
+  <link rel="canonical" href="http://localhost:4000/components/steps/">
+  <link rel="alternate" type="application/rss+xml" title="Bulma-Extensions" href="http://localhost:4000/feed.xml">
+
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bulma-Extensions">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/favicons/apple-touch-icon.png?v=201701041855">
+  <link rel="icon" type="image/png" href="http://localhost:4000/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+  <link rel="icon" type="image/png" href="http://localhost:4000/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+  <link rel="manifest" href="http://localhost:4000/favicons/manifest.json?v=201701041855">
+  <link rel="mask-icon" href="http://localhost:4000/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+  <link rel="shortcut icon" href="http://localhost:4000/favicons/favicon.ico?v=201701041855">
+  <meta name="msapplication-config" content="http://localhost:4000/favicons/browserconfig.xml?v=201701041855">
+  <meta name="theme-color" content="#00d1b2">
+</head>
+
+  <body class="layout-documentation page-components">
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://localhost:4000">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li >
+            <a href="http://localhost:4000">Overview</a>
+          </li>
+          <li >
+            <a href="http://localhost:4000/layout/divider/">Layout</a>
+          </li>
+          <li >
+            <a href="http://localhost:4000/form/checkradio">Form</a>
+          </li>
+          <li >
+            <a href="http://localhost:4000/elements/badge/">Elements</a>
+          </li>
+          <li class="is-active">
+            <a href="http://localhost:4000/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
+
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://localhost:4000">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuDocumentation" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-tabs">
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/accordion/">
+        Accordion
+      </a>
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/calendar/">
+        Calendar
+      </a>
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/carousel/">
+        Carousel
+      </a>
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/pricingtable/">
+        Pricing table
+      </a>
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/quickview/">
+        Quickview
+      </a>
+      <a class="navbar-item is-tab is-active" href="http://localhost:4000/components/steps/">
+        Steps
+      </a>
+      <a class="navbar-item is-tab " href="http://localhost:4000/components/timeline/">
+        Timeline
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Steps</h1>
+        <h2 class="subtitle">
+          Display <strong>steps</strong> for a process (like sign-up or an order form) with different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-steps" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-steps" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.1.7</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <a class="tag is-success" href="#colors">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <a class="tag is-success" href="#sizes">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Javascript</span>
+      
+        <a class="tag is-success" href="#javascript">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <a class="tag is-success" href="#variables">Yes</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-horizontal
+    
+    bd-is-3
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="steps">
+  <div class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step of the process.</p>
+    </div>
+  </div>
+  <div class="step-item is-active">
+    <div class="step-marker"></div>
+    <div class="step-details">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. You get here once you have completed the first step.</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. One more step before the end.</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 4</p>
+      <p>Final step. You have completed all the previous steps and end the process.</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item is-completed is-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the first step of the process.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the second step. You get here once you have completed the first step.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the third step. One more step before the end.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Final step. You have completed all the previous steps and end the process.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+  Colors
+  <a class="bd-anchor-link" href="#colors">
+    #
+  </a>
+</h3>
+
+
+    
+  <div class="
+    bd-snippet
+    bd-is-horizontal
+    
+    bd-is-3
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<ul class="steps">
+  <li class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-details is-primary is-completed">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step of the process.</p>
+    </div>
+  </li>
+  <li class="step-item is-info is-completed">
+    <div class="step-marker"></div>
+    <div class="step-details">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. You get here once you have completed the first step.</p>
+    </div>
+  </li>
+  <li class="step-item is-warning is-completed">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. One more step before the end.</p>
+    </div>
+  </li>
+  <li class="step-item is-danger is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 4</p>
+      <p>Final step. You have completed all the previous steps and end the process.</p>
+    </div>
+  </li>
+</ul>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-completed is-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details is-primary is-completed"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 1<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the first step of the process.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-info is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 2<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the second step. You get here once you have completed the first step.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-warning is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 3<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>This is the third step. One more step before the end.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-danger is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Step 4<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Final step. You have completed all the previous steps and end the process.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="sizes" class="title is-4 is-spaced bd-anchor-title">
+  Sizes
+  <a class="bd-anchor-link" href="#sizes">
+    #
+  </a>
+</h3>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-horizontal
+    
+    bd-is-3
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<ul class="steps is-small">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps is-medium">
+  <li class="step-item is-completed">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps is-large">
+  <li class="step-item is-completed">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-small"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-medium"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steps is-large"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-completed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item is-active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+  Variables
+  <a class="bd-anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="https://bulma.io/documentation/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+      <tr>
+        <td>
+          <code>$steps-maker-default-color</code>
+        </td>
+        <td>
+          <code>$grey-light</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$steps-marker-default-border</code>
+        </td>
+        <td>
+          <code>.2em solid</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$steps-default-color</code>
+        </td>
+        <td>
+          <code>$grey-lighter</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$steps-completed-color</code>
+        </td>
+        <td>
+          <code>$primary</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$steps-active-color</code>
+        </td>
+        <td>
+          <code>$primary</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$steps-divider-height</code>
+        </td>
+        <td>
+          <code>.2em</code>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="javascript" class="title is-4 is-spaced bd-anchor-title">
+  Javascript
+  <a class="bd-anchor-link" href="#javascript">
+    #
+  </a>
+</h3>
+
+
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation which manage steps navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-horizontal
+    
+    bd-is-3
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="steps" id="stepsDemo">
+  <div class="step-item is-active is-success">
+    <div class="step-marker">1</div>
+    <div class="step-details">
+      <p class="step-title">Account</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">2</div>
+    <div class="step-details">
+      <p class="step-title">Profile</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Social</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">4</div>
+    <div class="step-details">
+      <p class="step-title">Finish</p>
+    </div>
+  </div>
+  <div class="steps-content">
+    <div class="step-content has-text-centered is-active">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Username</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Confirm password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password_confirm" id="password_confirm" placeholder="Confirm password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Firstname</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="firstname" id="firstname" type="text" placeholder="Firstname" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Last name</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Email</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="email" name="email" id="email" placeholder="Email" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Facebook account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="facebook" id="facebook" type="text" placeholder="Facebook account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Twitter account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="twitter" id="twitter" type="text" placeholder="Twitter account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <h1 class="title is-4">Your account is now created!</h1>
+    </div>
+  </div>
+  <div class="steps-actions">
+    <div class="steps-action">
+      <a href="#" data-nav="previous" class="button is-light">Previous</a>
+    </div>
+    <div class="steps-action">
+      <a href="#" data-nav="next" class="button is-light">Next</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps"</span> <span class="na">id=</span><span class="s">"stepsDemo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item is-active is-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Social<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-marker"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-details"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"step-title"</span><span class="nt">&gt;</span>Finish<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content has-text-centered is-active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Username"</span> <span class="na">autofocus</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control has-icon has-icon-right"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Password"</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Confirm password<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control has-icon has-icon-right"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password_confirm"</span> <span class="na">id=</span><span class="s">"password_confirm"</span> <span class="na">placeholder=</span><span class="s">"Confirm password"</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content has-text-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Firstname<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">name=</span><span class="s">"firstname"</span> <span class="na">id=</span><span class="s">"firstname"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Firstname"</span> <span class="na">autofocus</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Last name<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control has-icon has-icon-right"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"lastname"</span> <span class="na">id=</span><span class="s">"lastname"</span> <span class="na">placeholder=</span><span class="s">"Last name"</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control has-icon has-icon-right"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content has-text-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Facebook account<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">name=</span><span class="s">"facebook"</span> <span class="na">id=</span><span class="s">"facebook"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Facebook account url"</span> <span class="na">autofocus</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field is-horizontal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-label is-normal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Twitter account<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">name=</span><span class="s">"twitter"</span> <span class="na">id=</span><span class="s">"twitter"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Twitter account url"</span> <span class="na">autofocus</span> <span class="na">data-validate=</span><span class="s">"require"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content has-text-centered"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title is-4"</span><span class="nt">&gt;</span>Your account is now created!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-action"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-nav=</span><span class="s">"previous"</span> <span class="na">class=</span><span class="s">"button is-light"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steps-action"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">data-nav=</span><span class="s">"next"</span> <span class="na">class=</span><span class="s">"button is-light"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="javascript-options" class="title is-4 is-spaced bd-anchor-title">
+  JavaScript options
+  <a class="bd-anchor-link" href="#javascript-options">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these options to <strong>customize</strong> the plugin instance. Simply set one or multiple of these options <em>when instancing</em> the plugin.
+  </p>
+</div>
+
+<table class="table is-bordered is-fullwidth">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+      <tr>
+        <td>
+          <code>selector</code>
+        </td>
+        <td>
+          Selector to identify steps
+        </td>
+        <td>
+          <code>.step-item</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>selector_content</code>
+        </td>
+        <td>
+          Selector to identify steps content
+        </td>
+        <td>
+          <code>.step-content</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>previous_selector</code>
+        </td>
+        <td>
+          Selector to identify previous button
+        </td>
+        <td>
+          <code>data-nav="previous"</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>next_selector</code>
+        </td>
+        <td>
+          Selector to identify next button
+        </td>
+        <td>
+          <code>data-nav="next"</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>active_class</code>
+        </td>
+        <td>
+          Class to apply to the active step
+        </td>
+        <td>
+          <code>is-active</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>completed_class</code>
+        </td>
+        <td>
+          Class to apply to completed step
+        </td>
+        <td>
+          <code>is-completed</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>beforeNext</code>
+        </td>
+        <td>
+          Callback called before displaying next step
+        </td>
+        <td>
+          <code>null</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>onShow</code>
+        </td>
+        <td>
+          Callback called when displaying step
+        </td>
+        <td>
+          <code>null</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>onFinish</code>
+        </td>
+        <td>
+          Callback called when all steps have been completed
+        </td>
+        <td>
+          <code>null</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>onError</code>
+        </td>
+        <td>
+          Callback called on error
+        </td>
+        <td>
+          <code>null</code>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+
+    <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <code>marker</code> name idea and for the sizes mixin declaration (which is smart).</p>
+
+    <script type="text/javascript" src="http://localhost:4000/node_modules/bulma-extensions/bulma-steps/dist/js/bulma-steps.min.js"></script>
+    <script>
+      bulmaSteps.attach();
+    </script>
+  </div>
+</section>
+
+
+    <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <p id="tsp">
+          <a href="https://bulma.io" target="_blank">
+            <img src="http://localhost:4000/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+          <small>
+            Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+          </small>
+        </p>
+        <br />
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://localhost:4000/vendor/clipboard-1.7.1.min.js"></script>
+<script src="http://localhost:4000/js/main.js?v=201910231021"></script>
+
+<script async defer type="text/javascript">
+  (function() {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+  }());
+  // var $mcj = window.jQuery.noConflict(true);
+</script>
+
+  </body>
+</html>
