@@ -1,0 +1,39 @@
+{% include anchor.html name="JavaScript options" %}
+
+<div class="content">
+  <p>
+    You can use these options to <strong>customize</strong> the plugin instance. Simply set one or multiple of these options <em>when instancing</em> the plugin.
+  </p>
+</div>
+
+<table class="table is-bordered is-fullwidth">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for jsOption in page.jsOptions %}
+      <tr>
+        <td>
+          <code>{{ jsOption.name }}</code>
+        </td>
+        <td>
+          {{ jsOption.description }}
+        </td>
+        <td>
+          <code>{{ jsOption.value }}</code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

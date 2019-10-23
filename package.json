@@ -1,0 +1,46 @@
+{
+  "name": "wikiki.github.io",
+  "version": "0.6.4",
+  "description": "Set of extensions for Bulma.io CSS Framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://wikiki@github.com/Wikiki/bulma-extensions.git"
+  },
+  "keywords": [
+    "bulma",
+    "extensions",
+    "bulma.io"
+  ],
+  "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikiki/bulma-extensions/issues"
+  },
+  "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
+  "devDependencies": {
+    "bulma": "~0.7.0",
+    "bulma-accordion": "latest",
+    "bulma-badge": "latest",
+    "bulma-calendar": "latest",
+    "bulma-carousel": "latest",
+    "bulma-checkradio": "latest",
+    "bulma-divider": "latest",
+    "bulma-iconpicker": "latest",
+    "bulma-pageloader": "latest",
+    "bulma-pricingtable": "latest",
+    "bulma-quickview": "latest",
+    "bulma-ribbon": "latest",
+    "bulma-slider": "latest",
+    "bulma-steps": "latest",
+    "bulma-switch": "latest",
+    "bulma-tagsinput": "latest",
+    "bulma-timeline": "latest",
+    "bulma-tooltip": "^3.0",
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}

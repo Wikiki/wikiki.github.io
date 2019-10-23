@@ -1,0 +1,442 @@
+---
+title: Steps
+layout: documentation
+doc-tab: components
+doc-subtab: steps
+npm-version: 0.1.7
+variables:
+- name: $steps-maker-default-color
+  value: $grey-light
+- name: $steps-marker-default-border
+  value: .2em solid #fff
+- name: $steps-default-color
+  value: $grey-lighter
+- name: $steps-completed-color
+  value: $primary
+- name: $steps-active-color
+  value: $primary
+- name: $steps-divider-height
+  value: .2em
+jsOptions:
+- name: selector
+  description: Selector to identify steps
+  value: .step-item
+- name: selector_content
+  description: Selector to identify steps content
+  value: .step-content
+- name: previous_selector
+  description: Selector to identify previous button
+  value: [data-nav="previous"]
+- name: next_selector
+  description: Selector to identify next button
+  value: [data-nav="next"]
+- name: active_class
+  description: Class to apply to the active step
+  value: is-active
+- name: completed_class
+  description: Class to apply to completed step
+  value: is-completed
+- name: beforeNext
+  description: Callback called before displaying next step
+  value: 'null'
+- name: onShow
+  description: Callback called when displaying step
+  value: 'null'
+- name: onFinish
+  description: Callback called when all steps have been completed
+  value: 'null'
+- name: onError
+  description: Callback called on error
+  value: 'null'
+---
+
+{% include subnav-components.html %}
+
+{% capture steps_example %}
+<div class="steps">
+  <div class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step of the process.</p>
+    </div>
+  </div>
+  <div class="step-item is-active">
+    <div class="step-marker"></div>
+    <div class="step-details">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. You get here once you have completed the first step.</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. One more step before the end.</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 4</p>
+      <p>Final step. You have completed all the previous steps and end the process.</p>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture steps_js_example %}
+<div class="steps" id="stepsDemo">
+  <div class="step-item is-active is-success">
+    <div class="step-marker">1</div>
+    <div class="step-details">
+      <p class="step-title">Account</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">2</div>
+    <div class="step-details">
+      <p class="step-title">Profile</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Social</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-marker">4</div>
+    <div class="step-details">
+      <p class="step-title">Finish</p>
+    </div>
+  </div>
+  <div class="steps-content">
+    <div class="step-content has-text-centered is-active">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Username</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Confirm password</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="password" name="password_confirm" id="password_confirm" placeholder="Confirm password" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Firstname</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="firstname" id="firstname" type="text" placeholder="Firstname" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Last name</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Email</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control has-icon has-icon-right">
+              <input class="input" type="email" name="email" id="email" placeholder="Email" data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Facebook account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="facebook" id="facebook" type="text" placeholder="Facebook account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Twitter account</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" name="twitter" id="twitter" type="text" placeholder="Twitter account url" autofocus data-validate="require">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-content has-text-centered">
+      <h1 class="title is-4">Your account is now created!</h1>
+    </div>
+  </div>
+  <div class="steps-actions">
+    <div class="steps-action">
+      <a href="#" data-nav="previous" class="button is-light">Previous</a>
+    </div>
+    <div class="steps-action">
+      <a href="#" data-nav="next" class="button is-light">Next</a>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture steps_sizes_example %}
+<ul class="steps is-small">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps">
+  <li class="step-item is-completed">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps is-medium">
+  <li class="step-item is-completed">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+
+<ul class="steps is-large">
+  <li class="step-item is-completed">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item is-active">
+    <div class="step-marker"></div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">3</div>
+  </li>
+  <li class="step-item">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture steps_colors_example %}
+<ul class="steps">
+  <li class="step-item is-completed is-success">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <div class="step-details is-primary is-completed">
+      <p class="step-title">Step 1</p>
+      <p>This is the first step of the process.</p>
+    </div>
+  </li>
+  <li class="step-item is-info is-completed">
+    <div class="step-marker"></div>
+    <div class="step-details">
+      <p class="step-title">Step 2</p>
+      <p>This is the second step. You get here once you have completed the first step.</p>
+    </div>
+  </li>
+  <li class="step-item is-warning is-completed">
+    <div class="step-marker">3</div>
+    <div class="step-details">
+      <p class="step-title">Step 3</p>
+      <p>This is the third step. One more step before the end.</p>
+    </div>
+  </li>
+  <li class="step-item is-danger is-active">
+    <div class="step-marker">
+      <span class="icon">
+        <i class="fa fa-flag"></i>
+      </span>
+    </div>
+    <div class="step-details">
+      <p class="step-title">Step 4</p>
+      <p>Final step. You have completed all the previous steps and end the process.</p>
+    </div>
+  </li>
+</ul>
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Steps</h1>
+        <h2 class="subtitle">
+          Display <strong>steps</strong> for a process (like sign-up or an order form) with different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-steps" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-steps" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+      colors=true
+      sizes=true
+      javascript=true
+      variables=true
+    %}
+
+    <hr>
+
+    {% include snippet.html content=steps_example horizontal=true more=true %}
+
+    {% include anchor.html name="Colors" %}
+
+    {% include snippet.html content=steps_colors_example horizontal=true more=true %}
+
+    {% include anchor.html name="Sizes" %}
+    {% include snippet.html content=steps_sizes_example horizontal=true more=true %}
+
+    {% include variables.html %}
+
+    {% include anchor.html name="Javascript" %}
+
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation which manage steps navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% include snippet.html content=steps_js_example horizontal=true more=true %}
+
+    {% include jsOptions.html %}
+
+    <p>Thanks to <a href="https://github.com/aramvisser/bulma-steps" tagret="_blank">aramvisser</a> for the <code>marker</code> name idea and for the sizes mixin declaration (which is smart).</p>
+
+    <script type="text/javascript" src="{{ site.url }}/node_modules/bulma-extensions/bulma-steps/dist/js/bulma-steps.min.js"></script>
+    <script>
+      bulmaSteps.attach();
+    </script>
+  </div>
+</section>

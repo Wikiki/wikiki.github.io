@@ -1,0 +1,84 @@
+---
+title: Divider
+layout: documentation
+doc-tab: layout
+doc-subtab: divider
+npm-version: 1.0.4
+variables:
+- name: $divider-background-color
+  value: $grey-lighter
+- name: $divider-thickness
+  value: .1rem
+- name: $divider-font-size
+  value: $size-7
+- name: $divider-color
+  value: $grey-light
+---
+
+{% include subnav-layout.html %}
+
+{% capture divider_example %}
+<div class="is-divider" data-content="OR"></div>
+{% endcapture %}
+
+{% capture divider_vertical_example %}
+<div class="columns">
+  <div class="column">Column 1</div>
+  <div class="is-divider-vertical" data-content="OR"></div>
+  <div class="column">
+    Column 2 <br/>
+    Note: divider stretches to parent's height.
+  </div>
+</div>
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Divider</h1>
+        <h2 class="subtitle">
+          Display a vertical or horizontal <strong>divider</strong> to segment your design.
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-divider" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-divider" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+      variables=true
+    %}
+
+    <hr>
+
+    <p>You can easily display a message on the divider by adding the <code>data-content</code> attribute to the divider.</p>
+    <br />
+    {% include snippet.html content=divider_example size="one-half" %}
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Vertical</h4>
+    {% include snippet.html content=divider_vertical_example size="one-half" %}
+
+    {% include variables.html %}
+  </div>
+</section>

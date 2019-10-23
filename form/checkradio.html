@@ -1,0 +1,503 @@
+---
+title: Checkradio
+layout: documentation
+doc-tab: form
+doc-subtab: checkradio
+npm-version: 0.1.4
+variables:
+- name: $checkbox-radius
+  value: $radius
+- name: $checkbox-border
+  value: .1rem solid $grey-lighter
+- name: $checkbox-block-background
+  value: $white-ter
+- name: $checkradio-focus
+  value: 1px dotted $grey-light
+---
+
+{% include subnav-form.html %}
+
+{% capture checkradio_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckbox" type="checkbox" name="exampleCheckbox" checked="checked">
+  <label for="exampleCheckbox">Check me</label>
+</div>
+<div class="field">
+  <input class="is-checkradio" id="exampleRadioInline1" type="radio" name="exampleRadioInline" checked="checked">
+  <label for="exampleRadioInline1">Option 1</label>
+  <input class="is-checkradio" id="exampleRadioInline2" type="radio" name="exampleRadioInline">
+  <label for="exampleRadioInline2">Option 2</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_rtl_example %}
+<div class="field">
+  <input class="is-checkradio is-rtl" id="exampleRtlCheckbox" type="checkbox" name="exampleRtlCheckbox" checked="checked">
+  <label for="exampleRtlCheckbox">Check me</label>
+</div>
+<div class="field">
+  <input class="is-checkradio is-rtl" id="exampleRtlRadioInline1" type="radio" name="exampleRtlRadioInline" checked="checked">
+  <label for="exampleRtlRadioInline1">Option 1</label>
+  <input class="is-checkradio is-rtl" id="exampleRtlRadioInline2" type="radio" name="exampleRtlRadioInline">
+  <label for="exampleRtlRadioInline2">Option 2</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_disabled_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckboxDisabled" type="checkbox" name="exampleCheckboxDisabled" checked="checked" disabled>
+  <label for="exampleCheckboxDisabled">Checkbox - disabled</label>
+</div>
+<div class="field">
+  <input class="is-checkradio" id="exampleRadioDisabled" type="radio" name="exampleRadioDisabled" checked="checked" disabled>
+  <label for="exampleRadioDisabled">Radio - disabled</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_indeterminate_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckboxIndeterminate" type="checkbox" name="exampleCheckboxIndeterminate">
+  <label for="exampleCheckboxIndeterminate">Checkbox - indeterminate</label>
+</div>
+{% endcapture %}
+
+{% capture checkbox_colors_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckboxDefault" type="checkbox" name="exampleCheckboxDefault" checked="checked">
+  <label for="exampleCheckboxDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-success" id="exampleCheckboxSuccess" type="checkbox" name="exampleCheckboxSuccess" checked="checked">
+  <label for="exampleCheckboxSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-warning" id="exampleCheckboxWarning" type="checkbox" name="exampleCheckboxWarning" checked="checked">
+  <label for="exampleCheckboxWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked="checked">
+  <label for="exampleCheckboxDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-info" id="exampleCheckboxInfo" type="checkbox" name="exampleCheckboxInfo" checked="checked">
+  <label for="exampleCheckboxInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio is-white" id="exampleCheckboxWhite" type="checkbox" name="exampleCheckboxWhite" checked="checked">
+    <label for="exampleCheckboxWhite">Checkbox - white</label>
+
+    <input class="is-checkradio is-white" id="exampleCheckboxWhite2" type="checkbox" name="exampleCheckboxWhite2">
+    <label for="exampleCheckboxWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture radio_colors_example %}
+<div class="field">
+  <input class="is-checkradio" id="exampleRadioDefault" type="radio" name="exampleRadioDefault" checked="checked">
+  <label for="exampleRadioDefault">Radio</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-success" id="exampleRadioSuccess" type="radio" name="exampleRadioSuccess" checked="checked">
+  <label for="exampleRadioSuccess">Radio - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-warning" id="exampleRadioWarning" type="radio" name="exampleRadioWarning" checked="checked">
+  <label for="exampleRadioWarning">Radio - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-danger" id="exampleRadioDanger" type="radio" name="exampleRadioDanger" checked="checked">
+  <label for="exampleRadioDanger">Radio - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-info" id="exampleRadioInfo" type="radio" name="exampleRadioInfo" checked="checked">
+  <label for="exampleRadioInfo">Radio - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio is-white" id="exampleRadioWhite" type="radio" name="exampleRadioWhite" checked="checked">
+    <label for="exampleRadioWhite">Radio - white</label>
+
+    <input class="is-checkradio is-white" id="exampleRadioWhite2" type="radio" name="exampleRadioWhite2">
+    <label for="exampleRadioWhite2">Radio - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkradio_block_colors_example %}
+<div class="field">
+  <input class="is-checkradio is-block" id="exampleCheckboxBlockDefault" type="checkbox" name="exampleCheckboxBlockDefault" checked="checked">
+  <label for="exampleCheckboxBlockDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-block is-success" id="exampleCheckboxBlockSuccess" type="checkbox" name="exampleCheckboxBlockSuccess" checked="checked">
+  <label for="exampleCheckboxBlockSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-block is-warning" id="exampleCheckboxBlockWarning" type="checkbox" name="exampleCheckboxBlockWarning" checked="checked">
+  <label for="exampleCheckboxBlockWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-block is-danger" id="exampleCheckboxBlockDanger" type="checkbox" name="exampleCheckboxBlockDanger" checked="checked">
+  <label for="exampleCheckboxBlockDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-block is-info" id="exampleCheckboxBlockInfo" type="checkbox" name="exampleCheckboxBlockInfo" checked="checked">
+  <label for="exampleCheckboxBlockInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio is-block is-white" id="exampleCheckboxBlockWhite" type="checkbox" name="exampleCheckboxBlockWhite" checked="checked">
+    <label for="exampleCheckboxBlockWhite">Checkbox - white</label>
+
+    <input class="is-checkradio is-block is-white" id="exampleCheckboxBlockWhite2" type="checkbox" name="exampleCheckboxBlockWhite2">
+    <label for="exampleCheckboxBlockWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkbox_noborder_example %}
+<div class="field">
+  <input class="is-checkradio has-no-border" id="exampleCheckboxNoBorderDefault" type="checkbox" name="exampleCheckboxNoBorderDefault" checked="checked">
+  <label for="exampleCheckboxNoBorderDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-success" id="exampleCheckboxNoBorderSuccess" type="checkbox" name="exampleCheckboxNoBorderSuccess" checked="checked">
+  <label for="exampleCheckboxNoBorderSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-warning" id="exampleCheckboxNoBorderWarning" type="checkbox" name="exampleCheckboxNoBorderWarning" checked="checked">
+  <label for="exampleCheckboxNoBorderWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-danger" id="exampleCheckboxNoBorderDanger" type="checkbox" name="exampleCheckboxNoBorderDanger" checked="checked">
+  <label for="exampleCheckboxNoBorderDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-info" id="exampleCheckboxNoBorderInfo" type="checkbox" name="exampleCheckboxNoBorderInfo" checked="checked">
+  <label for="exampleCheckboxNoBorderInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio has-no-border is-white" id="exampleCheckboxNoBorderWhite" type="checkbox" name="exampleCheckboxNoBorderWhite" checked="checked">
+    <label for="exampleCheckboxNoBorderWhite">Checkbox - white</label>
+
+    <input class="is-checkradio has-no-border is-white" id="exampleCheckboxNoBorderWhite2" type="checkbox" name="exampleCheckboxNoBorderWhite2">
+    <label for="exampleCheckboxNoBorderWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture radio_noborder_example %}
+<div class="field">
+  <input class="is-checkradio has-no-border" id="exampleRadioNoBorderDefault" type="radio" name="exampleRadioNoBorderDefault" checked="checked">
+  <label for="exampleRadioNoBorderDefault">Radio</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-success" id="exampleRadioNoBorderSuccess" type="radio" name="exampleRadioNoBorderSuccess" checked="checked">
+  <label for="exampleRadioNoBorderSuccess">Radio - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-warning" id="exampleRadioNoBorderWarning" type="radio" name="exampleRadioNoBorderWarning" checked="checked">
+  <label for="exampleRadioNoBorderWarning">Radio - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-danger" id="exampleRadioNoBorderDanger" type="radio" name="exampleRadioNoBorderDanger" checked="checked">
+  <label for="exampleRadioNoBorderDanger">Radio - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-no-border is-info" id="exampleRadioNoBorderInfo" type="radio" name="exampleRadioNoBorderInfo" checked="checked">
+  <label for="exampleRadioNoBorderInfo">Radio - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio has-no-border is-white" id="exampleRadioNoBorderWhite" type="radio" name="exampleRadioNoBorderWhite" checked="checked">
+    <label for="exampleRadioNoBorderWhite">Radio - white</label>
+
+    <input class="is-checkradio has-no-border is-white" id="exampleRadioNoBorderWhite2" type="radio" name="exampleRadioNoBorderWhite2">
+    <label for="exampleRadioNoBorderWhite2">Radio - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkbox_backgroundColor_example %}
+<div class="field">
+  <input class="is-checkradio has-background-color" id="exampleCheckboxBackgroundColorDefault" type="checkbox" name="exampleCheckboxBackgroundColorDefault" checked="checked">
+  <label for="exampleCheckboxBackgroundColorDefault">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-success" id="exampleCheckboxBackgroundColorSuccess" type="checkbox" name="exampleCheckboxBackgroundColorSuccess" checked="checked">
+  <label for="exampleCheckboxBackgroundColorSuccess">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-warning" id="exampleCheckboxBackgroundColorWarning" type="checkbox" name="exampleCheckboxBackgroundColorWarning" checked="checked">
+  <label for="exampleCheckboxBackgroundColorWarning">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-danger" id="exampleCheckboxBackgroundColorDanger" type="checkbox" name="exampleCheckboxBackgroundColorDanger" checked="checked">
+  <label for="exampleCheckboxBackgroundColorDanger">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-info" id="exampleCheckboxBackgroundColorInfo" type="checkbox" name="exampleCheckboxBackgroundColorInfo" checked="checked">
+  <label for="exampleCheckboxBackgroundColorInfo">Checkbox - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio has-background-color is-white" id="exampleCheckboxBackgroundColorWhite" type="checkbox" name="exampleCheckboxBackgroundColorWhite" checked="checked">
+    <label for="exampleCheckboxBackgroundColorWhite">Checkbox - white</label>
+
+    <input class="is-checkradio has-background-color is-white" id="exampleCheckboxBackgroundColorWhite2" type="checkbox" name="exampleCheckboxBackgroundColorWhite2">
+    <label for="exampleCheckboxBackgroundColorWhite2">Checkbox - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture radio_backgroundColor_example %}
+<div class="field">
+  <input class="is-checkradio has-background-color" id="exampleRadioBackgroundColorDefault" type="radio" name="exampleRadioBackgroundColorDefault" checked="checked">
+  <label for="exampleRadioBackgroundColorDefault">Radio</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-success" id="exampleRadioBackgroundColorSuccess" type="radio" name="exampleRadioBackgroundColorSuccess" checked="checked">
+  <label for="exampleRadioBackgroundColorSuccess">Radio - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-warning" id="exampleRadioBackgroundColorWarning" type="radio" name="exampleRadioBackgroundColorWarning" checked="checked">
+  <label for="exampleRadioBackgroundColorWarning">Radio - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-danger" id="exampleRadioBackgroundColorDanger" type="radio" name="exampleRadioBackgroundColorDanger" checked="checked">
+  <label for="exampleRadioBackgroundColorDanger">Radio - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio has-background-color is-info" id="exampleRadioBackgroundColorInfo" type="radio" name="exampleRadioBackgroundColorInfo" checked="checked">
+  <label for="exampleRadioBackgroundColorInfo">Radio - info</label>
+</div>
+
+<div class="bd-notification is-dark">
+  <div class="field">
+    <input class="is-checkradio has-background-color is-white" id="exampleRadioBackgroundColorWhite" type="radio" name="exampleRadioBackgroundColorWhite" checked="checked">
+    <label for="exampleRadioBackgroundColorWhite">Radio - white</label>
+
+    <input class="is-checkradio has-background-color is-white" id="exampleRadioBackgroundColorWhite2" type="radio" name="exampleRadioBackgroundColorWhite2">
+    <label for="exampleRadioBackgroundColorWhite2">Radio - white</label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture checkbox_sizes_example %}
+<div class="field">
+  <input class="is-checkradio is-small" id="exampleCheckboxSmall" type="checkbox" name="exampleCheckboxSmall" checked="checked">
+  <label for="exampleCheckboxSmall">Checkbox - small</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio" id="exampleCheckboxNormal" type="checkbox" name="exampleCheckboxNormal" checked="checked">
+  <label for="exampleCheckboxNormal">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-medium" id="exampleCheckboxMedium" type="checkbox" name="exampleCheckboxMedium" checked="checked">
+  <label for="exampleCheckboxMedium">Checkbox - medium</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-large" id="exampleCheckboxLarge" type="checkbox" name="exampleCheckboxLarge" checked="checked">
+  <label for="exampleCheckboxLarge">Checkbox - large</label>
+</div>
+{% endcapture %}
+
+{% capture radio_sizes_example %}
+<div class="field">
+  <input class="is-checkradio is-small" id="exampleRadioSmall" type="radio" name="exampleRadioSmall" checked="checked">
+  <label for="exampleRadioSmall">Radio - small</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio" id="exampleRadioNormal" type="radio" name="exampleRadioNormal" checked="checked">
+  <label for="exampleRadioNormal">Radio</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-medium" id="exampleRadioMedium" type="radio" name="exampleRadioMedium" checked="checked">
+  <label for="exampleRadioMedium">Radio - medium</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-large" id="exampleRadioLarge" type="radio" name="exampleRadioLarge" checked="checked">
+  <label for="exampleRadioLarge">Radio - large</label>
+</div>
+{% endcapture %}
+
+{% capture checkradio_colors_circle_example %}
+<div class="field">
+  <input class="is-checkradio is-circle" id="exampleCheckboxDefaultDisabledCircle" type="checkbox" name="exampleCheckboxDefaultDisabledCircle" checked="checked" disabled="disabled">
+  <label for="exampleCheckboxDefaultDisabledCircle">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-circle" id="exampleCheckboxDefaultCircle" type="checkbox" name="exampleCheckboxDefaultCircle" checked="checked">
+  <label for="exampleCheckboxDefaultCircle">Checkbox</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-success is-circle" id="exampleCheckboxSuccessCircle" type="checkbox" name="exampleCheckboxSuccessCircle" checked="checked">
+  <label for="exampleCheckboxSuccessCircle">Checkbox - success</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-warning is-circle" id="exampleCheckboxWarningCircle" type="checkbox" name="exampleCheckboxWarningCircle" checked="checked">
+  <label for="exampleCheckboxWarningCircle">Checkbox - warning</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-danger is-circle" id="exampleCheckboxDangerCircle" type="checkbox" name="exampleCheckboxDangerCircle" checked="checked">
+  <label for="exampleCheckboxDangerCircle">Checkbox - danger</label>
+</div>
+
+<div class="field">
+  <input class="is-checkradio is-info is-circle" id="exampleCheckboxInfoCircle" type="checkbox" name="exampleCheckboxInfoCircle" checked="checked">
+  <label for="exampleCheckboxInfoCircle">Checkbox - info</label>
+</div>
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Checkradio</h1>
+        <h2 class="subtitle">
+          Make classic <strong>checkbox</strong> and <strong>radio</strong> sexier with different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-checkradio" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-checkradio" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+      colors=true
+      sizes=true
+      variables=true
+    %}
+
+    <hr>
+
+    {% include snippet.html content=checkradio_example size="one-third" more=true %}
+
+    <hr>
+    <p>Use <code>is-rtl</code> to display a right-to-left design of checkbox or radio (text at left)</p>
+    <br />
+    {% include snippet.html content=checkradio_rtl_example size="one-third" more=true %}
+
+    <div class="has-text-centered has-text-danegr">
+      <p>Don't forget to set the <code>id</code> attribute on input and the <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
+    </div>
+    <br />
+
+    <div class="notification is-warning has-text-centered">
+      <p>Please note that due to <strong>CSS limitations</strong>, the structure of the checkbox is different than the one provided as an example in Bulma's documentation.<br /><i>(Input is not wrapped by the label)</i></p>
+    </div>
+
+    {% include anchor.html name="Colors" %}
+    {% include snippet.html content=checkbox_colors_example size="one-third" more=true %}
+    {% include snippet.html content=radio_colors_example size="one-third" more=true %}
+
+    {% include anchor.html name="Sizes" %}
+    {% include snippet.html content=checkbox_sizes_example size="one-third" more=true %}
+    {% include snippet.html content=radio_sizes_example size="one-third" more=true %}
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Circle</h4>
+    <p>You can add the <code>is-circle</code> modifier to the input to get a rounded checkbox</p>
+    <br />
+    {% include snippet.html content=checkradio_colors_circle_example size="one-third" more=true %}
+
+    <h4 class="subtitle">Block</h4>
+    <p>You can add the <code>is-block</code> modifier to the input to get a full colored checkbox</p>
+    <br />
+    {% include snippet.html content=checkradio_block_colors_example size="one-third" more=true %}
+
+    <h4 class="subtitle">No border</h4>
+    <p>Adding the <code>has-no-border</code> modifier to the input will remove the checkbox border</p>
+    <br />
+    {% include snippet.html content=checkbox_noborder_example size="one-third" more=true %}
+    {% include snippet.html content=radio_noborder_example size="one-third" more=true %}
+
+    <h4 class="subtitle">Background colored</h4>
+    <p>You can add the <code>has-background-color</code> modifier to the input to get the checkbox background color impacted</p>
+    <br />
+    {% include snippet.html content=checkbox_backgroundColor_example size="one-third" more=true %}
+    {% include snippet.html content=radio_backgroundColor_example size="one-third" more=true %}
+
+    <hr>
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    {% include snippet.html content=checkradio_disabled_example size="one-third" more=true %}
+    {% include snippet.html content=checkradio_indeterminate_example size="one-third" more=true %}
+
+    {% include variables.html %}
+  </div>
+</section>
+
+<script>
+window.onload = function() {
+  let checkbox = document.getElementById('exampleCheckboxIndeterminate');
+  checkbox.indeterminate = true;
+}
+</script>

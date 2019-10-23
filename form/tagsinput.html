@@ -1,0 +1,98 @@
+---
+title: TagsInput
+description: Modernize an add interaction on input of tags type
+layout: documentation
+doc-tab: form
+doc-subtab: tagsinput
+npm-version: 0.2.0
+---
+
+{% include subnav-form.html %}
+
+{% capture tagsinput_example %}
+<input class="input" type="tags" placeholder="Add Tag" value="Tag1,Tag2,Tag3">
+{% endcapture %}
+
+{% capture tagsinput_js %}
+<script type="text/javascript" src="/node_modules/bulma-extensions/bulma-tagsinput/dist/bulma-tagsinput.min.js"></script>
+{% endcapture %}
+
+{% capture tagsinput_attach %}
+bulmaTagsinput.attach();
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+          {{ page.description }}
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-tagsinput" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-tagsinput" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">{{ page.npm-version }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%
+      include meta.html
+      javascript=true
+    %}
+
+    <hr>
+
+    <div class="message is-info">
+      <div class="message-body">
+        <div class="content">
+          This extension is based on the wonderful Tags Input implementation by <a href="https://github.com/developit/tags-input" target="_blank">developit</a>.
+        </div>
+      </div>
+    </div>
+
+    {% include snippet.html content=tagsinput_example size="one-third" %}
+
+    <div class="notification is-info">
+      <p>You don't have to write any JavaScript code. Just set the input element attribute <code>type="tags"</code> and see the magic happens.</p>
+    </DIV>
+
+    <hr>
+
+    <div class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>The extension comes with a JavaScript implementation to manage input tags type. Don't forget to include it in your project.</p>
+
+          {% highlight javascript %}{{ tagsinput_js }}{% endhighlight %}
+          
+          <p>To activate the input elements, run the <code>attach</code>command.</p>
+
+          {% highlight javascript %}{{ tagsinput_attach }}{% endhighlight %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script type="text/javascript" src="{{ site.url}}/node_modules/bulma-extensions/bulma-tagsinput/dist/js/bulma-tagsinput.js"></script>
+<script>
+  bulmaTagsinput.attach();
+</script>

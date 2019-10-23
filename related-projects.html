@@ -1,0 +1,31 @@
+---
+layout: default
+route: index
+fixed_navbar: true
+doc-tab: overview
+doc-subtab: related-projects
+projects:
+- name: Bulma.io-axure
+  link: https://github.com/Code-Mine-Development/Bulma.io-axure/
+  readme: Bulma.io-axure.md
+- name: Laravel 5.5.x Front-end Preset For Bulma
+  link: https://github.com/laravel-frontend-presets/bulma
+  readme: LaravelFrontendPresets.md
+---
+
+{% include navbar.html id="Index" fixed=true has_container=true boxed=true transparent=true %}
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Related projects</h1>
+
+    <section class="accordion">
+      {% include related-projects.html %}
+    </section>
+
+  </div>
+</section>
+
+<script type="text/javascript" src="{{ site.url }}/assets/js/accordion.js"></script>

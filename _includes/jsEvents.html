@@ -1,0 +1,34 @@
+{% include anchor.html name="JavaScript Events" %}
+
+<div class="content">
+  <p>
+    You can use these events to react on plugin actions.
+  </p>
+</div>
+
+<table class="table is-bordered is-fullwidth">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for jsEvent in page.jsEvents %}
+      <tr>
+        <td>
+          <code>{{ jsEvent.name }}</code>
+        </td>
+        <td>
+          {{ jsEvent.description }}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

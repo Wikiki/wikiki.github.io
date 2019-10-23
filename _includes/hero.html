@@ -1,0 +1,41 @@
+<section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}">Overview</a>
+          </li>
+          <li {% if page.doc-tab == 'layout' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/layout/divider/">Layout</a>
+          </li>
+          <li {% if page.doc-tab == 'form' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/form/checkradio">Form</a>
+          </li>
+          <li {% if page.doc-tab == 'elements' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/elements/badge/">Elements</a>
+          </li>
+          <li {% if page.doc-tab == 'components' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
