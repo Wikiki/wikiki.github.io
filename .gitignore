@@ -4,3 +4,4 @@ Gemfile
 Gemfile.lock
 .jekyll-metadata
 .jekyll-cache/
+node_modules/

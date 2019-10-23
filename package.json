@@ -41,6 +41,9 @@
     "bulma-timeline": "latest",
     "bulma-tooltip": "^3.0",
     "gulp": "^4.0.2",
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-auto-task": "0.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-util": "^3.0.8",
+    "require-dir": "^1.2.0"
   }
 }
