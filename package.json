@@ -39,6 +39,8 @@
     "bulma-switch": "latest",
     "bulma-tagsinput": "latest",
     "bulma-timeline": "latest",
-    "bulma-tooltip": "^3.0"
+    "bulma-tooltip": "^3.0",
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4"
   }
 }
