@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
   "devDependencies": {
-    "bulma": "latest",
-    "bulma-extensions": "latest"
+    "bulma": "^0.8.0",
+    "bulma-extensions": "latest",
+    "bulma-tooltip": "^3.0"
   }
 }
