@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top route-documentation">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <title>Timeline | Bulma-Extensions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://wikiki.github.io/css/documentation.css?v=201910231117">
+
+  <link rel="canonical" href="https://wikiki.github.io/components/timeline/">
+  <link rel="alternate" type="application/rss+xml" title="Bulma-Extensions" href="https://wikiki.github.io/feed.xml">
+
+  <meta property="og:url" content="https://wikiki.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bulma-Extensions">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wikiki.github.io/favicons/apple-touch-icon.png?v=201701041855">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+  <link rel="manifest" href="https://wikiki.github.io/favicons/manifest.json?v=201701041855">
+  <link rel="mask-icon" href="https://wikiki.github.io/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+  <link rel="shortcut icon" href="https://wikiki.github.io/favicons/favicon.ico?v=201701041855">
+  <meta name="msapplication-config" content="https://wikiki.github.io/favicons/browserconfig.xml?v=201701041855">
+  <meta name="theme-color" content="#00d1b2">
+</head>
+
+  <body class="layout-documentation page-components">
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li >
+            <a href="https://wikiki.github.io">Overview</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/layout/divider/">Layout</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/form/checkradio">Form</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/elements/badge/">Elements</a>
+          </li>
+          <li class="is-active">
+            <a href="https://wikiki.github.io/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
+
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuDocumentation" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-tabs">
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/accordion/">
+        Accordion
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/calendar/">
+        Calendar
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/carousel/">
+        Carousel
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/pricingtable/">
+        Pricing table
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/quickview/">
+        Quickview
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/components/steps/">
+        Steps
+      </a>
+      <a class="navbar-item is-tab is-active" href="https://wikiki.github.io/components/timeline/">
+        Timeline
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Timeline</h1>
+        <h2 class="subtitle">
+          Display a vertical <strong>timeline</strong>, in different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-timeline" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-timeline" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">1.0.23</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <a class="tag is-success" href="#colors">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Javascript</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <a class="tag is-success" href="#variables">Yes</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    <h3 class="subtitle">Default layout</h3>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-marker is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item">
+    <div class="timeline-marker is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </div>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+  Colors
+  <a class="bd-anchor-link" href="#colors">
+    #
+  </a>
+</h3>
+
+    <h4 class="subtitle">You can use color modifiers on timeline-marker to change its color</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-plus"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </header>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-primary"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-warning is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-danger is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-plus"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+
+    <br />
+    <h4 class="subtitle">You can use color modifiers on timeline-item to change the line color</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item is-primary">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item is-warning">
+    <div class="timeline-marker is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </header>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <br />
+    <h4 class="subtitle">You can use them together</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </header>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-primary"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-warning is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-danger is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <br />
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="positions" class="title is-4 is-spaced bd-anchor-title">
+  Positions
+  <a class="bd-anchor-link" href="#positions">
+    #
+  </a>
+</h3>
+
+    <h4 class="subtitle">You can use the <code>is-centered</code> modifiers on timeline</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline is-centered">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </header>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline is-centered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-primary"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-warning is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-danger is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <br />
+    <h4 class="subtitle">You can use <code>is-rtl</code> modifiers on timeline</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="timeline is-rtl">
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">Start</span>
+  </header>
+  <div class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">January 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <div class="timeline-item is-warning">
+    <div class="timeline-marker is-warning is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">February 2016</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-primary">2017</span>
+  </header>
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">March 2017</p>
+      <p>Timeline content - Can include any HTML element</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-medium is-primary">End</span>
+  </header>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline is-rtl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-primary"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>January 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-warning is-image is-32x32"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/32x32.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>February 2016<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-primary"</span><span class="nt">&gt;</span>2017<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-item is-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-marker is-danger is-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-flag"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>March 2017<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Timeline content - Can include any HTML element<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"timeline-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tag is-medium is-primary"</span><span class="nt">&gt;</span>End<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+  Variables
+  <a class="bd-anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="https://bulma.io/documentation/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+      <tr>
+        <td>
+          <code>$timeline-marker-background-color</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$timeline-marker-border</code>
+        </td>
+        <td>
+          <code>.1em solid $grey-light</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$timeline-line</code>
+        </td>
+        <td>
+          <code>.1rem solid $grey-light</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$timeline-content-padding</code>
+        </td>
+        <td>
+          <code>1em 0 0 2em</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$timeline-icon-size</code>
+        </td>
+        <td>
+          <code>$size-5</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$timeline-header-width</code>
+        </td>
+        <td>
+          <code>4em</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$dimensions</code>
+        </td>
+        <td>
+          <code>16 24 32 48 64 96 128</code>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</section>
+
+
+    <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <p id="tsp">
+          <a href="https://bulma.io" target="_blank">
+            <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+          <small>
+            Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+          </small>
+        </p>
+        <br />
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://wikiki.github.io/vendor/clipboard-1.7.1.min.js"></script>
+<script src="https://wikiki.github.io/js/main.js?v=201910231117"></script>
+
+<script async defer type="text/javascript">
+  (function() {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+  }());
+  // var $mcj = window.jQuery.noConflict(true);
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top route-documentation">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <title>Switch | Bulma-Extensions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://wikiki.github.io/css/documentation.css?v=201910231117">
+
+  <link rel="canonical" href="https://wikiki.github.io/form/switch/">
+  <link rel="alternate" type="application/rss+xml" title="Bulma-Extensions" href="https://wikiki.github.io/feed.xml">
+
+  <meta property="og:url" content="https://wikiki.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bulma-Extensions">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wikiki.github.io/favicons/apple-touch-icon.png?v=201701041855">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+  <link rel="manifest" href="https://wikiki.github.io/favicons/manifest.json?v=201701041855">
+  <link rel="mask-icon" href="https://wikiki.github.io/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+  <link rel="shortcut icon" href="https://wikiki.github.io/favicons/favicon.ico?v=201701041855">
+  <meta name="msapplication-config" content="https://wikiki.github.io/favicons/browserconfig.xml?v=201701041855">
+  <meta name="theme-color" content="#00d1b2">
+</head>
+
+  <body class="layout-documentation page-form">
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li >
+            <a href="https://wikiki.github.io">Overview</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/layout/divider/">Layout</a>
+          </li>
+          <li class="is-active">
+            <a href="https://wikiki.github.io/form/checkradio">Form</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/elements/badge/">Elements</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
+
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuDocumentation" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-tabs">
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/checkradio/">
+        Checkradio
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/iconpicker/">
+        IconPicker
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/slider/">
+        Slider
+      </a>
+      <a class="navbar-item is-tab is-active" href="https://wikiki.github.io/form/switch/">
+        Switch
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/tagsinput/">
+        TagsInput
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Switch</h1>
+        <h2 class="subtitle">
+          Display the classic <strong>checkbox</strong> as a switch button with different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-switch" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-switch" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.1.3</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <a class="tag is-success" href="#colors">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <a class="tag is-success" href="#sizes">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Javascript</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <a class="tag is-success" href="#variables">Yes</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchExample" type="checkbox" name="switchExample" class="switch" checked="checked">
+  <label for="switchExample">Switch example</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchExample"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchExample"</span> <span class="na">class=</span><span class="s">"switch"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchExample"</span><span class="nt">&gt;</span>Switch example<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr>
+    <p>Use <code>is-rtl</code> to display a right-to-left design of checkbox (text at left)</p>
+    <br />
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchRtlExample" type="checkbox" name="switchRtlExample" class="switch is-rtl" checked="checked">
+  <label for="switchRtlExample">Switch example</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRtlExample"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRtlExample"</span> <span class="na">class=</span><span class="s">"switch is-rtl"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRtlExample"</span><span class="nt">&gt;</span>Switch example<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <div class="has-text-centered has-text-danegr">
+      <p>Don't forget to set the <code>id</code> attribute on input and the <code>for</code> attribute on label with the same value to get it work. This will link the label to the checkbox and then handle the click.</p>
+    </div>
+    <br />
+
+    <div class="notification is-warning has-text-centered">
+      <p>Please note that due to <strong>CSS limitations</strong> the structure of the checkbox is different than the one provided as example in Bulma's documentation.<br /><i>(Input is not wrapped by the label)</i></p>
+    </div>
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+  Colors
+  <a class="bd-anchor-link" href="#colors">
+    #
+  </a>
+</h3>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchColorDefault" type="checkbox" name="switchColorDefault" class="switch" checked="checked">
+  <label for="switchColorDefault">Switch default</label>
+</div>
+
+<div class="field">
+  <input id="switchColorSuccess" type="checkbox" name="switchColorSuccess" class="switch is-success" checked="checked">
+  <label for="switchColorSuccess">Switch success</label>
+</div>
+
+<div class="field">
+  <input id="switchColorWarning" type="checkbox" name="switchColorWarning" class="switch is-warning" checked="checked">
+  <label for="switchColorWarning">Switch warning</label>
+</div>
+
+<div class="field">
+  <input id="switchColorDanger" type="checkbox" name="switchColorDanger" class="switch is-danger" checked="checked">
+  <label for="switchColorDanger">Switch danger</label>
+</div>
+
+<div class="field">
+  <input id="switchColorInfo" type="checkbox" name="switchColorInfo" class="switch is-info" checked="checked">
+  <label for="switchColorInfo">Switch info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorDefault"</span> <span class="na">class=</span><span class="s">"switch"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorDefault"</span><span class="nt">&gt;</span>Switch default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorSuccess"</span> <span class="na">class=</span><span class="s">"switch is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorSuccess"</span><span class="nt">&gt;</span>Switch success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorWarning"</span> <span class="na">class=</span><span class="s">"switch is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorWarning"</span><span class="nt">&gt;</span>Switch warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorDanger"</span> <span class="na">class=</span><span class="s">"switch is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorDanger"</span><span class="nt">&gt;</span>Switch danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorInfo"</span> <span class="na">class=</span><span class="s">"switch is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorInfo"</span><span class="nt">&gt;</span>Switch info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="sizes" class="title is-4 is-spaced bd-anchor-title">
+  Sizes
+  <a class="bd-anchor-link" href="#sizes">
+    #
+  </a>
+</h3>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchSmall" type="checkbox" name="switchSmall" class="switch is-small">
+  <label for="switchSmall">Switch small</label>
+</div>
+
+<div class="field">
+  <input id="switchNormal" type="checkbox" name="switchNormal" class="switch">
+  <label for="switchNormal">Switch</label>
+</div>
+
+<div class="field">
+  <input id="switchMedium" type="checkbox" name="switchMedium" class="switch is-medium">
+  <label for="switchMedium">Switch medium</label>
+</div>
+
+<div class="field">
+  <input id="switchLarge" type="checkbox" name="switchLarge" class="switch is-large">
+  <label for="switchLarge">Switch large</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchSmall"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchSmall"</span> <span class="na">class=</span><span class="s">"switch is-small"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchSmall"</span><span class="nt">&gt;</span>Switch small<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchNormal"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchNormal"</span> <span class="na">class=</span><span class="s">"switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchNormal"</span><span class="nt">&gt;</span>Switch<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchMedium"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchMedium"</span> <span class="na">class=</span><span class="s">"switch is-medium"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchMedium"</span><span class="nt">&gt;</span>Switch medium<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchLarge"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchLarge"</span> <span class="na">class=</span><span class="s">"switch is-large"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchLarge"</span><span class="nt">&gt;</span>Switch large<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Thin</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault" class="switch is-thin" checked="checked">
+  <label for="switchThinColorDefault">Switch default</label>
+</div>
+
+<div class="field">
+  <input id="switchThinColorSuccess" type="checkbox" name="switchThinColorSuccess" class="switch is-thin is-success" checked="checked">
+  <label for="switchThinColorSuccess">Switch success</label>
+</div>
+
+<div class="field">
+  <input id="switchThinColorWarning" type="checkbox" name="switchThinColorWarning" class="switch is-thin is-warning" checked="checked">
+  <label for="switchThinColorWarning">Switch warning</label>
+</div>
+
+<div class="field">
+  <input id="switchThinColorDanger" type="checkbox" name="switchThinColorDanger" class="switch is-thin is-danger" checked="checked">
+  <label for="switchThinColorDanger">Switch danger</label>
+</div>
+
+<div class="field">
+  <input id="switchThinColorInfo" type="checkbox" name="switchThinColorInfo" class="switch is-thin is-info" checked="checked">
+  <label for="switchThinColorInfo">Switch info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinColorDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinColorDefault"</span> <span class="na">class=</span><span class="s">"switch is-thin"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinColorDefault"</span><span class="nt">&gt;</span>Switch default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinColorSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinColorSuccess"</span> <span class="na">class=</span><span class="s">"switch is-thin is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinColorSuccess"</span><span class="nt">&gt;</span>Switch success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinColorWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinColorWarning"</span> <span class="na">class=</span><span class="s">"switch is-thin is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinColorWarning"</span><span class="nt">&gt;</span>Switch warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinColorDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinColorDanger"</span> <span class="na">class=</span><span class="s">"switch is-thin is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinColorDanger"</span><span class="nt">&gt;</span>Switch danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinColorInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinColorInfo"</span> <span class="na">class=</span><span class="s">"switch is-thin is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinColorInfo"</span><span class="nt">&gt;</span>Switch info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <h4 class="subtitle">Rounded</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" class="switch is-rounded" checked="checked">
+  <label for="switchRoundedDefault">Switch rounded default</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedSuccess" type="checkbox" name="switchRoundedSuccess" class="switch is-rounded is-success" checked="checked">
+  <label for="switchRoundedSuccess">Switch rounded success</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedWarning" type="checkbox" name="switchRoundedWarning" class="switch is-rounded is-warning" checked="checked">
+  <label for="switchRoundedWarning">Switch rounded warning</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedDanger" type="checkbox" name="switchRoundedDanger" class="switch is-rounded is-danger" checked="checked">
+  <label for="switchRoundedDanger">Switch rounded danger</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedInfo" type="checkbox" name="switchRoundedInfo" class="switch is-rounded is-info" checked="checked">
+  <label for="switchRoundedInfo">Switch rounded info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedDefault"</span> <span class="na">class=</span><span class="s">"switch is-rounded"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedDefault"</span><span class="nt">&gt;</span>Switch rounded default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedSuccess"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedSuccess"</span><span class="nt">&gt;</span>Switch rounded success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedWarning"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedWarning"</span><span class="nt">&gt;</span>Switch rounded warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedDanger"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedDanger"</span><span class="nt">&gt;</span>Switch rounded danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedInfo"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedInfo"</span><span class="nt">&gt;</span>Switch rounded info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <h4 class="subtitle">Outlined</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchOutlinedDefault" type="checkbox" name="switchOutlinedDefault" class="switch is-outlined" checked="checked">
+  <label for="switchOutlinedDefault">Switch outlined default</label>
+</div>
+
+<div class="field">
+  <input id="switchOutlinedSuccess" type="checkbox" name="switchOutlinedSuccess" class="switch is-outlined is-success" checked="checked">
+  <label for="switchOutlinedSuccess">Switch outlined success</label>
+</div>
+
+<div class="field">
+  <input id="switchOutlinedWarning" type="checkbox" name="switchOutlinedWarning" class="switch is-outlined is-warning" checked="checked">
+  <label for="switchOutlinedWarning">Switch outlined warning</label>
+</div>
+
+<div class="field">
+  <input id="switchOutlinedDanger" type="checkbox" name="switchOutlinedDanger" class="switch is-outlined is-danger" checked="checked">
+  <label for="switchOutlinedDanger">Switch outlined danger</label>
+</div>
+
+<div class="field">
+  <input id="switchOutlinedInfo" type="checkbox" name="switchOutlinedInfo" class="switch is-outlined is-info" checked="checked">
+  <label for="switchOutlinedInfo">Switch outlined info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchOutlinedDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchOutlinedDefault"</span> <span class="na">class=</span><span class="s">"switch is-outlined"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchOutlinedDefault"</span><span class="nt">&gt;</span>Switch outlined default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchOutlinedSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchOutlinedSuccess"</span> <span class="na">class=</span><span class="s">"switch is-outlined is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchOutlinedSuccess"</span><span class="nt">&gt;</span>Switch outlined success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchOutlinedWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchOutlinedWarning"</span> <span class="na">class=</span><span class="s">"switch is-outlined is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchOutlinedWarning"</span><span class="nt">&gt;</span>Switch outlined warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchOutlinedDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchOutlinedDanger"</span> <span class="na">class=</span><span class="s">"switch is-outlined is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchOutlinedDanger"</span><span class="nt">&gt;</span>Switch outlined danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchOutlinedInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchOutlinedInfo"</span> <span class="na">class=</span><span class="s">"switch is-outlined is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchOutlinedInfo"</span><span class="nt">&gt;</span>Switch outlined info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <h4 class="subtitle">Mixed</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchRoundedOutlinedDefault" type="checkbox" name="switchRoundedOutlinedDefault" class="switch is-rounded is-outlined" checked="checked">
+  <label for="switchRoundedOutlinedDefault">Switch rounded outlined default</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedOutlinedSuccess" type="checkbox" name="switchRoundedOutlinedSuccess" class="switch is-rounded is-outlined is-success" checked="checked">
+  <label for="switchRoundedOutlinedSuccess">Switch rounded outlined success</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedOutlinedWarning" type="checkbox" name="switchRoundedOutlinedWarning" class="switch is-rounded is-outlined is-warning" checked="checked">
+  <label for="switchRoundedOutlinedWarning">Switch rounded outlined warning</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedOutlinedDanger" type="checkbox" name="switchRoundedOutlinedDanger" class="switch is-rounded is-outlined is-danger" checked="checked">
+  <label for="switchRoundedOutlinedDanger">Switch rounded outlined danger</label>
+</div>
+
+<div class="field">
+  <input id="switchRoundedOutlinedInfo" type="checkbox" name="switchRoundedOutlinedInfo" class="switch is-rounded is-outlined is-info" checked="checked">
+  <label for="switchRoundedOutlinedInfo">Switch rounded outlined info</label>
+</div>
+
+<div class="field">
+  <input id="switchThinRoundedOutlinedDefault" type="checkbox" name="switchThinRoundedOutlinedDefault" class="switch is-thin is-rounded is-outlined" checked="checked">
+  <label for="switchThinRoundedOutlinedDefault">Switch Thin rounded outlined default</label>
+</div>
+
+<div class="field">
+  <input id="switchThinRoundedOutlinedSuccess" type="checkbox" name="switchThinRoundedOutlinedSuccess" class="switch is-thin is-rounded is-outlined is-success" checked="checked">
+  <label for="switchThinRoundedOutlinedSuccess">Switch Thin rounded outlined success</label>
+</div>
+
+<div class="field">
+  <input id="switchThinRoundedOutlinedWarning" type="checkbox" name="switchThinRoundedOutlinedWarning" class="switch is-thin is-rounded is-outlined is-warning" checked="checked">
+  <label for="switchThinRoundedOutlinedWarning">Switch Thin rounded outlined warning</label>
+</div>
+
+<div class="field">
+  <input id="switchThinRoundedOutlinedDanger" type="checkbox" name="switchThinRoundedOutlinedDanger" class="switch is-thin is-rounded is-outlined is-danger" checked="checked">
+  <label for="switchThinRoundedOutlinedDanger">Switch Thin rounded outlined danger</label>
+</div>
+
+<div class="field">
+  <input id="switchThinRoundedOutlinedInfo" type="checkbox" name="switchThinRoundedOutlinedInfo" class="switch is-thin is-rounded is-outlined is-info" checked="checked">
+  <label for="switchThinRoundedOutlinedInfo">Switch Thin rounded outlined info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedOutlinedDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedOutlinedDefault"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-outlined"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedOutlinedDefault"</span><span class="nt">&gt;</span>Switch rounded outlined default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedOutlinedSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedOutlinedSuccess"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-outlined is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedOutlinedSuccess"</span><span class="nt">&gt;</span>Switch rounded outlined success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedOutlinedWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedOutlinedWarning"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-outlined is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedOutlinedWarning"</span><span class="nt">&gt;</span>Switch rounded outlined warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedOutlinedDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedOutlinedDanger"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-outlined is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedOutlinedDanger"</span><span class="nt">&gt;</span>Switch rounded outlined danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchRoundedOutlinedInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchRoundedOutlinedInfo"</span> <span class="na">class=</span><span class="s">"switch is-rounded is-outlined is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchRoundedOutlinedInfo"</span><span class="nt">&gt;</span>Switch rounded outlined info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinRoundedOutlinedDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinRoundedOutlinedDefault"</span> <span class="na">class=</span><span class="s">"switch is-thin is-rounded is-outlined"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinRoundedOutlinedDefault"</span><span class="nt">&gt;</span>Switch Thin rounded outlined default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinRoundedOutlinedSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinRoundedOutlinedSuccess"</span> <span class="na">class=</span><span class="s">"switch is-thin is-rounded is-outlined is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinRoundedOutlinedSuccess"</span><span class="nt">&gt;</span>Switch Thin rounded outlined success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinRoundedOutlinedWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinRoundedOutlinedWarning"</span> <span class="na">class=</span><span class="s">"switch is-thin is-rounded is-outlined is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinRoundedOutlinedWarning"</span><span class="nt">&gt;</span>Switch Thin rounded outlined warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinRoundedOutlinedDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinRoundedOutlinedDanger"</span> <span class="na">class=</span><span class="s">"switch is-thin is-rounded is-outlined is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinRoundedOutlinedDanger"</span><span class="nt">&gt;</span>Switch Thin rounded outlined danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchThinRoundedOutlinedInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchThinRoundedOutlinedInfo"</span> <span class="na">class=</span><span class="s">"switch is-thin is-rounded is-outlined is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchThinRoundedOutlinedInfo"</span><span class="nt">&gt;</span>Switch Thin rounded outlined info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr>
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<div class="field">
+  <input id="switchColorDefault" type="checkbox" name="switchColorDefault" class="switch" checked="checked" disabled>
+  <label for="switchColorDefault">Switch default</label>
+</div>
+
+<div class="field">
+  <input id="switchColorSuccess" type="checkbox" name="switchColorSuccess" class="switch is-success" checked="checked" disabled>
+  <label for="switchColorSuccess">Switch success</label>
+</div>
+
+<div class="field">
+  <input id="switchColorWarning" type="checkbox" name="switchColorWarning" class="switch is-warning" checked="checked" disabled>
+  <label for="switchColorWarning">Switch warning</label>
+</div>
+
+<div class="field">
+  <input id="switchColorDanger" type="checkbox" name="switchColorDanger" class="switch is-danger" checked="checked" disabled>
+  <label for="switchColorDanger">Switch danger</label>
+</div>
+
+<div class="field">
+  <input id="switchColorInfo" type="checkbox" name="switchColorInfo" class="switch is-info" checked="checked" disabled>
+  <label for="switchColorInfo">Switch info</label>
+</div>
+
+    </div>
+    <div class="bd-snippet-code highlight-full bd-is-more bd-is-more-clipped">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorDefault"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorDefault"</span> <span class="na">class=</span><span class="s">"switch"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorDefault"</span><span class="nt">&gt;</span>Switch default<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorSuccess"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorSuccess"</span> <span class="na">class=</span><span class="s">"switch is-success"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorSuccess"</span><span class="nt">&gt;</span>Switch success<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorWarning"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorWarning"</span> <span class="na">class=</span><span class="s">"switch is-warning"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorWarning"</span><span class="nt">&gt;</span>Switch warning<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorDanger"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorDanger"</span> <span class="na">class=</span><span class="s">"switch is-danger"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorDanger"</span><span class="nt">&gt;</span>Switch danger<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"switchColorInfo"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"switchColorInfo"</span> <span class="na">class=</span><span class="s">"switch is-info"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"switchColorInfo"</span><span class="nt">&gt;</span>Switch info<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+  Variables
+  <a class="bd-anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="https://bulma.io/documentation/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+      <tr>
+        <td>
+          <code>$switch-background</code>
+        </td>
+        <td>
+          <code>$grey-light</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-background-active</code>
+        </td>
+        <td>
+          <code>$primary</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-radius</code>
+        </td>
+        <td>
+          <code>$radius</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-margin</code>
+        </td>
+        <td>
+          <code>1rem</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-paddle-background</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-paddle-offset</code>
+        </td>
+        <td>
+          <code>0.25rem</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-paddle-transition</code>
+        </td>
+        <td>
+          <code>all 0.25s ease-out</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$switch-focus</code>
+        </td>
+        <td>
+          <code>1px dotted $grey-light</code>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</section>
+
+
+    <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <p id="tsp">
+          <a href="https://bulma.io" target="_blank">
+            <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+          <small>
+            Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+          </small>
+        </p>
+        <br />
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://wikiki.github.io/vendor/clipboard-1.7.1.min.js"></script>
+<script src="https://wikiki.github.io/js/main.js?v=201910231117"></script>
+
+<script async defer type="text/javascript">
+  (function() {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+  }());
+  // var $mcj = window.jQuery.noConflict(true);
+</script>
+
+  </body>
+</html>

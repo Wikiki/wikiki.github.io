@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top route-documentation">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <title>IconPicker | Bulma-Extensions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://wikiki.github.io/css/documentation.css?v=201910231117">
+
+  <link rel="canonical" href="https://wikiki.github.io/form/iconpicker/">
+  <link rel="alternate" type="application/rss+xml" title="Bulma-Extensions" href="https://wikiki.github.io/feed.xml">
+
+  <meta property="og:url" content="https://wikiki.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bulma-Extensions">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wikiki.github.io/favicons/apple-touch-icon.png?v=201701041855">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+  <link rel="manifest" href="https://wikiki.github.io/favicons/manifest.json?v=201701041855">
+  <link rel="mask-icon" href="https://wikiki.github.io/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+  <link rel="shortcut icon" href="https://wikiki.github.io/favicons/favicon.ico?v=201701041855">
+  <meta name="msapplication-config" content="https://wikiki.github.io/favicons/browserconfig.xml?v=201701041855">
+  <meta name="theme-color" content="#00d1b2">
+</head>
+
+  <body class="layout-documentation page-form">
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li >
+            <a href="https://wikiki.github.io">Overview</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/layout/divider/">Layout</a>
+          </li>
+          <li class="is-active">
+            <a href="https://wikiki.github.io/form/checkradio">Form</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/elements/badge/">Elements</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
+
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuDocumentation" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-tabs">
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/checkradio/">
+        Checkradio
+      </a>
+      <a class="navbar-item is-tab is-active" href="https://wikiki.github.io/form/iconpicker/">
+        IconPicker
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/slider/">
+        Slider
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/switch/">
+        Switch
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/tagsinput/">
+        TagsInput
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">IconPicker</h1>
+        <h2 class="subtitle">
+          Display an input as an Icon Picker to ease the user icon selection.
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-iconpicker" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-iconpicker" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">0.1.3</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Javascript</span>
+      
+        <a class="tag is-success" href="#javascript">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <span class="tag is-danger">No</span>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-third
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input type="text" id="iconPicker" data-action="iconPicker" value="fa fa-icon fa-star" />
+<p class="help">Click on icon to open the iconPicker.</p>
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"iconPicker"</span> <span class="na">data-action=</span><span class="s">"iconPicker"</span> <span class="na">value=</span><span class="s">"fa fa-icon fa-star"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help"</span><span class="nt">&gt;</span>Click on icon to open the iconPicker.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <div class="notification is-info">
+      <p>You don't have to write any JavaScript code. Just add the <code>data-action="iconPicker"</code> attribute to the input element and see the magic happen.</p>
+    </DIV>
+
+    <hr>
+
+    <div id="squickviewsExample" class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>The extension comes with a JavaScript implementation to display / close the IconPicker. Don't forget to include it in your project.</p>
+
+          <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">/node_modules/bulma-extensions/bulma-iconpicker/dist/bulma-iconpicker.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt;</span></code></pre></figure>
+
+          <p>Customize icon sets by overwriting the <code>iconPickerOptions</code> variable as in the following:</p>
+          <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">iconPickerOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">iconSets</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">simpleLine</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Name displayed on tab</span>
+    <span class="na">css</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// CSS url containing icons rules</span>
+    <span class="na">prefix</span><span class="p">:</span> <span class="dl">'</span><span class="s1">icon-</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// CSS rules prefix to identify icons</span>
+    <span class="na">displayPrefix</span><span class="p">:</span> <span class="dl">''</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fontAwesome</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Name displayed on tab</span>
+    <span class="na">css</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// CSS url containing icons rules</span>
+    <span class="na">prefix</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fa-</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// CSS rules prefix to identify icons</span>
+    <span class="na">displayPrefix</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fa fa-icon</span><span class="dl">'</span>
+  <span class="p">}</span> <span class="p">]</span>
+<span class="p">};</span></code></pre></figure>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script type="text/javascript" src="https://wikiki.github.io/node_modules/bulma-extensions/bulma-iconpicker/dist/js/bulma-iconpicker.min.js"></script>
+<script>
+  bulmaIconpicker.attach();
+</script>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <p id="tsp">
+          <a href="https://bulma.io" target="_blank">
+            <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+          <small>
+            Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+          </small>
+        </p>
+        <br />
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://wikiki.github.io/vendor/clipboard-1.7.1.min.js"></script>
+<script src="https://wikiki.github.io/js/main.js?v=201910231117"></script>
+
+<script async defer type="text/javascript">
+  (function() {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+  }());
+  // var $mcj = window.jQuery.noConflict(true);
+</script>
+
+  </body>
+</html>

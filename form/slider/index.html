@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top route-documentation">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <title>Slider | Bulma-Extensions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://wikiki.github.io/css/documentation.css?v=201910231117">
+
+  <link rel="canonical" href="https://wikiki.github.io/form/slider/">
+  <link rel="alternate" type="application/rss+xml" title="Bulma-Extensions" href="https://wikiki.github.io/feed.xml">
+
+  <meta property="og:url" content="https://wikiki.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bulma-Extensions">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:description" content="Set of missing Bulma.io functionalities provided as SASS / JavaScript extensions.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wikiki.github.io/favicons/apple-touch-icon.png?v=201701041855">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://wikiki.github.io/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+  <link rel="manifest" href="https://wikiki.github.io/favicons/manifest.json?v=201701041855">
+  <link rel="mask-icon" href="https://wikiki.github.io/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+  <link rel="shortcut icon" href="https://wikiki.github.io/favicons/favicon.ico?v=201701041855">
+  <meta name="msapplication-config" content="https://wikiki.github.io/favicons/browserconfig.xml?v=201701041855">
+  <meta name="theme-color" content="#00d1b2">
+</head>
+
+  <body class="layout-documentation page-form">
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+          <p class="subtitle">
+            Everything you need to start with Bulma-extensions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li >
+            <a href="https://wikiki.github.io">Overview</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/layout/divider/">Layout</a>
+          </li>
+          <li class="is-active">
+            <a href="https://wikiki.github.io/form/checkradio">Form</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/elements/badge/">Elements</a>
+          </li>
+          <li >
+            <a href="https://wikiki.github.io/components/accordion/">Components</a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  
+</section>
+
+    <nav id="navbar" class="navbar is-fixed-top ">
+  <div id="specialShadow" class="bd-special-shadow"></div>
+
+  <div class="container">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wikiki.github.io">
+      <strong>Bulma-Extensions</strong>
+    </a>
+
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-lg fa-github"></i>
+      </span>
+    </a>
+
+    <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuDocumentation" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item is-hidden-desktop-only" href="https://github.com/wikiki/bulma-extensions" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-lg fa-github"></i>
+        </span>
+      </a>
+
+      <div class="navbar-item">
+        <a class="is-hidden-desktop-only tags has-addons is-small" href="https://www.npmjs.com/package/bulma-extensions" target="_blank">
+          <span class="tag">npm</span>
+          <span class="tag is-dark">6.2.4</span>
+        </a>
+      </div>
+
+      <div class="navbar-item">
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-tabs">
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/checkradio/">
+        Checkradio
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/iconpicker/">
+        IconPicker
+      </a>
+      <a class="navbar-item is-tab is-active" href="https://wikiki.github.io/form/slider/">
+        Slider
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/switch/">
+        Switch
+      </a>
+      <a class="navbar-item is-tab " href="https://wikiki.github.io/form/tagsinput/">
+        TagsInput
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title">Slider</h1>
+        <h2 class="subtitle">
+          Display a classic <strong>slider</strong> with different colors, sizes, and states
+        </h2>
+      </div>
+      <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <a class="tags has-addons" href="https://github.com/Wikiki/bulma-slider" target="_blank">
+              <span class="tag">View on Github</span>
+              <span class="tag is-dark">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="control">
+            <a class="tags has-addons" href="https://www.npmjs.com/package/bulma-slider" target="_blank">
+              <span class="tag">NPM Package</span>
+              <span class="tag is-success">2.0.0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+  
+
+  
+
+  
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+      
+        <a class="tag is-success" href="#colors">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+      
+        <a class="tag is-success" href="#sizes">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Javascript</span>
+      
+        <a class="tag is-success" href="#javascript">Yes</a>
+      
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+      
+        <a class="tag is-success" href="#variables">Yes</a>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+  Colors
+  <a class="bd-anchor-link" href="#colors">
+    #
+  </a>
+</h3>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-success" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-warning" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-danger" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-info" step="1" min="0" max="100" value="50" type="range">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-success"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-warning"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-danger"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-info"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="sizes" class="title is-4 is-spaced bd-anchor-title">
+  Sizes
+  <a class="bd-anchor-link" href="#sizes">
+    #
+  </a>
+</h3>
+
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
+
+<input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-medium" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-large" step="1" min="0" max="100" value="50" type="range">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-small"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-small"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-medium"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-large"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr>
+
+    <h3 class="title">Styles</h3>
+    <h4 class="subtitle">Circle</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
+
+<input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-success is-circle" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-medium is-warning is-circle" step="1" min="0" max="100" value="50" type="range">
+
+<input class="slider is-fullwidth is-large is-danger is-circle" step="1" min="0" max="100" value="50" type="range">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-small is-circle"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-small is-circle"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-success is-circle"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-medium is-warning is-circle"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth is-large is-danger is-circle"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr>
+
+    <h3 class="title">Positions</h3>
+    <h4 class="subtitle">vertical</h4>
+    <p>Display a vertical slider by adding <code>orient="vertical"</code> to the range input.</p>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range" orient="vertical">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">orient=</span><span class="s">"vertical"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <h3 class="title">States</h3>
+    <h4 class="subtitle">Disabled</h4>
+    
+  <div class="
+    bd-snippet
+    bd-is-vertical
+    
+    bd-is-one-half
+    
+    ">
+    <div class="bd-snippet-preview ">
+      
+<input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range" disabled="disabled">
+
+    </div>
+    <div class="bd-snippet-code highlight-full ">
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"slider is-fullwidth"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span></code></pre></figure>
+    </div>
+  </div>
+
+
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="javascript" class="title is-4 is-spaced bd-anchor-title">
+  Javascript
+  <a class="bd-anchor-link" href="#javascript">
+    #
+  </a>
+</h3>
+
+    <h3 class="title">Display value</h3>
+    <p>Display the slider value by adding an <code>output</code> DOM element after the slider and the class <code>has-output</code> to the slider. Then use the following JavaScript implementation:</p>
+    <div class="bd-example">
+      <!--Example missing-->
+      
+<input id="sliderWithValue" class="slider has-output is-fullwidth" min="0" max="100" value="50" step="1" type="range">
+<output for="sliderWithValue">50</output>
+
+    </div>
+    <br/>
+    <p>Display the output as a tooltip by changing the class <code>has-output</code> to <code>has-output-tooltip</code> and use the following JavaScript implementation:</p>
+    <div class="bd-example">
+      <!--Example missing-->
+      
+<input id="sliderWithValueTooltip" class="slider has-output-tooltip is-fullwidth" min="0" max="100" value="50" step="1" type="range">
+<output for="sliderWithValueTooltip">50</output>
+
+    </div>
+
+    <div id="sliderJsExample" class="message is-info">
+      <h4 class="message-header">Javascript</h4>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            The extension comes with a JavaScript implementation which updates the output value associated to the slider.
+          </p>
+
+          <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"sliderWithValue"</span> <span class="na">class=</span><span class="s">"slider has-output is-fullwidth"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">type=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;output</span> <span class="na">for=</span><span class="s">"sliderWithValue"</span><span class="nt">&gt;</span>50<span class="nt">&lt;/output&gt;</span></code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Find output DOM associated to the DOM element passed as parameter</span>
+<span class="kd">function</span> <span class="nx">findOutputForSlider</span><span class="p">(</span> <span class="nx">element</span> <span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">idVal</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+   <span class="nx">outputs</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span> <span class="dl">'</span><span class="s1">output</span><span class="dl">'</span> <span class="p">);</span>
+   <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">outputs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span> <span class="nx">outputs</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">htmlFor</span> <span class="o">==</span> <span class="nx">idVal</span> <span class="p">)</span>
+       <span class="k">return</span> <span class="nx">outputs</span><span class="p">[</span> <span class="nx">i</span> <span class="p">];</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getSliderOutputPosition</span><span class="p">(</span> <span class="nx">slider</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Update output position</span>
+  <span class="kd">var</span> <span class="nx">newPlace</span><span class="p">,</span>
+      <span class="nx">minValue</span><span class="p">;</span>
+
+  <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getComputedStyle</span><span class="p">(</span> <span class="nx">slider</span><span class="p">,</span> <span class="kc">null</span> <span class="p">);</span>
+  <span class="c1">// Measure width of range input</span>
+  <span class="nx">sliderWidth</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span> <span class="nx">style</span><span class="p">.</span><span class="nx">getPropertyValue</span><span class="p">(</span> <span class="dl">'</span><span class="s1">width</span><span class="dl">'</span> <span class="p">),</span> <span class="mi">10</span> <span class="p">);</span>
+
+  <span class="c1">// Figure out placement percentage between left and right of input</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">slider</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span> <span class="dl">'</span><span class="s1">min</span><span class="dl">'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">minValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">minValue</span> <span class="o">=</span> <span class="nx">slider</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span> <span class="dl">'</span><span class="s1">min</span><span class="dl">'</span> <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">var</span> <span class="nx">newPoint</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">slider</span><span class="p">.</span><span class="nx">value</span> <span class="o">-</span> <span class="nx">minValue</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="nx">slider</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span> <span class="dl">'</span><span class="s1">max</span><span class="dl">'</span> <span class="p">)</span> <span class="o">-</span> <span class="nx">minValue</span> <span class="p">);</span>
+
+  <span class="c1">// Prevent bubble from going beyond left or right (unsupported browsers)</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="nx">newPoint</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">newPlace</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="nx">newPoint</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">newPlace</span> <span class="o">=</span> <span class="nx">sliderWidth</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">newPlace</span> <span class="o">=</span> <span class="nx">sliderWidth</span> <span class="o">*</span> <span class="nx">newPoint</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">position</span><span class="dl">'</span><span class="p">:</span> <span class="nx">newPlace</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span> <span class="dl">'</span><span class="s1">DOMContentLoaded</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Get all document sliders</span>
+  <span class="kd">var</span> <span class="nx">sliders</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span> <span class="dl">'</span><span class="s1">input[type="range"].slider</span><span class="dl">'</span> <span class="p">);</span>
+  <span class="p">[].</span><span class="nx">forEach</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">sliders</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">slider</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">findOutputForSlider</span><span class="p">(</span> <span class="nx">slider</span> <span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">output</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="nx">slider</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span> <span class="dl">'</span><span class="s1">has-output-tooltip</span><span class="dl">'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Get new output position</span>
+        <span class="kd">var</span> <span class="nx">newPosition</span> <span class="o">=</span> <span class="nx">getSliderOutputPosition</span><span class="p">(</span> <span class="nx">slider</span> <span class="p">);</span>
+
+        <span class="c1">// Set output position</span>
+        <span class="nx">output</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span> <span class="dl">'</span><span class="s1">left</span><span class="dl">'</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">newPosition</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="c1">// Add event listener to update output when slider value change</span>
+      <span class="nx">slider</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span> <span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">event</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span> <span class="dl">'</span><span class="s1">has-output-tooltip</span><span class="dl">'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// Get new output position</span>
+          <span class="kd">var</span> <span class="nx">newPosition</span> <span class="o">=</span> <span class="nx">getSliderOutputPosition</span><span class="p">(</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="p">);</span>
+
+          <span class="c1">// Set output position</span>
+          <span class="nx">output</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span> <span class="dl">'</span><span class="s1">left</span><span class="dl">'</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">newPosition</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Update output with slider value</span>
+        <span class="nx">output</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+      <span class="p">}</span> <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="p">);</span>
+<span class="p">}</span> <span class="p">);</span></code></pre></figure>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title is-4 is-spaced bd-anchor-title">
+  Variables
+  <a class="bd-anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="https://bulma.io/documentation/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    
+      <tr>
+        <td>
+          <code>$slider-radius</code>
+        </td>
+        <td>
+          <code>$radius</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-track-background</code>
+        </td>
+        <td>
+          <code>$grey-lighter</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-track-radius</code>
+        </td>
+        <td>
+          <code>$radius</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-track-border</code>
+        </td>
+        <td>
+          <code>0px solid $grey</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-track-shadow</code>
+        </td>
+        <td>
+          <code>0px 0px 0px $grey</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-thumb-background</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-thumb-radius</code>
+        </td>
+        <td>
+          <code>$radius</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-thumb-border</code>
+        </td>
+        <td>
+          <code>1px solid $grey-light</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-thumb-to-track-ratio</code>
+        </td>
+        <td>
+          <code>2</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-output-width</code>
+        </td>
+        <td>
+          <code>3rem</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-output-background</code>
+        </td>
+        <td>
+          <code>$grey-dark</code>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <code>$slider-output-radius</code>
+        </td>
+        <td>
+          <code>$radius</code>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+
+    <script type="text/javascript" src="https://wikiki.github.io/node_modules/bulma-extensions/bulma-slider/dist/js/bulma-slider.js"></script>
+    <script>
+      bulmaSlider.attach();
+    </script>
+  </div>
+</section>
+
+
+    <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half has-text-centered">
+        <p id="tsp">
+          <a href="https://bulma.io" target="_blank">
+            <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+          <small>
+            Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+          </small>
+        </p>
+        <br />
+        <a href='https://ko-fi.com/wikiki' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://wikiki.github.io/vendor/clipboard-1.7.1.min.js"></script>
+<script src="https://wikiki.github.io/js/main.js?v=201910231117"></script>
+
+<script async defer type="text/javascript">
+  (function() {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';
+    ftypes[0]='email';
+  }());
+  // var $mcj = window.jQuery.noConflict(true);
+</script>
+
+  </body>
+</html>
