@@ -58,6 +58,26 @@ variables:
 </div>
 {% endcapture %}
 
+{% capture tooltip_arrows_example %}
+<div class="columns is-multiline text-center">
+  <div class="column">
+    <button class="button is-primary has-tooltip-arrow" data-tooltip="Tooltip Text">top tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary has-tooltip-right has-tooltip-arrow" data-tooltip="Tooltip Text">right
+      tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary has-tooltip-bottom has-tooltip-arrow" data-tooltip="Tooltip Text">bottom
+      tooltip</button>
+  </div>
+  <div class="column">
+    <button class="button is-primary has-tooltip-left has-tooltip-arrow" data-tooltip="Tooltip Text">left
+      tooltip</button>
+  </div>
+</div>
+{% endcapture %}
+
 {% capture tooltip_responsive_positioning_example %}
 <div class="column">
   <button class="button is-primary has-tooltip-top has-tooltip-bottom-desktop has-tooltip-active" data-tooltip="Hi! I'm on top and bottom.">Top and Bottom</button>
@@ -162,6 +182,14 @@ variables:
         You may refer to the <a href="https://bulma.io/documentation/modifiers/responsive-helpers/">Documentation of Bulma</a> for all of the available responsive helpers.
       </div>
     </div>
+
+    <h3 class="title">Arrow</h3>
+    <p>By default tooltip as no arrow. You can add it easily by adding the following class on the element:
+      <ul>
+        <li><code>.has-tooltip-arrow</code></li>
+      </ul>
+    </p>
+    {% include snippet.html content=tooltip_arrows_example size="one-half" %}
 
     {% include anchor.html name="Sizes" %}
     <h4 class="subtitle">You can force multiline display by using the <code>.has-tooltip-multiline</code> modifier.</h4>
