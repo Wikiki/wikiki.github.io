@@ -25,7 +25,11 @@ gulp.task('build:prod', function (callback) {
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', gulp.series('build:prod'), function () {
+gulp.task('deploy:gh-pages', function () {
   return gulp.src("./_site/**/*")
     .pipe(deploy())
 });
+
+gulp.task('deploy', gulp.series('build:prod', 'deploy:gh-pages'), function (callback) {
+  return callback();
+})
