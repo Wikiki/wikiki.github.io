@@ -22,8 +22,23 @@
   },
   "homepage": "https://github.com/Wikiki/bulma-extensions#readme",
   "devDependencies": {
-    "bulma": "^0.8.0",
-    "bulma-extensions": "latest",
+    "bulma": "~0.7.0",
+    "bulma-accordion": "latest",
+    "bulma-badge": "latest",
+    "bulma-calendar": "latest",
+    "bulma-carousel": "latest",
+    "bulma-checkradio": "latest",
+    "bulma-divider": "latest",
+    "bulma-iconpicker": "latest",
+    "bulma-pageloader": "latest",
+    "bulma-pricingtable": "latest",
+    "bulma-quickview": "latest",
+    "bulma-ribbon": "latest",
+    "bulma-slider": "latest",
+    "bulma-steps": "latest",
+    "bulma-switch": "latest",
+    "bulma-tagsinput": "latest",
+    "bulma-timeline": "latest",
     "bulma-tooltip": "^3.0"
   }
 }

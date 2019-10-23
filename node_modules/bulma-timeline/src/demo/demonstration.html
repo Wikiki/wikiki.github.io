@@ -1,0 +1,103 @@
+---
+layout: default
+route: demonstration
+title: Demonstration
+---
+{% capture timeline_colors_both_example %}
+<h1 class="title is-6 has-text-centered">By default, content shows in left mode. Apply .is-centered or .is-rtl to your
+  .timeline to place timeline-content in zig-zag or right respectively.</h1>
+<div id="timelineSwitch" class="buttons has-addons is-centered">
+  <span id="timelineLeft" class="button is-info is-selected">Left</span>
+  <span id="timelineCenter" class="button">Center</span>
+  <span id="timelineRight" class="button">Right</span>
+</div>
+<section class="section">
+  <div class="timeline">
+    <header class="timeline-header">
+      <span class="tag is-medium is-primary">Start</span>
+    </header>
+    <div class="timeline-item is-primary">
+      <div class="timeline-marker is-primary"></div>
+      <div class="timeline-content">
+        <p class="heading">January 2016</p>
+        <p>Timeline content - Can include any HTML element</p>
+      </div>
+    </div>
+    <div class="timeline-item is-warning">
+      <div class="timeline-marker is-warning is-image is-32x32">
+        <img src="http://bulma.io/images/placeholders/32x32.png">
+      </div>
+      <div class="timeline-content">
+        <p class="heading">February 2016</p>
+        <p>Timeline content - Can include any HTML element</p>
+      </div>
+    </div>
+    <header class="timeline-header">
+      <span class="tag is-primary">2017</span>
+    </header>
+    <div class="timeline-item is-danger">
+      <div class="timeline-marker is-danger is-icon">
+        <i class="fa fa-flag"></i>
+      </div>
+      <div class="timeline-content">
+        <p class="heading">March 2017</p>
+        <p>Timeline content - Can include any HTML element</p>
+      </div>
+    </div>
+    <header class="timeline-header">
+      <span class="tag is-medium is-primary">End</span>
+    </header>
+  </div>
+</section>
+{% endcapture %}
+
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      {{ timeline_colors_both_example }}
+    </div>
+  </div>
+</section>
+
+<script>
+  var timeline = document.querySelector('.timeline');
+  var leftButton = document.getElementById('timelineLeft');
+  var centerButton = document.getElementById('timelineCenter');
+  var rightButton = document.getElementById('timelineRight');
+  leftButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    e.target.classList.add('is-info');
+    e.target.classList.add('is-selected');
+    centerButton.classList.remove('is-info');
+    centerButton.classList.remove('is-selected');
+    rightButton.classList.remove('is-info');
+    rightButton.classList.remove('is-selected');
+    timeline.classList.remove('is-centered');
+    timeline.classList.remove('is-rtl');
+  });
+  centerButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    e.target.classList.add('is-info');
+    e.target.classList.add('is-selected');
+    leftButton.classList.remove('is-info');
+    leftButton.classList.remove('is-selected');
+    rightButton.classList.remove('is-info');
+    rightButton.classList.remove('is-selected');
+    timeline.classList.add('is-centered');
+    timeline.classList.remove('is-rtl');
+  });
+  rightButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    e.target.classList.add('is-info');
+    e.target.classList.add('is-selected');
+    centerButton.classList.remove('is-info');
+    centerButton.classList.remove('is-selected');
+    leftButton.classList.remove('is-info');
+    leftButton.classList.remove('is-selected');
+    timeline.classList.remove('is-centered');
+    timeline.classList.add('is-rtl');
+  });
+</script>
