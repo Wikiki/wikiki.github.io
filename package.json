@@ -30,7 +30,7 @@
     "bulma-checkradio": "latest",
     "bulma-divider": "latest",
     "bulma-iconpicker": "latest",
-    "bulma-pageloader": "latest",
+    "bulma-pageloader": "^2.2.0",
     "bulma-pricingtable": "latest",
     "bulma-quickview": "latest",
     "bulma-ribbon": "latest",
