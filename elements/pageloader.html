@@ -23,6 +23,10 @@ variables:
 <div class="pageloader is-left-to-right"><span class="title">Pageloader</span></div>
 {% endcapture %}
 
+{% capture pageloader4_example %}
+<div class="pageloader is-bottom-to-top"><span class="title">Pageloader</span></div>
+{% endcapture %}
+
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -70,6 +74,15 @@ variables:
       </div>
       <div class="column">
         {% highlight html %}{{pageloader_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <button data-target="pageloader4" class="button is-primary">Show Page-loader from bottom</button>
+      </div>
+      <div class="column">
+        {% highlight html %}{{pageloader4_example}}{% endhighlight %}
       </div>
     </div>
 
